@@ -46,7 +46,7 @@ include 'main/logo.php';
 echo "<div id='P'>";
     include 'main/box.php';
 echo "</div>";
-echo "Thanks man";
+echo "Thanks, man.";
 ?>
 </body>
 </html>
