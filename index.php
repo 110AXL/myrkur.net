@@ -34,7 +34,7 @@
   src="https://www.facebook.com/tr?id=260449551282360&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Facebook Pixel Code -->
-
+<link rel="shortcut icon" type="image/png" href="main/favicon-16x16.png"/>
 </head>
 <body bgcolor="black">
  <?php
