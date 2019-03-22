@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 
 
-			
+
 <html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href="default.css">
+<link rel="stylesheet" type="text/css" href="main/default.css">
 
 <!-- Facebook Pixel Code -->
 <script>
@@ -39,13 +39,13 @@
 <body bgcolor="black">
  <?php
 session_start();
-include 'ipgrabber.php';
-include 'sqlcon.php';
-include 'header.php';
-include 'logo.php';
+include 'main/ipgrabber.php';
+include 'main/sqlcon.php';
+include 'main/header.php';
+include 'main/logo.php';
 echo "<div id='P'>";
-    include 'box.php';
+    include 'main/box.php';
 echo "</div>";
-?> 
+?>
 </body>
-</html> 
+</html>
