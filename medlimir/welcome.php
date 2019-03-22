@@ -18,15 +18,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <style type="text/css">
         body{ font: 14px sans-serif; text-align: center; }
     </style>
-include('../main/facebookPixelCode.php')
+<?php include('../main/facebookPixelCode.php'); ?>
 </head>
 <body>
     <div class="page-header">
         <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1><br/><h2><a href="addalbum.php">Add album</a><br/><a href="/movies/addmovie.php">Add movie</h2></a>
     </div>
     <p>
-        <a href="/medlimir/reset-password.php" class="btn btn-warning">Reset Your Password</a>
-        <a href="/medlimir/logout.php" class="btn btn-danger">Sign Out of Your Account</a>
+        <a href="/reset-password.php" class="btn btn-warning">Reset Your Password</a>
+        <a href="/logout.php" class="btn btn-danger">Log Out of Your Account</a>
     </p>
 <div class="container">
 	<h2>Registered users:
