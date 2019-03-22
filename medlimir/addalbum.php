@@ -1,11 +1,11 @@
-<?php 
+<?php
 session_start();
 if(!isset($_SESSION['username'])){
    header("Location:index.php");
 }
 include '../ipgrabber.php';
 
-$year = date("Y"); 
+$year = date("Y");
 ?>
 
 <!DOCTYPE html>
@@ -19,23 +19,7 @@ $year = date("Y");
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
     </style>
-	<!-- Facebook Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '260449551282360');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=260449551282360&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
+<?php	include('../main/facebookPixelCode.php') ?>
 </head>
 <body>
     <div class="wrapper">
@@ -46,13 +30,13 @@ $year = date("Y");
 			Select an image to upload:
 			<input type="file" name="fileToUpload" id="fileToUpload"><br/>
 			<input type="text" name="img_url" placeholder="Or enter image URL">
- 
+
 
 
 		</div>
-		
-		
-	<div class="form-group"  >			
+
+
+	<div class="form-group"  >
 		<label id="first"> Artist's name:</label><br/>
 		<input type="text" name="artist" id="artist"><br/>
 	</div>
@@ -71,6 +55,7 @@ I just drink blood dude</option>
                <option id="genre" name="genre" value = "rock">Rock</option>
                <option id="genre" name="genre" value = "pop">Pop</option>
                <option id="genre" name="genre" value = "metal">Metal</option>
+               <option id="genre" name="genre" value = "hiphop">Hiphop</option>
 			 </select></p>
 	<div class="form-group" >
 		<label id="first">Link to the music:</label><br/>
@@ -83,7 +68,7 @@ I just drink blood dude</option>
 				<input type="submit" value="submit" name="submit">
     </form>
 
-			
+
 			 <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
 				  <script>
 				  grecaptcha.ready(function() {
@@ -93,6 +78,6 @@ I just drink blood dude</option>
 				  });
 			 </script>
         </form>
-    </div>    
+    </div>
 </body>
 </html>
