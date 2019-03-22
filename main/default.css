@@ -44,7 +44,7 @@ h1 {
   text-align: center;
   font-size: 300%;
   text-shadow: 2px 2px 4px #000000;
-  color: #hsl(360, 100%, 100%) !important;
+  color: #222 !important;
 }
 
 body {
