@@ -1,3 +1,4 @@
+<php
 echo "
   <!DOCTYPE html>
   <html lang='en'>
@@ -33,3 +34,4 @@ echo "
         <p>Don't have an account? <a href='register.php'>Sign up now</a>.</p>
       </form>
     </div>";
+?>
