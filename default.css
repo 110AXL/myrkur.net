@@ -1,0 +1,258 @@
+body {
+  background-image: url("eclipse.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.grid-container {
+    display: grid;
+}
+
+.grid-container--fill {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 15fr));
+}
+
+.grid-container--fit {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+
+.grid-element {
+  background-color: #000;
+  padding: 0px;
+  color: #000;
+  border: 1px solid #000;
+  margin-bottom: 2em;
+}
+
+
+.center {
+
+}
+
+#P {
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 1em;
+}
+
+h1 {
+	  width: 50%;
+	padding: 1em;
+	  margin: auto;
+  text-align: center;
+  font-size: 300%;
+  text-shadow: 2px 2px 4px #000000;
+  color: #hsl(360, 100%, 100%) !important;
+}
+
+body {
+	margin: 0px;
+}
+
+
+hr {
+  margin: 8px;
+}
+
+ /* unvisited link */
+a:link {
+  color: #aaa;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: #666;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: white;
+  text-decoration: none;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+/* selected link */
+a:active {
+  color: #333;
+  text-decoration: none;
+}
+
+.title {
+	font-family: Georgia, serif;
+	padding: 4px;
+	color: black;
+}
+
+.grid-element:hover {
+    z-index: 50;
+    background-image: linear-gradient(to right, #000 0%, #222 100%);
+}
+
+.box:hover, .box:hover > .icon {
+	    color: red;
+      fill: red;
+    }
+
+.mainbody,
+.header,
+.footer {
+    padding: 0px;
+}
+
+.header {
+    height: 20px;
+    background-color: #333;
+	padding-right: 33px;
+	padding-bottom: 3px;
+	padding-left: 33px;
+	-webkit-border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+	text-align: right;
+}
+
+.add {
+  position: relative;
+  display: inline-block;
+  float: left;
+}
+
+.addbtn {
+  background-color: #666;
+  color: #aaa;
+  font-size: 9px;
+  border: none;
+  height: 16px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.addbtn:hover {
+  color: #eee;
+}
+
+IMG.left_centered {
+    display: inline;
+	margin-bottom: -1px;
+    margin-left: -3px;
+    margin-right: 0px
+	}
+
+IMG.right_centered {
+    display: inline;
+	margin-bottom: -1px;
+    margin-right: 0px;
+    margin-left: 0px
+	}
+
+/*--------------------------------------------*/
+
+ /* Dropdown Button */
+.dropbtn {
+  background-color: #666;
+  color: #aaa;
+  font-size: 9px;
+  border: none;
+  height: 16px;
+  cursor: pointer;
+  padding: 3px;
+  padding-left: 4px;
+}
+
+.dropbtn:hover {
+  color: #eee;
+}
+
+/* The container <div> - needed to position the dropdown content */
+
+.genrebtn {
+  background-color: #666;
+  color: #aaa;
+  font-size: 9px;
+  border: none;
+  height: 16px;
+  cursor: pointer;
+  padding: 3px;
+  padding-right: 24px;
+  text-align: center;
+}
+
+.genrebtn:hover {
+  color: #eee;
+}
+
+/* Genre drop down */
+
+.genre {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.genre-content {
+  text-align: left;
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 66px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.genre-content a {
+  color: black;
+  padding: 3px 3px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of genre links on hover */
+.genre-content a:hover {background-color: #666}
+
+/* Show the genre menu on hover */
+.genre:hover .genre-content {	display: block;}
+
+/* Change the background color of the genre button when the genre content is shown */
+.genre:hover .dropbtn {background-color: #333;}
+
+/* Dropdown div */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  text-align: left;
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 66px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 3px 3px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #666}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {	display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #333;}
