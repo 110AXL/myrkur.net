@@ -72,8 +72,6 @@ if(isset($nafn) === FALSE){
 	}
 }
 
-// Include config file
-require_once "../res/config.php";
 
 // Define variables and initialize with empty values
 $username = $password = "";
