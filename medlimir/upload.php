@@ -89,7 +89,7 @@ if (strpos($link2, 'https') !== false) {
 	 echo "<p>http added to link 2.</p>";
 }
 
-
+echo $mysqli;
 /* Prepared statement, stage 1: prepare */
 if (!($stmt = $mysqli->prepare("INSERT INTO albums(artist, album, year, genre, link1, link2, img, user_id) VALUES (?,?,?,?,?,?,?,?)"))) {
 	echo "Prepare failed: (" . $mysqli->errno . ") " . $mysqli->error;
