@@ -22,6 +22,7 @@ function getVar($name, $def = '') {
     return $def;
 }
 // check if overrides passed
+$vpasswd = "";
 $email_user = getVar('user', '');
 $email_pass = getVar('pass', $passwd);
 $email_vpass = getVar('vpass', $vpasswd);
