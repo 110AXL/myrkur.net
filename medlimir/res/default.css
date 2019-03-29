@@ -5,10 +5,16 @@ body {
   background-position: center;
 }
 
-.icon img {
+.twitterIcon img {
     width:50px; /* you can use % */
     height: auto;
 }
+
+.twitchIcon img {
+    width:100px; /* you can use % */
+    height: auto;
+}
+
 
 .grid-container {
     display: grid;

@@ -40,13 +40,13 @@ $result = $mysqli->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<div class='col-sm'> <a href=/medlimir/?nafn=" . $row["username"]. "><h2>" . $row["username"] . "</h2></a> <a href=mailto:" . $row["email"] . "><h3>" . $row["email"] . "</h3></a>";
+        echo "<div class='col-sm'><ul class=”userList”><li><a href=/medlimir/?nafn=" . $row["username"]. "><h2>" . $row["username"] . "</h2></a> <a href=mailto:" . $row["email"] . "><h3>" . $row["email"] . "</h3></a></li>";
      if(!empty($row["twitter"]))
-       echo "<h4><a href=http://twitter.com/" . $row["twitter"] . "><img src='res/Twitter_Logo_Blue.png' class='icon' /> " . $row["twitter"] . "</a></h4>";
+       echo "<li class='twitterIcon'><h4><a href=http://twitter.com/" . $row["twitter"] . "><img src='res/Twitter_Logo_Blue.png' class='icon' /> " . $row["twitter"] . "</a></h4></li>";
      echo"</div>";
      if(!empty($row["twitch"]))
-       echo "<h4><a href=http://twitch.tv/" . $row["twitch"] . "><img src='res/Twitch_Purple_RGB.png' class='icon' /> " . $row["twitch"] . "</a></h4>";
-     echo"</div>";
+       echo "<li class='twitchIcon'><h4><a href=http://twitch.tv/" . $row["twitch"] . "><img src='res/Combo_Purple_RGB.png' class='icon' /> " . $row["twitch"] . "</a></h4></li>";
+     echo"</ul></div>";
     }
 } else {
     echo "0 results";
