@@ -32,7 +32,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <?php
 require_once 'res/sqlcon.php';
 
-$sql = "SELECT username, email, twitter, twitch FROM users ORDER BY COALESCE(twitch, twitter, username)";
+$sql = "SELECT username, email, twitter, twitch FROM users ORDER BY CASE
+    WHEN twitch IS NOT NULL THEN twitch
+    WHEN twitter IS NOT NULL THEN twitter
+    ELSE username
+    END";
 $result = $mysqli->query($sql);
 
 if ($result->num_rows > 0) {
@@ -48,8 +52,8 @@ if ($result->num_rows > 0) {
       </tr>
     </thead>";
     while($row = $result->fetch_assoc()) {
-        echo "<tr><td style='font-family: Courier New, Courier, Monospace;'><a href=/medlimir/?nafn=" . $row["username"]. ">" . $row["username"] . "</a>";
-        echo "<td style='font-family: Lucida Console;'><a href=mailto:" . $row["email"] . ">" . $row["email"] . "</a></td>";
+        echo "<tr><td style='font-family: Lucida Console;'><a href=/medlimir/?nafn=" . $row["username"]. ">" . $row["username"] . "</a>";
+        echo "<td style='font-family: Courier New, Courier, Monospace;'><a href=mailto:" . $row["email"] . ">" . $row["email"] . "</a></td>";
         echo "<td>";
      if(!empty($row["twitter"]))
        echo "<a href=http://twitter.com/" . $row["twitter"] . "><img src='res/Twitter_Logo_Blue.png' style='width:21px;height:21px;' /></a>";
