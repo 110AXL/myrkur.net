@@ -36,9 +36,9 @@
   		      <form action="socialupdate.php" method="post" enctype="multipart/form-data">
 
 				  		<label id="twitch">Twitch handle:</label><br/>
-				  		<input type="text" name="artist" placeholder="<?php /*echo $param_twitch*/ ?>" id="twitch"><br/>
+				  		<input type="text" name="artist" id="twitch"><br/>
 				  		<label id="twitter">Twitter handle (With @):</label><br/>
-				  		<input type="text" name="album" placeholder="<?php /*echo $param_twitter*/ ?>" id="twitter"><br/>
+				  		<input type="text" name="album" id="twitter"><br/>
 
 	  					<input type="submit" value="submit" name="submit">
       			</form>
