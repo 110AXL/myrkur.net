@@ -83,6 +83,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     } else{
         $twitter = trim($_POST["twitter"]);
     }
+    echo substr(trim($_POST["twitter"]), 1);
 
     // Twitch channel
     if(!empty(trim($_POST["twitch"]))){
