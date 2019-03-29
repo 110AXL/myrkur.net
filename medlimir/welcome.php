@@ -22,13 +22,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </head>
 <body>
     <div class="page-header">
-        <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Velkominn á innri vef myrkur.net</h1><br/><h2><a href="addalbum.php">Add album</a><br/><a href="/movies/addmovie.php">Add movie</h2></a>
+        <h1>Hy, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Velkominn á innri vef myrkur.net</h1><br/><h2><a href="addalbum.php">Add album</a><br/><a href="/movies/addmovie.php">Add movie</h2></a>
     </div>
     <p>
-        <h3><a href="/reset-password.php" class="btn btn-warning">Reset Your Password</a></h3>
-        <h3><a href="/logout.php" class="btn btn-danger">Log Out of Your Account</a></h3>
+        <h3 style='text-align: left;'><a href="/reset-password.php">Endurstilla lykilorð (reset password)</a></h3>
+        <h3 style='text-align: right;'><a href="/logout.php">Útskráning (log out)</a></h3>
     </p>
-	<h2>Registered users:</h2>
+	<h2>Skráðir notendur:</h2>
 	<?php
 require_once 'res/sqlcon.php';
 
