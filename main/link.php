@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php include('.res/facebookPixelCode.php'); ?>
+<?php include('res/facebookPixelCode.php'); ?>
 </head>
 <body>
 <?php

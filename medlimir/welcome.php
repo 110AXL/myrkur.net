@@ -18,7 +18,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <style type="text/css">
         body{ font: 14px sans-serif; text-align: center; }
     </style>
-<?php include('.res/facebookPixelCode.php'); ?>
+<?php include('res/facebookPixelCode.php'); ?>
 </head>
 <body>
     <div class="page-header">
@@ -42,10 +42,10 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo "<div class='col-sm'> <a href=/medlimir/?nafn=" . $row["username"]. "><h2>" . $row["username"] . "</h2></a> <a href=mailto:" . $row["email"] . "><h3>" . $row["email"] . "</h3></a>";
      if(!empty($row["twitter"]))
-       echo " <a href=http://twitter.com/" . $row["twitter"] . "<img src='.res/Twitter_Logo_Blue.png' /> " . $row["twitter"] . "</a>";
+       echo " <a href=http://twitter.com/" . $row["twitter"] . "<img src='res/Twitter_Logo_Blue.png' /> " . $row["twitter"] . "</a>";
      echo"</div>";
      if(!empty($row["twitch"]))
-       echo " <a href=http://twitch.tv/" . $row["twitch"] . "<img src='.res/Twitch_White_RGB.png' />" . $row["twitch"] . "</a>";
+       echo " <a href=http://twitch.tv/" . $row["twitch"] . "<img src='res/Twitch_White_RGB.png' />" . $row["twitch"] . "</a>";
      echo"</div>";
     }
 } else {

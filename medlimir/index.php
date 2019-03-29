@@ -52,7 +52,7 @@ if(isset($nafn) === FALSE){
 					</style>";
 					include('res/facebookPixelCode.php');
 					echo "
-				<link rel='shortcut icon' type='image/png' href='.main/favicon-16x16.png'/>
+				<link rel='shortcut icon' type='image/png' href='res/favicon-16x16.png'/>
 				</head>";
 				echo "<body bgcolor='black'>";
 				// output data of each row

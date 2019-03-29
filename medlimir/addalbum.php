@@ -3,7 +3,7 @@ session_start();
 if(!isset($_SESSION['username'])){
    header("Location:index.php");
 }
-include '.res/ip.php';
+include 'res/ip.php';
 
 $year = date("Y");
 ?>
@@ -19,7 +19,7 @@ $year = date("Y");
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
     </style>
-<?php	include('.res/facebookPixelCode.php') ?>
+<?php	include('res/facebookPixelCode.php') ?>
 </head>
 <body>
     <div class="wrapper">
