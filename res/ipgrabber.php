@@ -1,11 +1,11 @@
 <?php
 //IP Grabber
-include 'sqlcon.php';
+include '../hidden/sqlcon.php';
 
 
 
 
- 
+
 //Variables
 $ref = "";
 $protocol = $_SERVER['SERVER_PROTOCOL'];
@@ -22,7 +22,7 @@ if(isset($_SERVER['HTTP_REFERER'])) {
 	$ref = $_SERVER['HTTP_REFERER'];
 };
 
- 
+
 // prepare and bind
 $stmt = $mysqli->prepare("INSERT INTO log (ip, hostname, port, user_agent, protocol, referer, site) VALUES (?, ?, ?, ?, ?, ?, ?)");
 $stmt->bind_param("ssissss", $ip, $hostname, $port, $agent, $protocol, $ref, $site);
@@ -64,19 +64,19 @@ function contains($str, array $arr)
 }
 
 if(isset($_SERVER['HTTP_REFERER'])) {
-	$file_data = $date ."\n IP Address: " . $ip ."\n Hostname: " . $hostname . "\n Port number: " . $port . "\n User agent: " . $agent . "\n HTTP referer: " . $ref . "\n\n";	
+	$file_data = $date ."\n IP Address: " . $ip ."\n Hostname: " . $hostname . "\n Port number: " . $port . "\n User agent: " . $agent . "\n HTTP referer: " . $ref . "\n\n";
 }
-else { 
+else {
 	$file_data = $date ."\n IP Address: " . $ip ."\n Hostname: " . $hostname . "\n Port number: " . $port . "\n User agent: " . $agent . "\n\n";
 };
 
 if(contains($hostname, $blocked)) {
-	echo "You are on the blocked list.<br/>Contact ekkert@myrkur.net to get removed from the blocked list.</br>"; 
+	echo "You are on the blocked list.<br/>Contact ekkert@myrkur.net to get removed from the blocked list.</br>";
 	prepend($file_data, $blocked_log);
 	return false; }
 else if (contains($hostname, $allowed)) {
 	echo "You are on the allowed bot list.<br/>Contact ekkert@myrkur.net if you don't want to be considered as an allowed bot.</br>";
-	prepend($file_data, $allowed_log);	
+	prepend($file_data, $allowed_log);
 }
 else
 	prepend($file_data, $log);
