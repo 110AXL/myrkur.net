@@ -9,7 +9,8 @@
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
     </style>
-	<?php include('res/facebookPixelCode.php'); ?>
+	<?php include('res/facebookPixelCode.php');
+				include('res/sqlcon.php'); ?>
 </head>
 <body>
 
@@ -19,7 +20,6 @@ if(!isset($_SESSION['username'])){
    header("Location:index.php");
 }
 
-include 'res/sqlcon.php';
 include 'res/ip.php';
 echo "<center>";
 include 'res/logo.html';
