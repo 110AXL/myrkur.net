@@ -132,7 +132,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if(mysqli_stmt_execute($stmt)){
                 // Redirect to login page
                 header("refresh:5;location: index.php");
-                echo "<h1>Registration complete.</h1><h2>You will be redirected to Login in 5 seconds.</h2>"
+                echo "<h1>Registration complete.</h1><h2>You will be redirected to Login in 5 seconds.</h2>";
             } else{
                 echo "Something went wrong. Please try again later.";
             }
