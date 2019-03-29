@@ -4,7 +4,7 @@
 	<script src='https://www.google.com/recaptcha/api.js?render=6Le4LHsUAAAAAKwatXhyWMwqgwcoIG88JbmAXLas'></script>
     <meta charset="UTF-8">
     <title>Add an album</title>
-  	<link rel="stylesheet" type="text/css" href=".res/default.css">
+  	<link rel="stylesheet" type="text/css" href="res/default.css">
 		<style type="text/css">
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
