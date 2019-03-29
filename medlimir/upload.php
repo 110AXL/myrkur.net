@@ -9,8 +9,7 @@
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
     </style>
-	<?php include('res/facebookPixelCode.php');
-				include('res/sqlcon.php'); ?>
+	<?php include('res/facebookPixelCode.php'); ?>
 </head>
 <body>
 
@@ -28,6 +27,14 @@ echo "<p>Uploading file..</p><p>Genre: " . $_POST['genre'] . "</p>";
 
 // Define variables and initialize with empty values
 $artist = $album = $link1 = $link2 = $userId = $genre = $year = $data = $file = "";
+
+try {
+    include('/res/sqlcon.php');
+}
+catch (exception $e) {
+    echo $e;
+}
+
 
 $artist = str_replace("'","",htmlspecialchars($_POST["artist"]));
 $album = str_replace("'","",htmlspecialchars($_POST["album"]));
