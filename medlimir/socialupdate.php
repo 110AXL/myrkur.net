@@ -3,14 +3,13 @@
 session_start();
 // Define variables and initialize with empty values
 $twitter = $param_twitter = $twitch = $param_twitch = "";
-$twitchOk = 0;
 $id = $_SESSION['id'];
 
 
 /* Check if POST contains twitch url */
 if(isset($_POST['twitch']))
 {
-	$twitch = $_POST['twitch'] ?: '';
+	$twitch = $_POST['twitch'];
 	echo $twitch;
 
   $stmt = $mysqli->prepare("UPDATE users SET twitch=? WHERE id=?");
@@ -68,6 +67,6 @@ if(isset($_POST['twitter']))
     trigger_error($stmt2->error, E_USER_ERROR);
   }
   printf("stmt2 %d Row inserted.\n", $stmt2->affected_rows);
-}
+} else echo "No Post";
 
 ?>
