@@ -48,8 +48,8 @@ if ($result->num_rows > 0) {
       </tr>
     </thead>";
     while($row = $result->fetch_assoc()) {
-        echo "<tr><td style=font-family: Courier New, Courier, Monospace;><a href=/medlimir/?nafn=" . $row["username"]. ">" . $row["username"] . "</a>";
-        echo "<td style=font-family: Lucida Console;><a href=mailto:" . $row["email"] . ">" . $row["email"] . "</a></td>";
+        echo "<tr><td style='font-family: Courier New, Courier, Monospace;'><a href=/medlimir/?nafn=" . $row["username"]. ">" . $row["username"] . "</a>";
+        echo "<td style='font-family: Lucida Console;'><a href=mailto:" . $row["email"] . ">" . $row["email"] . "</a></td>";
         echo "<td>";
      if(!empty($row["twitter"]))
        echo "<a href=http://twitter.com/" . $row["twitter"] . "><img src='res/Twitter_Logo_Blue.png' style='width:21px;height:21px;' /></a>";
