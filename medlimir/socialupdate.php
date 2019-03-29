@@ -4,7 +4,7 @@ session_start();
 // Define variables and initialize with empty values
 $twitter = $param_twitter = $twitch = $param_twitch = "";
 $id = $_SESSION['id'];
-include "/sqlcon.php";
+include "sqlcon.php";
 
 /* Check if POST contains twitch url */
 if(isset($_POST['twitch']))
