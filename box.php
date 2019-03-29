@@ -1,4 +1,5 @@
 <?php
+require_once 'main/sqlcon.php';
 if (!empty($_GET["genre"])) {
 	echo "<h1>Genre: " . $_GET["genre"] . "</h1>";
 	$genre = $_GET["genre"];
