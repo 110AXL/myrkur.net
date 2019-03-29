@@ -1,6 +1,6 @@
 <?php
-
 session_start();
+include 'res/logo.html';
 // Define variables and initialize with empty values
 $twitter = $param_twitter = $twitch = $param_twitch = "";
 $id = $_SESSION['id'];
