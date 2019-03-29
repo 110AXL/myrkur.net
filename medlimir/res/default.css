@@ -267,3 +267,13 @@ IMG.right_centered {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #333;}
+
+#page-header {
+    background-color: #ccc;
+    padding: 20px
+}
+
+#buttons {
+    color: #e1e114;
+    padding: 20px
+}
