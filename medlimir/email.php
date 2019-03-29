@@ -1,6 +1,6 @@
 <?php
 
-include("./xmlapi.php");   //XMLAPI cpanel client class
+include("../res/xmlapi.php");   //XMLAPI cpanel client class
 
 // Default whm/cpanel account info
 
