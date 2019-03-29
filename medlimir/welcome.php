@@ -26,8 +26,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <p style='float: right;color: #89a203; padding: 20px; margin: 10px;'><a href="/logout.php">Útskráning (log out)</a></p>
   </div>
     <div>
-        <p style="font-family: 'Times New Roman', Times, serif;"><h1>Hy, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Velkominn á innri vef myrkur.net</h1></p>
-        <p style="font-family: 'Verdana', Verdana, sans-serif;"><h2><a href="addalbum.php">Add album</a><br/><a href="/movies/addmovie.php">Add movie</h2></a></p>
+        <p style='font-family: Times New Roman, Times, serif;'><h1>Hy, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Velkominn á innri vef myrkur.net</h1></p>
+        <p style='font-family: Verdana, Verdana, sans-serif;'><h2><a href="addalbum.php">Add album</a><br/><a href="/movies/addmovie.php">Add movie</h2></a></p>
     </div>
   <?php
 require_once 'res/sqlcon.php';
