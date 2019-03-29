@@ -33,17 +33,16 @@
           <h2>Tengja reikning</h2>
           <p>Hér getur þú tengt Twitch og Twitter við reikninginn þinn.</p>
   		    <div class="form-group" >
-  		          <form action="social.php" method="post" enctype="multipart/form-data">
+  		      <form action="social.php" method="post" enctype="multipart/form-data">
 
-  		<label id="first">Twitch handle:</label><br/>
-  		<input type="text" name="artist" placeholder="<?php /*echo $param_twitch*/ ?>" id="twitch"><br/>
-  	</div>
-  	<div class="form-group" >
-  		<label id="first">Twitter handle (With @):</label><br/>
-  		<input type="text" name="album" placeholder="<?php /*echo $param_twitter*/ ?>" id="twitter"><br/>
-  	</div>
-  				<input type="submit" value="submit" name="submit">
-      </form>
+				  		<label id="twitch">Twitch handle:</label><br/>
+				  		<input type="text" name="artist" placeholder="<?php /*echo $param_twitch*/ ?>" id="twitch"><br/>
+				  		<label id="twitter">Twitter handle (With @):</label><br/>
+				  		<input type="text" name="album" placeholder="<?php /*echo $param_twitter*/ ?>" id="twitter"><br/>
+
+	  					<input type="submit" value="submit" name="submit">
+      			</form>
+				 </div>
 
 
   			 <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
