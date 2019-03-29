@@ -19,7 +19,7 @@
 	  <div class="dropdown-content">
 	    <a target=_blank href="http://members.myrkur.net/">Login</a>
 	    <a target=_blank href="http://members.myrkur.net/register.php">Register</a>
-		<a target=_blank href="http://myrkur.net/movies/">Movies</a>
+		<a target=_blank href="http://members.myrkur.net/movies/">Movies</a>
 		<a target=_blank href="http://www.myrkur.net">Music</a>
 		<a target=_blank href="http://myrkur.net/tv/">TV</a>
 	  </div>
