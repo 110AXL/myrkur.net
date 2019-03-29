@@ -18,7 +18,7 @@ include 'medlimir/res/ip.php';
 include 'main/header.php';
 include 'medlimir/res/logo.php';
 echo "<div id='P'>";
-    include 'main/box.php';
+    include 'box.php';
 echo "</div>";
 echo "Thanks, man.";
 ?>
