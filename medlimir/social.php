@@ -68,16 +68,16 @@ $id = $_SESSION['id'];
 /* Check if POST contains twitch url */
 if(!empty($_POST['twitch']))
 {
-  if (substr($_POST['twitch']) 0, 9 == "twitch.tv") {
+  if (substr($_POST['twitch']), 0, 9 == "twitch.tv") {
       echo "twitch.tv linked.";
       $twitchOk = 1;
-  } elseif (substr($_POST['twitch']) 0, 13 == "www.twitch.tv") {
+  } elseif (substr($_POST['twitch']), 0, 13 == "www.twitch.tv") {
       echo "www.twitch.tv is linked";
       $twitchOk = 1;
-  } elseif (substr($_POST['twitch']) 0, 20 == "http://www.twitch.tv") {
+  } elseif (substr($_POST['twitch']), 0, 20 == "http://www.twitch.tv") {
       echo "http://www.twitch.tv is linked";
       $twitchOk = 1;
-  } elseif (substr($_POST['twitch']) 0, 21 == "https://www.twitch.tv") {
+  } elseif (substr($_POST['twitch']), 0, 21 == "https://www.twitch.tv") {
       echo "https://www.twitch.tv is linked";
       $twitchOk = 1;
   } else
@@ -113,16 +113,16 @@ if($twitchOk = 1){
 /* Check if POST contains twitter url */
 if(!empty($_POST['twitter']))
 {
-  if (substr($_POST['twitter']) 0, 11 == "twitter.com") {
+  if (substr($_POST['twitter']), 0, 11 == "twitter.com") {
       echo "twitter.com linked.";
       $twitterhOk = 1;
-  } elseif (substr($_POST['twitter']) 0, 15 == "www.twitter.com") {
+  } elseif (substr($_POST['twitter']), 0, 15 == "www.twitter.com") {
       echo "www.twitter.tv is linked";
       $twitterOk = 1;
-  } elseif (substr($_POST['twitter']) 0, 22 == "http://www.twitter.com") {
+  } elseif (substr($_POST['twitter']), 0, 22 == "http://www.twitter.com") {
       echo "http://www.twitter.com is linked";
       $twitterOk = 1;
-  } elseif (substr($_POST['twitter']) 0, 23 == "https://www.twitter.com") {
+  } elseif (substr($_POST['twitter']), 0, 23 == "https://www.twitter.com") {
       echo "https://www.twitter.com is linked";
       $twitterOk = 1;
   } else
