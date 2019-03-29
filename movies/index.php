@@ -11,7 +11,7 @@
 <body bgcolor="black">
  <?php
 include './res/ipgrabber.php';
-include './res/sqlcon.php';
+include './hidden/sqlcon.php';
 include './res/header.php';
 
 

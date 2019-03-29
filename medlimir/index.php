@@ -18,7 +18,7 @@ if(isset($nafn) === FALSE){
     else if($nafn != NULL){
 		/* ---- START VARIABLE ---- */
 
-		include '../res/sqlcon.php';
+		include './hidden/sqlcon.php';
 
 		$sql = "SELECT * FROM users WHERE username='" . $nafn . "'";
 		$result = mysqli_query($conn, $sql);

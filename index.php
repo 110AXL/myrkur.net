@@ -14,7 +14,7 @@
  <?php
 session_start();
 include './res/ipgrabber.php';
-include './res/sqlcon.php';
+include './hidden/sqlcon.php';
 include './main/header.php';
 include './res/logo.php';
 echo "<div id='P'>";
