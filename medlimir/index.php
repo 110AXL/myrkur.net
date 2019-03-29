@@ -1,7 +1,8 @@
 <?php
 // Initialize the session
 session_start();
-
+// get sql config
+include './hidden/sqlcon.php';
  // Before using $_POST['value']
 if (isset($_GET['nafn']))
 {
@@ -17,8 +18,6 @@ if(isset($nafn) === FALSE){
 }
     else if($nafn != NULL){
 		/* ---- START VARIABLE ---- */
-
-		include './hidden/sqlcon.php';
 
 		$sql = "SELECT * FROM users WHERE username='" . $nafn . "'";
 		$result = mysqli_query($conn, $sql);
