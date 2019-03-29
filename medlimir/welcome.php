@@ -22,15 +22,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </head>
 <body>
     <div class="page-header">
-        <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1><br/><h2><a href="addalbum.php">Add album</a><br/><a href="/movies/addmovie.php">Add movie</h2></a>
+        <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Velkominn á innri vef myrkur.net</h1><br/><h2><a href="addalbum.php">Add album</a><br/><a href="/movies/addmovie.php">Add movie</h2></a>
     </div>
     <p>
-        <a href="/reset-password.php" class="btn btn-warning">Reset Your Password</a>
-        <a href="/logout.php" class="btn btn-danger">Log Out of Your Account</a>
+        <h3><a href="/reset-password.php" class="btn btn-warning">Reset Your Password</a></h3>
+        <h3><a href="/logout.php" class="btn btn-danger">Log Out of Your Account</a></h3>
     </p>
-<div class="container">
-	<h2>Registered users:
-  <div class="row">
+	<h2>Registered users:</h2>
 	<?php
 require_once 'res/sqlcon.php';
 
@@ -38,9 +36,8 @@ $sql = "SELECT username, email, twitter, twitch FROM users ORDER BY username, tw
 $result = $mysqli->query($sql);
 
 if ($result->num_rows > 0) {
-    // output data of each row<div class="w3-container">
-  echo "<h2>Userlist</h2>
-
+    // output data of each row
+  echo "<div class='w3-container'>
   <table class='w3-table-all w3-hoverable'>
     <thead>
       <tr class='w3-light-grey'>
@@ -53,10 +50,10 @@ if ($result->num_rows > 0) {
         echo "<tr><td><a href=/medlimir/?nafn=" . $row["username"]. ">" . $row["username"] . "</a>";
         echo "<td><a href=mailto:" . $row["email"] . ">" . $row["email"] . "</a></td>";
      if(!empty($row["twitter"]))
-       echo "<td><a href=http://twitter.com/" . $row["twitter"] . "><img src='res/Twitter_Logo_Blue.png' style='width:18px;height:18px;' /></a>";
+       echo "<td><a href=http://twitter.com/" . $row["twitter"] . "><img src='res/Twitter_Logo_Blue.png' style='width:21px;height:21px;' /></a>";
      if(!empty($row["twitch"])){
        echo " ";
-       echo "<a href=http://twitch.tv/" . $row["twitch"] . "><img src='res/Glitch_Purple_RGB.png' style='width:18px;height:18px;' /></a></td>";
+       echo "<a href=http://twitch.tv/" . $row["twitch"] . "><img src='res/Glitch_Purple_RGB.png' style='width:21px;height:21px;' /></a></td>";
      }
      echo "<tr></div>";
     }
