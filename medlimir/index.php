@@ -152,7 +152,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 
 if(isset($_SESSION["loggedin"]) === false){
-		Include('./medlimir/login.php');
+		Include('./login.php');
 		echo "</body>";
 		echo "</html>";
 	exit;
