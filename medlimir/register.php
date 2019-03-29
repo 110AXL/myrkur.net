@@ -81,7 +81,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty(trim($_POST["twitter"]))){
         $twitter_err = "You can link your Twitter handle here, if you have one.";
     } elseif(substr(trim($_POST["twitter"]), 1) != "@"){
-        $password_err = "Twitter handle must start with @";
+        $twitter_err = "Twitter handle must start with @";
     } else{
         $twitter = trim($_POST["twitter"]);
     }
@@ -90,7 +90,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty(trim($_POST["twitch"]))){
         $twitch_err = "You can link your Twitch channel here, if you have one.";
     } else{
-        $twitch = trim($_POST["password"]);
+        $twitch = trim($_POST["twitch"]);
     }
 
     // Validate password
