@@ -13,7 +13,7 @@
 <body bgcolor="black">
  <?php
 session_start();
-require_once 'main/sqlcon.php';
+require_once 'sqlcon.php';
 include 'medlimir/res/ip.php';
 include 'main/header.php';
 include 'medlimir/res/logo.php';
