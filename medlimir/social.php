@@ -33,12 +33,13 @@
           <h2>Tengja reikning</h2>
           <p>Hér getur þú tengt Twitch og Twitter við reikninginn þinn.</p>
   		    <div class="form-group" >
-  		      <form action="socialupdate.php" method="post" enctype="multipart/form-data">
+
+  		      <form action="social.php" method="post" enctype="multipart/form-data">
 
 				  		<label id="twitch">Twitch handle:</label><br/>
-				  		<input type="text" name="artist" id="twitch"><br/>
+				  		<input type="text" name="twitch" id="twitch"><br/>
 				  		<label id="twitter">Twitter handle (With @):</label><br/>
-				  		<input type="text" name="album" id="twitter"><br/>
+				  		<input type="text" name="twitter" id="twitter"><br/>
 
 	  					<input type="submit" value="submit" name="submit">
       			</form>
@@ -56,5 +57,76 @@
           </form>
       </div>
 </div>
+<?php
+// Define variables and initialize with empty values
+$twitter = $param_twitter = $twitch = $param_twitch = "";
+$id = $_SESSION['id'];
+
+
+/* Check if POST contains twitch url */
+if(isset($_POST['twitch']))
+{
+	$twitch = $_POST['twitch'];
+	echo $twitch;
+
+  $stmt = $mysqli->prepare("UPDATE users SET twitch=? WHERE id=?");
+  /* BK: always check whether the prepare() succeeded */
+  if ($stmt === false) {
+    trigger_error($mysqli->error, E_USER_ERROR);
+    return;
+  }
+  /* Bind our params */
+  /* BK: variables must be bound in the same order as the params in your SQL.
+   * Some people prefer PDO because it supports named parameter. */
+  $stmt->bind_param('si', $twitch, $id);
+
+  /* Set our params */
+  /* BK: No need to use escaping when using parameters, in fact, you must not,
+   * because you'll get literal '\' characters in your content. */
+/*  $twitch = $_POST['twitch'] ?: '';*/
+
+  /* Execute the prepared Statement */
+  $status = $stmt->execute();
+  /* BK: always check whether the execute() succeeded */
+  if ($status === false) {
+    trigger_error($stmt->error, E_USER_ERROR);
+  }
+  printf("stmt %d Row inserted.\n", $stmt->affected_rows);
+}
+
+/* Check if POST contains twitter url */
+if(isset($_POST['twitter']))
+{
+	$twitter = $_POST['twitter'] ?: '';
+
+  $stmt2 = $mysqli2->prepare("UPDATE users SET twitter=? WHERE id=?");
+  /* BK: always check whether the prepare() succeeded */
+  if ($stmt2 === false) {
+    trigger_error($mysqli2->error, E_USER_ERROR);
+    return;
+  }
+  /*$id = 1;*/
+  /* Bind our params */
+  /* BK: variables must be bound in the same order as the params in your SQL.
+   * Some people prefer PDO because it supports named parameter. */
+  $stmt2->bind_param('si', $twitter, $id);
+
+  /* Set our params */
+  /* BK: No need to use escaping when using parameters, in fact, you must not,
+   * because you'll get literal '\' characters in your content. */
+/*  $twitter = $_POST['twitter'] ?: '';*/
+
+
+  /* Execute the prepared Statement */
+  $status2 = $stmt2->execute();
+  /* BK: always check whether the execute() succeeded */
+  if ($status2 === false) {
+    trigger_error($stmt2->error, E_USER_ERROR);
+  }
+  printf("stmt2 %d Row inserted.\n", $stmt2->affected_rows);
+} else echo "No Post";
+
+?>
+
 </body>
 </html>
