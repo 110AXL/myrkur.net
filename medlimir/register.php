@@ -78,19 +78,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         mysqli_stmt_close($stmt);
     }
     // Twitter handle
-    if(empty(trim($_POST["twitter"]))){
-        $twitter_err = "You can link your Twitter handle here, if you have one.";
-    } elseif(substr(trim($_POST["twitter"]), 1) != "@"){
+    if(substr(trim($_POST["twitter"]), 1) != "@"){
         $twitter_err = "Twitter handle must start with @";
     } else{
         $twitter = trim($_POST["twitter"]);
     }
 
     // Twitch channel
-    if(empty(trim($_POST["twitch"]))){
-        $twitch_err = "You can link your Twitch handle here, if you have one.";
-    } else{
-        $twitch = trim($_POST["twitch"]);
+    if(!empty(trim($_POST["twitch"]))){
+      $twitch = trim($_POST["twitch"]);
     }
 
     // Validate password
@@ -113,7 +109,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Check input errors before inserting in database
-    if(empty($username_err) && empty($password_err) && empty($confirm_password_err)&& empty($email_err)){
+    if(empty($username_err) && empty($password_err) && empty($confirm_password_err)&& empty($email_err)&& empty($twitter_err)){
 
         // Prepare an insert statement
         $sql = "INSERT INTO users (username, password, email, twitter, twitch) VALUES (?, ?, ?, ?, ?)";
@@ -131,7 +127,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Redirect to login page
-                header("refresh:5;location: index.php");
+                header("location: index.php");
                 echo "<h1>Registration complete.</h1><h2>You will be redirected to Login in 5 seconds.</h2>";
             } else{
                 echo "Something went wrong. Please try again later.";
@@ -163,7 +159,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <body>
     <div class="wrapper">
         <h2>Sign Up</h2>
-        <p>Please fill this form to create an account.</p>
+        <p>Please fill this form to create an account. You will be redirected to Login upon completion.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
