@@ -15,5 +15,5 @@ if ($mysqli->connect_errno) {
 	echo $sqlcon;
 }
 
-	echo get_include_path();
+/*	echo get_include_path(); */
 ?>
