@@ -66,7 +66,7 @@ if(isset($nafn) === FALSE){
 			}
 		echo "</body>";
 		}
-	$conn->close();
+	$mysqli->close();
 		/* ---- END VARIABLE ---- */
 	}
 }
