@@ -70,22 +70,7 @@ if(isset($_POST['twitch']))
 {
 	$twitch = $_POST['twitch'] ?: '';
 	echo $twitch;
-  if (substr($twitch, 0, 9) == "twitch.tv") {
-      echo "twitch.tv linked.";
-      $twitchOk = 1;
-  } elseif (substr($twitch, 0, 13) == "www.twitch.tv") {
-      echo "www.twitch.tv is linked";
-      $twitchOk = 1;
-  } elseif (substr($twitch, 0, 20) == "http://www.twitch.tv") {
-      echo "http://www.twitch.tv is linked";
-      $twitchOk = 1;
-  } elseif (substr($twitch, 0, 21) == "https://www.twitch.tv") {
-      echo "https://www.twitch.tv is linked";
-      $twitchOk = 1;
-  } else
-    $twitchOk = 0;
-}
-if($twitchOk == 1){
+
   $stmt = $mysqli->prepare("UPDATE users SET twitch=? WHERE id=?");
   /* BK: always check whether the prepare() succeeded */
   if ($stmt === false) {
@@ -115,23 +100,8 @@ if($twitchOk == 1){
 if(isset($_POST['twitter']))
 {
 	$twitter = $_POST['twitter'] ?: '';
-  if (substr($twitter, 0, 11) == "twitter.com") {
-      echo "twitter.com linked.";
-      $twitterhOk = 1;
-  } elseif (substr($twitter, 0, 15) == "www.twitter.com") {
-      echo "www.twitter.tv is linked";
-      $twitterOk = 1;
-  } elseif (substr($twitter, 0, 22) == "http://www.twitter.com") {
-      echo "http://www.twitter.com is linked";
-      $twitterOk = 1;
-  } elseif (substr($twitter, 0, 23) == "https://www.twitter.com") {
-      echo "https://www.twitter.com is linked";
-      $twitterOk = 1;
-  } else
-    $twitterOk = 0;
-}
-if($twitterOk = 1){
-    $stmt2 = $mysqli2->prepare("UPDATE users SET twitter=? WHERE id=?");
+
+  $stmt2 = $mysqli2->prepare("UPDATE users SET twitter=? WHERE id=?");
   /* BK: always check whether the prepare() succeeded */
   if ($stmt2 === false) {
     trigger_error($mysqli2->error, E_USER_ERROR);
