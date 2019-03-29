@@ -63,9 +63,10 @@
 $twitter = $param_twitter = $twitch = $param_twitch = "";
 $twitchOk = 0;
 $username = $_SESSION['username'];
+$twitch = $_POST['twitch'];
 
 /* Check if POST contains twitch url */
-if(!isset($_POST['twitch']))
+if(!empty($twitch))
 {
   if (substr($_POST['twitch'], 0, 9) == "twitch.tv") {
       echo "twitch.tv linked.";
