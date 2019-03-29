@@ -19,7 +19,6 @@
   if(!isset($_SESSION['username'])){
      header("Location:index.php");
   }
-  require_once 'sqlcon.php';
   include 'res/ip.php';
   echo "<center>";
   include 'res/logo.html';
@@ -68,6 +67,7 @@ $id = $_SESSION['id'];
 /* Check if POST contains twitch url */
 if(isset($_POST['twitch']))
 {
+	include 'sqlcon.php';
 	$twitch = $_POST['twitch'] ?: '';
 	echo $twitch;
   if (substr($twitch, 0, 9) == "twitch.tv") {
@@ -131,6 +131,7 @@ if(isset($_POST['twitter']))
     $twitterOk = 0;
 }
 if($twitterOk = 1){
+	include 'sqlcon.php';
     $stmt2 = $mysqli->prepare("UPDATE users SET twitter=? WHERE id=?");
   /* BK: always check whether the prepare() succeeded */
   if ($stmt2 === false) {
