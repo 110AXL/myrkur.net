@@ -62,7 +62,7 @@
 // Define variables and initialize with empty values
 $twitter = $param_twitter = $twitch = $param_twitch = "";
 $twitchOk = 0;
-$username = $_SESSION['username'];
+$id = $_SESSION['id'];
 
 /* Check if POST contains twitch url */
 if(!isset($_POST['twitch']))
@@ -100,7 +100,6 @@ if($twitchOk == 1){
   /* BK: No need to use escaping when using parameters, in fact, you must not,
    * because you'll get literal '\' characters in your content. */
   $twitch = $_POST['twitch'] ?: '';
-	$id = $_SESSION['id'];
 
   /* Execute the prepared Statement */
   $status = $stmt->execute();
@@ -130,10 +129,10 @@ if(!empty($_POST['twitter']))
     $twitterOk = 0;
 }
 if($twitterOk = 1){
-    $stmt = $this->mysqli->prepare("UPDATE users SET twitter=? WHERE id=?");
+    $stmt = $mysqli->prepare("UPDATE users SET twitter=? WHERE id=?");
   /* BK: always check whether the prepare() succeeded */
   if ($stmt === false) {
-    trigger_error($this->mysqli->error, E_USER_ERROR);
+    trigger_error($mysqli->error, E_USER_ERROR);
     return;
   }
   /*$id = 1;*/
@@ -146,6 +145,7 @@ if($twitterOk = 1){
   /* BK: No need to use escaping when using parameters, in fact, you must not,
    * because you'll get literal '\' characters in your content. */
   $twitter = $_POST['twitter'] ?: '';
+
 
   /* Execute the prepared Statement */
   $status = $stmt->execute();
