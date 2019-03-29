@@ -18,7 +18,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <style type="text/css">
         body{ font: 14px sans-serif; text-align: center; }
     </style>
-<?php include('../main/facebookPixelCode.php'); ?>
+<?php include('http://myrkur.net/res/facebookPixelCode.php'); ?>
 </head>
 <body>
     <div class="page-header">

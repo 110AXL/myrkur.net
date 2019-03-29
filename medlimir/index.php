@@ -18,7 +18,7 @@ if(isset($nafn) === FALSE){
     else if($nafn != NULL){
 		/* ---- START VARIABLE ---- */
 
-		include '../sqlcon.php';
+		include 'http://myrkur.net/res/sqlcon.php';
 
 		$sql = "SELECT * FROM users WHERE username='" . $nafn . "'";
 		$result = mysqli_query($conn, $sql);
@@ -51,7 +51,7 @@ if(isset($nafn) === FALSE){
 						body{ font: 14px sans-serif; }
 						.wrapper{ width: 350px; padding: 20px; }
 					</style>";
-					include('../main/facebookPixelCode.php');
+					include('http://myrkur.net/res/facebookPixelCode.php');
 					echo "
 				<link rel='shortcut icon' type='image/png' href='../main/favicon-16x16.png'/>
 				</head>";
@@ -152,7 +152,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 
 if(isset($_SESSION["loggedin"]) === false){
-		Include('login.php');
+		Include('http://myrkur.net/medlimir/login.php');
 		echo "</body>";
 		echo "</html>";
 	exit;
