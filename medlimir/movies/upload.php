@@ -34,7 +34,7 @@ if(!isset($_SESSION['username'])){
    header("Location:index.php");
 }
 // Include config file
-require_once "medlimir/res/sqlcon.php";
+require_once "sqlcon.php";
 
 $year = $link = $name = $user_id = "";
 

@@ -29,7 +29,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <div>
         <p style='font-family: Times New Roman, Times, serif;'><h1>Velkominn <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b> á innri vefinn.</h1></p>
         <p style='font-family: Verdana, Verdana, sans-serif;'><h2><a href="addalbum.php">Bæta við tónlist</a><br/>
-        <a href="../movies/addmovie.php">Bæta við glápi</h2></a><br/>
+        <a href="/movies/addmovie.php">Bæta við glápi</h2></a><br/>
         <a href="/social.php">Tengja Twitch eða Twitter við reikning</h2></a><br/>
       </p>
     </div>
