@@ -291,9 +291,12 @@ else if(empty($_POST['img_url']) && !empty($_FILES['fileToUpload']['name']))
 		/* Display: Locally uploaded */
 		echo "Resized image:<br/><img src='" . $resizedFilename ."'><br/>";
 		echo "<h1>" . $artist . " - " . $album . "</h1><br/>";
+		if(!empty($_FILES)) {
+			echo "<pre>";
+			print_r($_FILES);
+			echo "</pre>";
+		}
 		echo "<pre>";
-		print_r($_FILES);
-		echo "</pre><pre>";
 		print_r($_POST);
 		echo "</pre>";
     }
