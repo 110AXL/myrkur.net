@@ -28,8 +28,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <p style='float: left;'><a href="/reset-password.php">Endurstilla lykilorð (reset password)</a></p>
         <p style='float: right;'><a href="/logout.php">Útskráning (log out)</a></p>
     </div>
-	<h2>Skráðir notendur:</h2>
-	<?php
+  <?php
 require_once 'res/sqlcon.php';
 
 $sql = "SELECT username, email, twitter, twitch FROM users ORDER BY username, twitter, twitch  ASC";
@@ -38,6 +37,7 @@ $result = $mysqli->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
   echo "<div class='w3-container'>
+    <h2>Skráðir notendur:</h2>
   <table class='w3-table-all w3-hoverable'>
     <thead>
       <tr class='w3-light-grey'>

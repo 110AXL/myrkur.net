@@ -270,10 +270,12 @@ IMG.right_centered {
 
 #page-header {
     background-color: #ccc;
-    padding: 20px
+    padding: 20px;
+    margin: 10px;
 }
 
 #buttons {
     color: #e1e114;
-    padding: 20px
+    padding: 20px;
+    margin: 10px;
 }
