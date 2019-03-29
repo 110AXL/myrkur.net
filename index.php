@@ -16,7 +16,7 @@ session_start();
 include 'medlimir/res/ip.php';
 include 'main/header.php';
 include 'medlimir/res/logo.html';
-require_once 'main/sqlcon.php';
+require_once '/home/u445255185/domains/myrkur.net/public_html/medlimir/res/sqlcon.php';
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
