@@ -1,5 +1,5 @@
 <?php
-require_once 'medlimir/sqlcon.php';
+require_once '../medlimir/sqlcon.php';
 
 if (!empty($_GET["genre"])) {
 	echo $_GET["genre"];
