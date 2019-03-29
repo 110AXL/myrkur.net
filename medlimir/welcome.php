@@ -18,7 +18,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <style type="text/css">
         body{ font: 14px sans-serif; text-align: center; }
     </style>
-<?php include('http://myrkur.net/res/facebookPixelCode.php'); ?>
+<?php include('../res/facebookPixelCode.php'); ?>
 </head>
 <body>
     <div class="page-header">
@@ -32,16 +32,19 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	<h2>Registered users:
   <div class="row">
 	<?php
-    include '../main/sqlcon.php';
+    include '../res/sqlcon.php';
 
-$sql = "SELECT username FROM users";
+$sql = "SELECT username, twitch FROM users";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
         echo "<div class='col-sm'> <a href=/medlimir/?nafn=" .
-     $row["username"]. ">" . $row["username"] . "</a></div>";
+     $row["username"]. ">" . $row["username"] . "</a>";
+     if(!empty($row["twitch"]))
+       echo " <a href=" . $row["twitch"] . "<img src='../res/Twitch_White_RGB.png' /></a>";
+     echo"</div>";
     }
 } else {
     echo "0 results";

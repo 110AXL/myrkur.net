@@ -6,13 +6,13 @@
 <html lang="en">
 <head>
 <link rel="stylesheet" type="text/css" href="http://myrkur.net/res/default.css">
-<?php include('http://myrkur.net/res/facebookPixelCode.php'); ?>
+<?php include('./res/facebookPixelCode.php'); ?>
 </head>
 <body bgcolor="black">
  <?php
-include 'http://myrkur.net/res/ipgrabber.php';
-include 'http://myrkur.net/res/sqlcon.php';
-include 'http://myrkur.net/res/header.php';
+include './res/ipgrabber.php';
+include './res/sqlcon.php';
+include './res/header.php';
 
 
 $sql = "SELECT movies.name, movies.year, movies.link, movies.img, users.username FROM movies LEFT JOIN users ON movies.user_id = users.id ORDER BY movies.id DESC";

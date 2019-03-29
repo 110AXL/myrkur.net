@@ -3,7 +3,7 @@ session_start();
 if(!isset($_SESSION['username'])){
    header("Location:index.php");
 }
-include 'http://myrkur.net/res/ipgrabber.php';
+include '../res/ipgrabber.php';
 
 $year = date("Y");
 ?>
@@ -19,7 +19,7 @@ $year = date("Y");
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
     </style>
-<?php	include('http://myrkur.net/res/facebookPixelCode.php') ?>
+<?php	include('./res/facebookPixelCode.php') ?>
 </head>
 <body>
     <div class="wrapper">
