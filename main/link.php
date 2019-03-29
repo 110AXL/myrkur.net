@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php include('http://myrkur.net/res/facebookPixelCode.php'); ?>
+<?php include('../res/facebookPixelCode.php'); ?>
 </head>
 <body>
 <?php
@@ -9,7 +9,7 @@ session_start();
 
 // Include config file
 require_once "http://myrkur.net/res/config.php";
-include 'http://myrkur.net/res/sqlcon.php';
+include './res/sqlcon.php';
 
 $mysqli = new mysqli("localhost", "u445255185_zc4r", "AXL110axl", "u445255185_sweet");
 $year = $link = $name = $user_id = "";

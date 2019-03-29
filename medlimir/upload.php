@@ -9,7 +9,7 @@
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
     </style>
-	<?php include('http://myrkur.net/res/facebookPixelCode.php'); ?>
+	<?php include('../res/facebookPixelCode.php'); ?>
 </head>
 <body>
 
@@ -18,12 +18,12 @@ session_start();
 if(!isset($_SESSION['username'])){
    header("Location:index.php");
 }
-include 'http://myrkur.net/res/ipgrabber.php';
-include 'http://myrkur.net/res/sqlcon.php';
-include 'http://myrkur.net/res/logo.php';
+include '../res/ipgrabber.php';
+include '../res/sqlcon.php';
+include '../res/logo.php';
 echo "<p>" . $_POST['genre'] . "<br/>";
 // Include config file
-require_once "config.php";
+require_once "../res/config.php";
 
 // Define variables and initialize with empty values
 $artist = $album = $link1 = $link2 = $userId = $genre = $year = $data = $file = "";

@@ -1,6 +1,6 @@
 <?php
 // Include config file
-require_once "config.php";
+require_once "../res/config.php";
 
 // Define variables and initialize with empty values
 $username = $email = $password = $confirm_password = "";
@@ -148,7 +148,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
     </style>
-<?php    include('http://myrkur.net/res/facebookPixelCode.php'); ?>
+<?php    include('../res/facebookPixelCode.php'); ?>
 </head>
 <body>
     <div class="wrapper">
