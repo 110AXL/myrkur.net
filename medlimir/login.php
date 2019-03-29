@@ -11,6 +11,7 @@
 <?php    include('res/facebookPixelCode.php'); ?>
   </head>
   <body>
+    <?php include 'res/logo.html'; ?>
     <div class='wrapper'>
       <h2>Login</h2>
       <p>Please fill in your credentials to login.</p>
