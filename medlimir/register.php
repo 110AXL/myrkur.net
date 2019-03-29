@@ -130,11 +130,36 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 // Redirect to login page
                 echo "<h1>Registration complete.</h1><h2>Redirecting in 5 seconds..</h2>";
 
-                mysqli_stmt_bind_result($stmt, $id, $username);
-                $_SESSION["loggedin"] = true;
-                $_SESSION["id"] = $id;
-                $_SESSION["username"] = $username;
-                header("refresh:5;url=index.php");
+                $sql = "SELECT id, username FROM users WHERE username = ?";
+
+                if($stmt = mysqli_prepare($mysqli, $sql)){
+                    // Bind variables to the prepared statement as parameters
+                    mysqli_stmt_bind_param($stmt, "s", $param_username);
+
+                    // Set parameters
+                    $param_username = $username;
+
+                    // Attempt to execute the prepared statement
+                    if(mysqli_stmt_execute($stmt)){
+                        // Store result
+                        mysqli_stmt_store_result($stmt);
+
+                        // Check if username exists, if yes then verify password
+                        if(mysqli_stmt_num_rows($stmt) == 1){
+                            // Bind result variables
+                            mysqli_stmt_bind_result($stmt, $id, $username);
+                            if(mysqli_stmt_fetch($stmt)){
+                                    // start session
+                                    session_start();
+
+                                    // Store data in session variables
+                                    $_SESSION["loggedin"] = true;
+                                    $_SESSION["id"] = $id;
+                                    $_SESSION["username"] = $username;
+
+                                    // Redirect user to welcome page
+                                    header("location: welcome.php");
+                                }
             } else{
                 echo "Something went wrong. Please try again later.";
             }
