@@ -22,8 +22,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </head>
 <body>
   <div id="buttons">
-    <p style='float: left; color: #e1e114; padding: 20px; margin: 10px;'><a href="/reset-password.php">Endurstilla lykilorð (reset password)</a></p>
-    <p style='float: right;color: #89a203; padding: 20px; margin: 10px;'><a href="/logout.php">Útskráning (log out)</a></p>
+    <p style='float: left; color: #e1e114; padding: 20px; margin: 10px;'><a href="/reset-password.php">Endurstilla lykilorð<br/>(reset password)</a></p>
+    <p style='float: right;color: #89a203; padding: 20px; margin: 10px;'><a href="/logout.php">Útskráning<br/>(log out)</a></p>
   </div>
     <div>
         <p style='font-family: Times New Roman, Times, serif;'><h1>Hy, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Velkominn á innri vef myrkur.net</h1></p>
@@ -32,11 +32,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <?php
 require_once 'res/sqlcon.php';
 
-$sql = "SELECT username, email, twitter, twitch FROM users ORDER BY CASE
-    WHEN twitch IS NOT NULL THEN twitch
-    WHEN twitter IS NOT NULL THEN twitter
-    ELSE username
-    END";
+$sql = "SELECT username, email, twitter, twitch FROM users ORDER BY -twitch, -twitter, username DESC;
 $result = $mysqli->query($sql);
 
 if ($result->num_rows > 0) {
