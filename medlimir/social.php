@@ -66,7 +66,7 @@ $username = $_SESSION['username'];
 $id = $_SESSION['id'];
 
 /* Check if POST contains twitch url */
-if(!empty($_POST['twitch']))
+if(!isset($_POST['twitch']))
 {
   if (substr($_POST['twitch'], 0, 9) == "twitch.tv") {
       echo "twitch.tv linked.";
