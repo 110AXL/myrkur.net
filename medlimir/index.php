@@ -35,8 +35,8 @@ if(isset($nafn) === FALSE){
 
 
 		$sql2 = "SELECT artist, album, link1, img FROM albums WHERE user_id='" . $result1 . "' ORDER BY id DESC";
-		$result2 = $conn->query($sql2);
-		$result3 = $conn->query($sql2);
+		$result2 = $mysqli->query($sql2);
+		$result3 = $mysqli->query($sql2);
 
 
 		if(isset($result2) == TRUE){
