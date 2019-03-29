@@ -18,7 +18,7 @@ session_start();
 if(!isset($_SESSION['username'])){
    header("Location:index.php");
 }
-require_once '../hidden/sqlcon.php';
+include '../hidden/sqlcon.php';
 include '../res/ipgrabber.php';
 echo "<center>";
 include '../res/logo.php';
