@@ -83,7 +83,7 @@ if(!isset($_POST['twitch']))
     $twitchOk = 0;
 }
 if($twitchOk == 1){
-    try($stmt = $mysqli->prepare("UPDATE users SET twitch=? WHERE id=?"));
+  $stmt = $mysqli->prepare("UPDATE users SET twitch=? WHERE id=?");
   /* BK: always check whether the prepare() succeeded */
   if ($stmt === false) {
     trigger_error($mysqli->error, E_USER_ERROR);
