@@ -3,7 +3,7 @@ session_start();
 if(!isset($_SESSION['username'])){
    header("Location:index.php");
 }
-include '../res/ipgrabber.php';
+include '../res/ip.php';
 
 $year = date("Y");
 ?>

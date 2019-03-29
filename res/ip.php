@@ -1,6 +1,6 @@
 <?php
 //IP Grabber
-include '../hidden/sqlcon.php';
+require_once './hidden/sqlcon.php';
 
 
 

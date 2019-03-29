@@ -10,7 +10,7 @@
 </head>
 <body bgcolor="black">
  <?php
-include './res/ipgrabber.php';
+include './res/ip.php';
 include './hidden/sqlcon.php';
 include './res/header.php';
 

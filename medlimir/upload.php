@@ -19,9 +19,9 @@ if(!isset($_SESSION['username'])){
    header("Location:index.php");
 }
 
-include '../res/ipgrabber.php';
+include './res/ip.php';
 echo "<center>";
-include '../res/logo.php';
+include './res/logo.php';
 echo "</center>";
 echo "<p>Uploading file..</p><p>Genre: " . $_POST['genre'] . "</p>";
 
@@ -90,14 +90,14 @@ if (strpos($link2, 'https') !== false) {
 
 try {
 
-if (! @include_once( '../hidden/sqlcon.php' )) // @ - to suppress warnings,
+if (! @include_once( './hidden/sqlcon.php' )) // @ - to suppress warnings,
 // you can also use error_reporting function for the same purpose which may be a better option
-  throw new Exception ('../hidden/sqlcon.php does not exist');
+  throw new Exception ('./hidden/sqlcon.php does not exist');
 // or
-if (!file_exists('../hidden/sqlcon.php' ))
-  throw new Exception ('../hidden/sqlcon.php does not exist');
+if (!file_exists('./hidden/sqlcon.php' ))
+  throw new Exception ('./hidden/sqlcon.php does not exist');
 else
-  require_once('../hidden/sqlcon.php' );
+  require_once('./hidden/sqlcon.php' );
 }
 catch(Exception $e) {
   echo "Message : " . $e->getMessage();
