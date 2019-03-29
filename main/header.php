@@ -21,7 +21,7 @@
 	    <a target=_blank href="http://members.myrkur.net/register.php">Register</a>
 		<a target=_blank href="http://myrkur.net/movies/">Movies</a>
 		<a target=_blank href="http://www.myrkur.net">Music</a>
-		<a target=_blank href="http://tv.myrkur.net">TV</a>
+		<a target=_blank href="http://myrkur.net/tv/">TV</a>
 	  </div>
 	</div>
 </div>
