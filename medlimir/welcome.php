@@ -27,7 +27,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   </div>
   <?php include 'res/logo.html'; ?>
     <div>
-        <p style='font-family: Times New Roman, Times, serif;'><h1>Hy, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Velkominn á innri vef myrkur.net</h1></p>
+        <p style='font-family: Times New Roman, Times, serif;'><h1>Hy, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Velkominn á innri vefinn.</h1></p>
         <p style='font-family: Verdana, Verdana, sans-serif;'><h2><a href="addalbum.php">Add album</a><br/><a href="/movies/addmovie.php">Add movie</h2></a></p>
     </div>
   <?php
