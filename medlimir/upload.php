@@ -135,6 +135,7 @@ if(!empty($_POST['img_url']))
 	}
 	else if($urlOk == 1) {
 		/* if everything is ok, try to upload file */
+		echo "Copying " . $_POST['img_url'] . " to " . $localUrl;
 		file_put_contents($localUrl, file_get_contents($_POST['img_url']));
 
 		/* add url located info to MySQL server */
@@ -294,6 +295,10 @@ else if(empty($_POST['img_url']) && !empty($_FILES['fileToUpload']['name']))
 		if($uploadOk == 1) {
 			echo "<pre>";
 			print_r($_FILES);
+			echo "</pre>";
+		} else if($urlOk == 1) {
+			echo "<pre>";
+			print_r(file_get_contents($_POST['img_url']));
 			echo "</pre>";
 		}
 		echo "<pre>";
