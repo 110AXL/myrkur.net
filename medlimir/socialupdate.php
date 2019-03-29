@@ -10,7 +10,7 @@ include "sqlcon.php";
 if(isset($_POST['twitch']))
 {
 	$twitch = $_POST['twitch'];
-	echo $twitch;
+	echo "<p>Twitch account set to: ". $twitch ."</p>";
 
   $stmt = $mysqli->prepare("UPDATE users SET twitch=? WHERE id=?");
   /* BK: always check whether the prepare() succeeded */
@@ -34,13 +34,14 @@ if(isset($_POST['twitch']))
   if ($status === false) {
     trigger_error($stmt->error, E_USER_ERROR);
   }
-  printf("stmt %d Row inserted.\n", $stmt->affected_rows);
+  printf("<p>Twitch %d Row inserted.</p>\n", $stmt->affected_rows);
 }
 
 /* Check if POST contains twitter url */
 if(isset($_POST['twitter']))
 {
 	$twitter = $_POST['twitter'] ?: '';
+  	echo "<p>Twitter account set to: ". $twitter ."</p>";
 
   $stmt2 = $mysqli2->prepare("UPDATE users SET twitter=? WHERE id=?");
   /* BK: always check whether the prepare() succeeded */
@@ -66,7 +67,7 @@ if(isset($_POST['twitter']))
   if ($status2 === false) {
     trigger_error($stmt2->error, E_USER_ERROR);
   }
-  printf("stmt2 %d Row inserted.\n", $stmt2->affected_rows);
+  printf("<p>Twitter %d Row inserted.</p>\n", $stmt2->affected_rows);
 } else echo "No Post";
 
 ?>
