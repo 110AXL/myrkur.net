@@ -18,12 +18,12 @@ session_start();
 if(!isset($_SESSION['username'])){
    header("Location:index.php");
 }
+require_once '../hidden/sqlcon.php';
 include '../res/ipgrabber.php';
-include '../res/sqlcon.php';
+echo "<center>";
 include '../res/logo.php';
+echo "</center>";
 echo "<p>Uploading file..</p><p>Genre: " . $_POST['genre'] . "</p>";
-// Include config file
-require_once "../res/config.php";
 
 // Define variables and initialize with empty values
 $artist = $album = $link1 = $link2 = $userId = $genre = $year = $data = $file = "";
@@ -87,10 +87,6 @@ if (strpos($link2, 'https') !== false) {
      $link2 = substr_replace($link2,"http://",0,0);
 	 echo "<p>http added to link 2.</p>";
 }
-
-/* Connect to MySQL server */
-include('../hidden/sqlcon.php');
-
 
 /* Prepared statement, stage 1: prepare */
 if (!($stmt = $mysqli->prepare("INSERT INTO albums(artist, album, year, genre, link1, link2, img, user_id) VALUES (?,?,?,?,?,?,?,?)"))) {
