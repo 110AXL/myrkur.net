@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>Add an album</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <style type="text/css">
+		<link rel="stylesheet" type="text/css" href="../res/default.css">
+		<style type="text/css">
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
     </style>
@@ -135,7 +136,7 @@ if(!empty($_POST['img_url']))
 	}
 	else if($urlOk == 1) {
 		/* if everything is ok, try to upload file */
-		echo "Copying " . $_POST['img_url'] . " to " . $localUrl;
+		echo "<b>Copying</b> " . $_POST['img_url'] . "<b> to </b>" . $localUrl . "<br/>";
 		file_put_contents($localUrl, file_get_contents($_POST['img_url']));
 
 		/* add url located info to MySQL server */
@@ -288,9 +289,9 @@ else if(empty($_POST['img_url']) && !empty($_FILES['fileToUpload']['name']))
 
 		/* explicit close recommended */
 		$stmt->close();
-
+	}
 		/* Display: Locally uploaded */
-		echo "Resized image:<br/><img src='" . $resizedFilename ."'><br/>";
+		echo "Resized image: <br/><img src='" . $resizedFilename ."'><br/>";
 		echo "<h1>" . $artist . " - " . $album . "</h1><br/>";
 		if($uploadOk == 1) {
 			echo "<pre>";
@@ -308,7 +309,6 @@ else if(empty($_POST['img_url']) && !empty($_FILES['fileToUpload']['name']))
 		else {
     	echo "Sorry, there was an error uploading your file.";
 		}
-	}
 
 
 ?>
