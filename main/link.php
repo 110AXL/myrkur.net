@@ -8,8 +8,8 @@
 session_start();
 
 // Include config file
-require_once "http://myrkur.net/res/config.php";
-include './res/sqlcon.php';
+require_once "../res/config.php";
+include '../res/sqlcon.php';
 
 $mysqli = new mysqli("localhost", "u445255185_zc4r", "AXL110axl", "u445255185_sweet");
 $year = $link = $name = $user_id = "";
@@ -45,11 +45,11 @@ $conn->close();
 if(isset($link) === FALSE){
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-header("location: welcome.php");
+header("location: ./medlimir/welcome.php");
 exit;
 	}
 	else{
-		header("location: index.php");
+		header("location: ../index.php");
 	}
 }
 
