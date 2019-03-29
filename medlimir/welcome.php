@@ -52,7 +52,7 @@ if ($result->num_rows > 0) {
       </tr>
     </thead>";
     while($row = $result->fetch_assoc()) {
-        echo "<tr><td style='font-family: Lucida Console;'><a href=/medlimir/?nafn=" . $row["username"]. ">" . $row["username"] . "</a>";
+        echo "<tr><td style='font-family: Lucida Console;'><a href=/?nafn=" . $row["username"]. ">" . $row["username"] . "</a>";
         echo "<td style='font-family: Courier New, Courier, Monospace;'><a href=mailto:" . $row["email"] . ">" . $row["email"] . "</a></td>";
         echo "<td>";
      if(!empty($row["twitch"]))
