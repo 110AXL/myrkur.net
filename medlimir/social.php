@@ -38,7 +38,7 @@
 
 				  		<label id="twitch">Twitch handle:</label><br/>
 				  		<input type="text" name="twitch" id="twitch"><br/>
-				  		<label id="twitter">Twitter handle (With @):</label><br/>
+				  		<label id="twitter">Twitter handle (Without @):</label><br/>
 				  		<input type="text" name="twitter" id="twitter"><br/>
 
 	  					<input type="submit" value="submit" name="submit">
