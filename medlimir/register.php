@@ -1,7 +1,7 @@
 <?php
 session_start();
 // Include config file
-require_once "/res/sqlcon.php";
+require_once "sqlcon.php";
 
 // Define variables and initialize with empty values
 $username = $email = $password = $confirm_password  = $twitter = $twitch = "";
