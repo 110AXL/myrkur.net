@@ -19,6 +19,7 @@ if(!isset($_SESSION['username'])){
    header("Location:index.php");
 }
 
+include 'res/sqlcon.php';
 include 'res/ip.php';
 echo "<center>";
 include 'res/logo.html';
@@ -88,7 +89,6 @@ if (strpos($link2, 'https') !== false) {
 	 echo "<p>http added to link 2.</p>";
 }
 
-include_once('res/sqlcon.php');
 
 /* Prepared statement, stage 1: prepare */
 if (!($stmt = $mysqli->prepare("INSERT INTO albums(artist, album, year, genre, link1, link2, img, user_id) VALUES (?,?,?,?,?,?,?,?)"))) {
