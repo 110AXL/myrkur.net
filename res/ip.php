@@ -1,6 +1,6 @@
 <?php
 //IP Grabber
-require_once './medlimir/sqlcon.php';
+require_once 'medlimir/sqlcon.php';
 
 
 

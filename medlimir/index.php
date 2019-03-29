@@ -50,9 +50,9 @@ if(isset($nafn) === FALSE){
 						body{ font: 14px sans-serif; }
 						.wrapper{ width: 350px; padding: 20px; }
 					</style>";
-					include('./res/facebookPixelCode.php');
+					include('res/facebookPixelCode.php');
 					echo "
-				<link rel='shortcut icon' type='image/png' href='../main/favicon-16x16.png'/>
+				<link rel='shortcut icon' type='image/png' href='.main/favicon-16x16.png'/>
 				</head>";
 				echo "<body bgcolor='black'>";
 				// output data of each row
@@ -149,7 +149,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 
 if(isset($_SESSION["loggedin"]) === false){
-		Include('./login.php');
+		Include('login.php');
 		echo "</body>";
 		echo "</html>";
 	exit;

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php include('../res/facebookPixelCode.php'); ?>
+<?php include('.res/facebookPixelCode.php'); ?>
 </head>
 <body>
 <?php
 session_start();
 
 // Include config file
-require_once './medlimir/sqlcon.php';
+require_once 'medlimir/sqlcon.php';
 
 $year = $linkUrl = $name = $user_id = "";
 
@@ -43,11 +43,11 @@ $mysqli->close();
 if(isset($linkUrl) === FALSE){
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-header("location: ./medlimir/welcome.php");
+header("location: medlimir/welcome.php");
 exit;
 	}
 	else{
-		header("location: ../index.php");
+		header("location: .index.php");
 	}
 }
 

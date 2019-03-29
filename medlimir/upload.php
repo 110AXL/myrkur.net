@@ -4,12 +4,12 @@
 	<script src='https://www.google.com/recaptcha/api.js?render=6Le4LHsUAAAAAKwatXhyWMwqgwcoIG88JbmAXLas'></script>
     <meta charset="UTF-8">
     <title>Add an album</title>
-  	<link rel="stylesheet" type="text/css" href="../res/default.css">
+  	<link rel="stylesheet" type="text/css" href=".res/default.css">
 		<style type="text/css">
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
     </style>
-	<?php include('../res/facebookPixelCode.php'); ?>
+	<?php include('.res/facebookPixelCode.php'); ?>
 </head>
 <body>
 
@@ -19,9 +19,9 @@ if(!isset($_SESSION['username'])){
    header("Location:index.php");
 }
 
-include './res/ip.php';
+include 'res/ip.php';
 echo "<center>";
-include './res/logo.php';
+include 'res/logo.php';
 echo "</center>";
 echo "<p>Uploading file..</p><p>Genre: " . $_POST['genre'] . "</p>";
 

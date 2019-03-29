@@ -9,7 +9,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 }
 
 // Include config file
-require_once "../res/config.php";
+require_once ".res/config.php";
 
 // Define variables and initialize with empty values
 $new_password = $confirm_password = "";
@@ -80,7 +80,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
     </style>
-<?php    include('../res/facebookPixelCode.php'); ?>
+<?php    include('.res/facebookPixelCode.php'); ?>
 </head>
 <body>
     <div class="wrapper">
