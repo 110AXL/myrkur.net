@@ -1,11 +1,11 @@
 <?php
 // Include config file
-require_once "../res/config.php";
+require_once "sqlcon.php";
 
 // Define variables and initialize with empty values
-$username = $email = $password = $confirm_password = "";
+$username = $email = $password = $confirm_password  = $twitter = $twitch = "";
 
-$username_err = $password_err = $confirm_password_err = $email_err = "";
+$username_err = $password_err = $confirm_password_err = $email_err = $twitter_err = $twitch_err = "";
 
 
 // Processing form data when form is submitted
@@ -77,6 +77,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // Close statement
         mysqli_stmt_close($stmt);
     }
+    // Twitter handle
+    if(empty(trim($_POST["twitter"]))){
+        $twitter_err = "You can link your Twitch channel here.";
+    } elseif(substr(trim($_POST["twitter"]), 1) != "@"){
+        $password_err = "Twitter handle must start with @";
+    } else{
+        $twitter = trim($_POST["twitter"]);
+    }
 
     // Twitch channel
     if(empty(trim($_POST["twitch"]))){
@@ -108,17 +116,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err)&& empty($email_err){
 
         // Prepare an insert statement
-        $sql = "INSERT INTO users (username, password, email, twitch) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO users (username, password, email, twitter, twitch) VALUES (?, ?, ?, ?, ?)";
 
         if($stmt = mysqli_prepare($mysqli, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ssss", $param_username, $param_password, $param_email, $param_twitch);
+            mysqli_stmt_bind_param($stmt, "sssss", $param_username, $param_password, $param_email, $param_twitter, $param_twitch);
 
             // Set parameters
             $param_username = $username;
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
             $param_email = $email;
             $param_twitch = $twitch;
+            $param_twitter = $twitter;
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Redirect to login page
@@ -148,7 +157,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
     </style>
-<?php    include('../res/facebookPixelCode.php'); ?>
+<?php    include('./res/facebookPixelCode.php'); ?>
 </head>
 <body>
     <div class="wrapper">
@@ -165,6 +174,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <label>Email</label>
                 <input type="text" name="email" class="form-control" value="<?php echo $email; ?>">
                 <span class="help-block"><?php echo $email_err; ?></span>
+            </div>
+            <div class="form-group <?php echo (!empty($twitter_err)) ? 'has-error' : ''; ?>">
+                <label>Twitter handle</label>
+                <input type="text" name="email" class="form-control" value="<?php echo $twitter; ?>">
+                <span class="help-block"><?php echo $twitter_err; ?></span>
             </div>
             <div class="form-group <?php echo (!empty($twitch_err)) ? 'has-error' : ''; ?>">
                 <label>Twitch channel</label>
