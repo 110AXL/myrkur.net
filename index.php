@@ -13,13 +13,13 @@
 <body bgcolor="black">
  <?php
 session_start();
-$mysqli = new mysqli("localhost", "u445255185_zc4r", "Dim&mur%Dalur", "u445255185_sweet");
-if ($mysqli->connect_errno) {
-	echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-}
+require_once 'main/sqlcon.php';
 include 'medlimir/res/ip.php';
 include 'main/header.php';
 include 'medlimir/res/logo.php';
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 echo "<div id='P'>";
 
 if (!empty($_GET["genre"])) {
