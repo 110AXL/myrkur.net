@@ -188,7 +188,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
     </style>
-<?php    include('../res/facebookPixelCode.php'); ?>
 </head>
 <body>
     <div class="wrapper">
