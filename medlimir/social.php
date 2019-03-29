@@ -61,9 +61,8 @@
 
 // Define variables and initialize with empty values
 $twitter = $param_twitter = $twitch = $param_twitch = "";
-
+$twitchOk = 0;
 $username = $_SESSION['username'];
-$id = $_SESSION['id'];
 
 /* Check if POST contains twitch url */
 if(!isset($_POST['twitch']))
@@ -83,14 +82,13 @@ if(!isset($_POST['twitch']))
   } else
     $twitchOk = 0;
 }
-if($twitchOk = 1){
-    $stmt = $mysqli->prepare("UPDATE users SET twitch=? WHERE id=?");
+if($twitchOk == 1){
+    try($stmt = $mysqli->prepare("UPDATE users SET twitch=? WHERE id=?"));
   /* BK: always check whether the prepare() succeeded */
   if ($stmt === false) {
     trigger_error($mysqli->error, E_USER_ERROR);
     return;
   }
-  $id = 1;
   /* Bind our params */
   /* BK: variables must be bound in the same order as the params in your SQL.
    * Some people prefer PDO because it supports named parameter. */
@@ -100,6 +98,7 @@ if($twitchOk = 1){
   /* BK: No need to use escaping when using parameters, in fact, you must not,
    * because you'll get literal '\' characters in your content. */
   $twitch = $_POST['twitch'] ?: '';
+	$id = $_SESSION['id'];
 
   /* Execute the prepared Statement */
   $status = $stmt->execute();
