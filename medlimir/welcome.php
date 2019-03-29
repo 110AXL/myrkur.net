@@ -22,12 +22,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </head>
 <body>
   <div id="buttons">
-    <p style='float: left; color: #e1e114;
-        padding: 20px;
-        margin: 10px;'><a href="/reset-password.php">Endurstilla lykilorð (reset password)</a></p>
-    <p style='float: right;color: #89a203;
-        padding: 20px;
-        margin: 10px;'><a href="/logout.php">Útskráning (log out)</a></p>
+    <p style='float: left; color: #e1e114; padding: 20px; margin: 10px;'><a href="/reset-password.php">Endurstilla lykilorð (reset password)</a></p>
+    <p style='float: right;color: #89a203; padding: 20px; margin: 10px;'><a href="/logout.php">Útskráning (log out)</a></p>
   </div>
     <div>
         <p style="font-family: 'Times New Roman', Times, serif;"><h1>Hy, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Velkominn á innri vef myrkur.net</h1></p>
@@ -52,7 +48,7 @@ if ($result->num_rows > 0) {
       </tr>
     </thead>";
     while($row = $result->fetch_assoc()) {
-        echo "<tr style="font-family: 'Courier New', Courier, Monospace;"><td><a href=/medlimir/?nafn=" . $row["username"]. ">" . $row["username"] . "</a>";
+        echo "<tr style='font-family: Courier New, Courier, Monospace;'><td><a href=/medlimir/?nafn=" . $row["username"]. ">" . $row["username"] . "</a>";
         echo "<td><a href=mailto:" . $row["email"] . ">" . $row["email"] . "</a></td>";
         echo "<td>";
      if(!empty($row["twitter"]))
