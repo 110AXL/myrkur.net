@@ -32,9 +32,8 @@
 session_start();
 
 // Include config file
-require_once "config.php";
+require_once "../hidden/sqlcon.php";
 
-$mysqli = new mysqli("localhost", "u445255185_zc4r", "AXL110axl", "u445255185_sweet");
 $year = $link = $name = $user_id = "";
 
 if (isset($_GET['i']))
@@ -43,12 +42,12 @@ $i = htmlspecialchars($_GET["i"]);
 
 $sql = "SELECT link1 FROM albums WHERE id =" $i;
 
-$link1 = $conn->query($sql);
+$link1 = $mysqli->query($sql);
 
 header("location: " . $link1 );
-} 
+}
 
-if(isset($link) === FALSE){ 
+if(isset($link) === FALSE){
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 header("location: welcome.php");

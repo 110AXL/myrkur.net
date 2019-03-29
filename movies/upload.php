@@ -34,9 +34,8 @@ if(!isset($_SESSION['username'])){
    header("Location:index.php");
 }
 // Include config file
-require_once "config.php";
+require_once "../hidden/sqlcon.php";
 
-$mysqli = new mysqli("localhost", "u445255185_zc4r", "AXL110axl", "u445255185_sweet");
 $year = $link = $name = $user_id = "";
 
 	/* Prepared statement, stage 2: bind and execute */
@@ -95,12 +94,12 @@ if (!$stmt->execute()) {
 /* explicit close recommended */
 $stmt->close();
 
-/* Non-prepared statement 
+/* Non-prepared statement
 $res = $mysqli->query("SELECT (artist) FROM albums");
 var_dump($res->fetch_all());*/
 
 //Resize image function:
-// for jpg 
+// for jpg
 function resize_imagejpg($file, $w, $h) {
    list($width, $height) = getimagesize($file);
    $src = imagecreatefromjpeg($file);
@@ -143,18 +142,18 @@ function resize_imagegif($file, $w, $h) {
 	if (file_exists($target_file)) {
 		echo "Sorry, file already exists. ";
 		$uploadOk = 0;
-	} 
+	}
 	// Check file size
 	if ($fileToUpload > 5000000) {
 		echo "Sorry, your file is too large. ";
 		$uploadOk = 0;
-	} 
+	}
 	// Allow certain file formats
 	if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 	&& $imageFileType != "gif" ) {
 		echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed. ";
 		$uploadOk = 0;
-	} 
+	}
 		// Check if $uploadOk is set to 0 by an error
 	if ($uploadOk == 0) {
 		echo "Sorry, your file was not uploaded.";

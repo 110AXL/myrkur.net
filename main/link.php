@@ -8,11 +8,9 @@
 session_start();
 
 // Include config file
-require_once "../res/config.php";
-include '../res/sqlcon.php';
+require_once '../hidden/sqlcon.php';
 
-$mysqli = new mysqli("localhost", "u445255185_zc4r", "AXL110axl", "u445255185_sweet");
-$year = $link = $name = $user_id = "";
+$year = $linkUrl = $name = $user_id = "";
 
 if (isset($_GET['i']))
 {
@@ -20,7 +18,7 @@ if (isset($_GET['i']))
 }
 $sql = "SELECT link1, clicks FROM albums WHERE id =" . $i;
 
-$result = $conn->query($sql);
+$result = $mysqli->query($sql);
 
 
 if ($result->num_rows > 0) {
@@ -29,10 +27,10 @@ while($row = $result->fetch_assoc()) {
 
 		$sql2 = "UPDATE albums SET clicks=" . $clicks . " WHERE id=" . $i;
 
-		if ($conn->query($sql2) === TRUE) {
+		if ($mysqli->query($sql2) === TRUE) {
 			echo $clicks;
 		} else {
-			echo "Error updating record: " . $conn->error;
+			echo "Error updating record: " . $mysqli->error;
 		}
 		header("location: " . $row["link1"]);
 	}
@@ -40,9 +38,9 @@ while($row = $result->fetch_assoc()) {
 
 
 
-$conn->close();
+$mysqli->close();
 
-if(isset($link) === FALSE){
+if(isset($linkUrl) === FALSE){
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 header("location: ./medlimir/welcome.php");

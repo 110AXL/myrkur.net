@@ -10,7 +10,7 @@ if (!empty($_GET["genre"])) {
 	}
 
 
-$result = $conn->query($sql);
+$result = $mysqli->query($sql);
 echo "<div class='grid-container grid-container--fill'>";
 
 
@@ -23,6 +23,6 @@ if ($result->num_rows > 0) {
 		}
 	}
 
-$conn->close();
+$mysqli->close();
 echo "</div>";
 ?>

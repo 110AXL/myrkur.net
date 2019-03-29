@@ -24,12 +24,12 @@ if(isset($_SERVER['HTTP_REFERER'])) {
 
  
 // prepare and bind
-$stmt = $conn->prepare("INSERT INTO log (ip, hostname, port, user_agent, protocol, referer, site) VALUES (?, ?, ?, ?, ?, ?, ?)");
+$stmt = $mysqli->prepare("INSERT INTO log (ip, hostname, port, user_agent, protocol, referer, site) VALUES (?, ?, ?, ?, ?, ?, ?)");
 $stmt->bind_param("ssissss", $ip, $hostname, $port, $agent, $protocol, $ref, $site);
 
 $stmt->execute();
 $stmt->close();
-$conn->close();
+$mysqli->close();
 
 
 /* --- Old log file ---

@@ -4,8 +4,7 @@
 	<script src='https://www.google.com/recaptcha/api.js?render=6Le4LHsUAAAAAKwatXhyWMwqgwcoIG88JbmAXLas'></script>
     <meta charset="UTF-8">
     <title>Add an album</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="../res/default.css">
+  	<link rel="stylesheet" type="text/css" href="../res/default.css">
 		<style type="text/css">
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
@@ -22,7 +21,7 @@ if(!isset($_SESSION['username'])){
 include '../res/ipgrabber.php';
 include '../res/sqlcon.php';
 include '../res/logo.php';
-echo "<p>" . $_POST['genre'] . "<br/>";
+echo "<p>Uploading file..</p><p>Genre: " . $_POST['genre'] . "</p>";
 // Include config file
 require_once "../res/config.php";
 
@@ -72,28 +71,25 @@ function resize_imagegif($file, $w, $h) {
 /* remove https replace with http on link1 */
 if (strpos($link1, 'https') !== false) {
 		$link1 = substr_replace($link1,NULL,4,1);
-	 	echo "https replaced with http on link 1.<br/>";
+	 	echo "<p>https replaced with http on link 1.</p>";
 	}
 else if(strpos($link1, 'http://') === false) {
     $link1 = substr_replace($link1,"http://",0,0);
-	 	echo "http added to link 1.<br/>";
+	 	echo "<p>http added to link 1.</p>";
 }
 
 /* remove https replace with http on link2 */
 if (strpos($link2, 'https') !== false) {
      $link2 = substr_replace($link2,NULL,4,1);
-	 echo "https replaced with http on link 2.<br/>";
+	 echo "<p>https replaced with http on link 2.</p>";
 	}
 	else if(strpos($link2, 'http://') === false && $link2 != NULL) {
      $link2 = substr_replace($link2,"http://",0,0);
-	 echo "http added to link 2.<br/>";
+	 echo "<p>http added to link 2.</p>";
 }
 
 /* Connect to MySQL server */
-$mysqli = new mysqli("localhost", "u445255185_zc4r", "AXL110axl", "u445255185_sweet");
-if ($mysqli->connect_errno) {
-	echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-}
+include('../hidden/sqlcon.php');
 
 
 /* Prepared statement, stage 1: prepare */

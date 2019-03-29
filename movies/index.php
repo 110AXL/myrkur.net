@@ -17,7 +17,7 @@ include './res/header.php';
 
 $sql = "SELECT movies.name, movies.year, movies.link, movies.img, users.username FROM movies LEFT JOIN users ON movies.user_id = users.id ORDER BY movies.id DESC";
 
-$result = $conn->query($sql);
+$result = $mysqli->query($sql);
 
 
 if ($result->num_rows > 0) {
@@ -33,7 +33,7 @@ if ($result->num_rows > 0) {
 			echo "<a target=_blank title='" . $row["name"]. " - " . $row["year"]. " [" . $row["username"] . "]' href='" . $row["link"]."'><img width=200 height=200 src=/movies/" . $removed_spaces . " /></a>";
     }
 }
-$conn->close();
+$mysqli->close();
 ?>
 </body>
 </html>

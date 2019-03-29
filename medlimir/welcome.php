@@ -35,7 +35,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     include '../res/sqlcon.php';
 
 $sql = "SELECT username, email, twitch FROM users ORDER BY twitch, username ASC";
-$result = $conn->query($sql);
+$result = $mysqli->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
@@ -49,7 +49,7 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
-$conn->close();?>
+$mysqli->close();?>
   </div>
 </div>
 </body>
