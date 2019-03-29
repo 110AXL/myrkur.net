@@ -193,7 +193,6 @@ if(!empty($_POST['img_url']))
 			echo "</pre>";
     }
 	}
-}
 
 else if(empty($_POST['img_url']) && !empty($_FILES['fileToUpload']['name']))
 {
