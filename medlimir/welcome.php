@@ -41,7 +41,7 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
         echo "<div class='col-sm'> <a href=/medlimir/?nafn=" .
-     $row["username"]. ">" . $row["username"] . "</a> <a href=mailto:" . $row["email"] . ">" . $row["email"] . "</a>";
+     $row["username"]. "><h2>" . $row["username"] . "</h2></a> <a href=mailto:" . $row["email"] . "><h3>" . $row["email"] . "</h3></a>";
      if(!empty($row["twitch"]))
        echo " <a href=" . $row["twitch"] . "<img src='../res/Twitch_White_RGB.png' /></a>";
      echo"</div>";
