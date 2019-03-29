@@ -5,7 +5,7 @@ body {
   background-position: center;
 }
 
-img.icon {
+.icon img {
     width:50px; /* you can use % */
     height: auto;
 }
