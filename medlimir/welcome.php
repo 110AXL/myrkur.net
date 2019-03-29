@@ -32,7 +32,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <?php
 require_once 'res/sqlcon.php';
 
-$sql = "SELECT username, email, twitter, twitch FROM users ORDER BY -twitch, -twitter, username DESC";
+$sql = "SELECT username, email, twitter, twitch FROM users ORDER BY -twitch, -twitter DESC";
 $result = $mysqli->query($sql);
 
 if ($result->num_rows > 0) {
