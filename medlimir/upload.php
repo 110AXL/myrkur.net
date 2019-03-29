@@ -21,7 +21,7 @@ if(!isset($_SESSION['username'])){
 
 include 'res/ip.php';
 echo "<center>";
-include 'res/logo.php';
+include 'res/logo.html';
 echo "</center>";
 echo "<p>Uploading file..</p><p>Genre: " . $_POST['genre'] . "</p>";
 
@@ -88,21 +88,7 @@ if (strpos($link2, 'https') !== false) {
 	 echo "<p>http added to link 2.</p>";
 }
 
-try {
-
-if (! @include_once( 'res/sqlcon.php' )) // @ - to suppress warnings,
-// you can also use error_reporting function for the same purpose which may be a better option
-  throw new Exception ('res/sqlcon.php does not exist');
-// or
-if (!file_exists('res/sqlcon.php' ))
-  throw new Exception ('res/sqlcon.php does not exist');
-else
-  require_once('res/sqlcon.php' );
-}
-catch(Exception $e) {
-  echo "Message : " . $e->getMessage();
-  echo "Code : " . $e->getCode();
-}
+include_once('res/sqlcon.php');
 
 /* Prepared statement, stage 1: prepare */
 if (!($stmt = $mysqli->prepare("INSERT INTO albums(artist, album, year, genre, link1, link2, img, user_id) VALUES (?,?,?,?,?,?,?,?)"))) {
