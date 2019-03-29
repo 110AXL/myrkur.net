@@ -18,9 +18,9 @@ session_start();
 if(!isset($_SESSION['username'])){
    header("Location:index.php");
 }
-include '../ipgrabber.php';
-include '../sqlcon.php';
-include '../logo.php';
+include '../main/ipgrabber.php';
+include '../main/sqlcon.php';
+include '../main/logo.php';
 echo "<p>" . $_POST['genre'] . "<br/>";
 // Include config file
 require_once "config.php";
