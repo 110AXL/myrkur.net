@@ -8,7 +8,7 @@ $password =escapeshellcmd($password);
 $hostname =escapeshellcmd($hostname);
 $database =escapeshellcmd($database);
 $backupFile=’/home/u445255185/domains/myrkur.net/public_html/bak/’.date(“Y-m-d-H-i-s”).$database.’.sql’;
-$command = “mysqldump -u$username -p$password -h$hostname $database > $backupFile”;
+$command = “mysqldump -u".$username."-p".$password."-h".$hostname $database > $backupFile”;
 system($command, $result);
 echo $result;
 ?>
