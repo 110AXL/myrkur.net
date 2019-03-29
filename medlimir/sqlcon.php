@@ -3,7 +3,7 @@ $mysqli = new mysqli("localhost", "u445255185_zc4r", "Dim&mur%Dalur", "u44525518
 if ($mysqli->connect_errno) {
 	echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 } else {
-	$sqlcon = "mysqli tengt gagnagrunni.";
+	$sqlcon = "mysqli tengt gagnagrunni.<br/>";
 	echo $sqlcon;
 }
 
@@ -11,7 +11,7 @@ $mysqli2 = new mysqli("localhost", "u445255185_zc4r", "Dim&mur%Dalur", "u4452551
 if ($mysqli->connect_errno) {
 	echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 } else {
-	$sqlcon = "mysqli2 tengt gagnagrunni.";
+	$sqlcon = "mysqli2 tengt gagnagrunni.<br/>";
 	echo $sqlcon;
 }
 

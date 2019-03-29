@@ -131,10 +131,10 @@ if(isset($_POST['twitter']))
     $twitterOk = 0;
 }
 if($twitterOk = 1){
-    $stmt2 = $mysqli->prepare("UPDATE users SET twitter=? WHERE id=?");
+    $stmt2 = $mysqli2->prepare("UPDATE users SET twitter=? WHERE id=?");
   /* BK: always check whether the prepare() succeeded */
   if ($stmt2 === false) {
-    trigger_error($mysqli->error, E_USER_ERROR);
+    trigger_error($mysqli2->error, E_USER_ERROR);
     return;
   }
   /*$id = 1;*/
