@@ -19,7 +19,7 @@
   if(!isset($_SESSION['username'])){
      header("Location:index.php");
   }
-  require_once 'res/sqlcon.php';
+  require_once 'sqlcon.php';
   include 'res/ip.php';
   echo "<center>";
   include 'res/logo.php';
@@ -63,7 +63,7 @@
 $twitter = $param_twitter = $twitch = $param_twitch = "";
 
 $username = $_SESSION['username'];
-$userId = $_SESSION['id'];
+$id = $_SESSION['id'];
 
 /* Check if POST contains twitch url */
 if(!empty($_POST['twitch']))
@@ -135,7 +135,7 @@ if($twitterOk = 1){
     trigger_error($this->mysqli->error, E_USER_ERROR);
     return;
   }
-  $id = 1;
+  /*$id = 1;*/
   /* Bind our params */
   /* BK: variables must be bound in the same order as the params in your SQL.
    * Some people prefer PDO because it supports named parameter. */
