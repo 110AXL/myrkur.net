@@ -8,7 +8,7 @@
     body{ font: 14px sans-serif; }
     .wrapper{ width: 350px; padding: 20px; }
   </style>
-<?php    include('res/facebookPixelCode.php'); ?>
+<?php    include('/home/u445255185/domains/myrkur.net/public_html/medlimir/res/facebookPixelCode.php'); ?>
 </head>
 <body>
   <p>
