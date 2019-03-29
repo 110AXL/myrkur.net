@@ -34,14 +34,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	<?php
     include '../res/sqlcon.php';
 
-$sql = "SELECT username, twitch FROM users";
+$sql = "SELECT username, email, twitch FROM users";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
         echo "<div class='col-sm'> <a href=/medlimir/?nafn=" .
-     $row["username"]. ">" . $row["username"] . "</a>";
+     $row["username"]. ">" . $row["username"] . "</a> <a href=mailto:" . $row["email"] . ">" . $row["email"] . "</a>";
      if(!empty($row["twitch"]))
        echo " <a href=" . $row["twitch"] . "<img src='../res/Twitch_White_RGB.png' /></a>";
      echo"</div>";
