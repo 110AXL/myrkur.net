@@ -2,7 +2,7 @@
 // Initialize the session
 session_start();
 // get sql config
-require_once 'res/sqlcon.php';
+require_once 'sqlcon.php';
  // Before using $_POST['value']
 if (isset($_GET['nafn']))
 {
@@ -20,7 +20,7 @@ if(isset($nafn) === FALSE){
 		/* ---- START VARIABLE ---- */
 
 		$sql = "SELECT * FROM users WHERE username='" . $nafn . "'";
-		$result = mysqli_query($conn, $sql);
+		$result = mysqli_query($mysqli, $sql);
 
 		if (mysqli_num_rows($result) > 0) {
 			// output data of each row
