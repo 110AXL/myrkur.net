@@ -48,7 +48,7 @@ if ($result->num_rows > 0) {
       </tr>
     </thead>";
     while($row = $result->fetch_assoc()) {
-        echo "<tr style='font-family: Courier New, Courier, Monospace;'><td><a href=/medlimir/?nafn=" . $row["username"]. ">" . $row["username"] . "</a>";
+        echo "<tr style=font-family: Courier New, Courier, Monospace;><td><a href=/medlimir/?nafn=" . $row["username"]. ">" . $row["username"] . "</a>";
         echo "<td><a href=mailto:" . $row["email"] . ">" . $row["email"] . "</a></td>";
         echo "<td>";
      if(!empty($row["twitter"]))
