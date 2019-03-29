@@ -78,12 +78,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         mysqli_stmt_close($stmt);
     }
     // Twitter handle
-    if(substr(trim($_POST["twitter"]), 1) != "@"){
+    if(substr(trim($_POST["twitter"]), 0, 1) != "@"){
         $twitter_err = "Twitter handle must start with @";
     } else{
         $twitter = trim($_POST["twitter"]);
     }
-    echo substr(trim($_POST["twitter"]), 1);
+    echo substr(trim($_POST["twitter"]), 0, 1);
 
     // Twitch channel
     if(!empty(trim($_POST["twitch"]))){
@@ -160,7 +160,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <body>
     <div class="wrapper">
         <h2>Sign Up</h2>
-        <p>Please fill this form to create an account. You will be redirected to Login upon completion.</p>
+        <p>Please fill this form to create an account.</br> You will be redirected to Login upon completion.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
@@ -174,13 +174,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="help-block"><?php echo $email_err; ?></span>
             </div>
             <div class="form-group <?php echo (!empty($twitter_err)) ? 'has-error' : ''; ?>">
-                <label>Twitter handle</label>
-                <input type="text" name="twitter" class="form-control" value="<?php echo $twitter; ?>">
+                <label>Twitter handle (With @)</label>
+                <input type="text" name="twitter" placeholder="enter your twitter @username here" class="form-control" value="<?php echo $twitter; ?>">
                 <span class="help-block"><?php echo $twitter_err; ?></span>
             </div>
             <div class="form-group <?php echo (!empty($twitch_err)) ? 'has-error' : ''; ?>">
                 <label>Twitch handle</label>
-                <input type="text" name="twitch" class="form-control" value="<?php echo $twitch; ?>">
+                <input type="text" name="twitch" placeholder="enter your twitch username here" class="form-control" value="<?php echo $twitch; ?>">
                 <span class="help-block"><?php echo $twitch_err; ?></span>
             </div>
             <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
