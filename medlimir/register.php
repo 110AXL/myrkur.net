@@ -79,7 +79,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     // Twitter handle
     if(empty(trim($_POST["twitter"]))){
-        $twitter_err = "You can link your Twitch channel here.";
+        $twitter_err = "You can link your Twitter handle here, if you have one.";
     } elseif(substr(trim($_POST["twitter"]), 1) != "@"){
         $password_err = "Twitter handle must start with @";
     } else{
@@ -88,7 +88,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // Twitch channel
     if(empty(trim($_POST["twitch"]))){
-        $twitch_err = "You can link your Twitch channel here.";
+        $twitch_err = "You can link your Twitch channel here, if you have one.";
     } else{
         $twitch = trim($_POST["password"]);
     }
@@ -177,12 +177,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             <div class="form-group <?php echo (!empty($twitter_err)) ? 'has-error' : ''; ?>">
                 <label>Twitter handle</label>
-                <input type="text" name="email" class="form-control" value="<?php echo $twitter; ?>">
+                <input type="text" name="twitter" class="form-control" value="<?php echo $twitter; ?>">
                 <span class="help-block"><?php echo $twitter_err; ?></span>
             </div>
             <div class="form-group <?php echo (!empty($twitch_err)) ? 'has-error' : ''; ?>">
                 <label>Twitch channel</label>
-                <input type="text" name="email" class="form-control" value="<?php echo $twitch; ?>">
+                <input type="text" name="twitch" class="form-control" value="<?php echo $twitch; ?>">
                 <span class="help-block"><?php echo $twitch_err; ?></span>
             </div>
             <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
