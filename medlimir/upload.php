@@ -177,13 +177,21 @@ if(!empty($_POST['img_url']))
 		}
 
 		/* Display: url uploaded */
-		echo "Resized image:<br/><img src='" . $resizedFilename ."'><br/>";
+		echo "Resized image: <br/><img src='" . $resizedFilename ."'><br/>";
 		echo "<h1>" . $artist . " - " . $album . "</h1><br/>";
-		echo "<pre>";
-		print_r($_FILES);
-		echo "</pre><pre>";
-		print_r($_POST);
-		echo "</pre>";
+		if($uploadOk == 1) {
+			echo "<pre>";
+			print_r($_FILES);
+			echo "</pre>";
+		} else if($urlOk == 1) {
+			echo "<pre>";
+			print_r(file_get_contents($_POST['img_url']));
+			echo "</pre>";
+		}
+			echo "<pre>";
+			print_r($_POST);
+			echo "</pre>";
+    }
 	}
 }
 
