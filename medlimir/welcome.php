@@ -34,7 +34,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	<?php
 require_once 'sqlcon.php';
 
-$sql = "SELECT username, email, twitch FROM users ORDER BY twitch, username ASC";
+$sql = "SELECT username, email, twitter, twitch FROM users ORDER BY twitch, twitter, username DESC";
 $result = $mysqli->query($sql);
 
 if ($result->num_rows > 0) {
@@ -42,10 +42,10 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo "<div class='col-sm'> <a href=/medlimir/?nafn=" . $row["username"]. "><h2>" . $row["username"] . "</h2></a> <a href=mailto:" . $row["email"] . "><h3>" . $row["email"] . "</h3></a>";
      if(!empty($row["twitter"]))
-       echo " <a href=http://twitter.com/" . $row["twitter"] . "<img src='res/Twitter_Logo_Blue.png' /> " . $row["twitter"] . "</a>";
+       echo "<h4><a href=http://twitter.com/" . $row["twitter"] . "><img src='../res/Twitter_Logo_Blue.png' /> " . $row["twitter"] . "</a></h4>";
      echo"</div>";
      if(!empty($row["twitch"]))
-       echo " <a href=http://twitch.tv/" . $row["twitch"] . "<img src='res/Twitch_White_RGB.png' />" . $row["twitch"] . "</a>";
+       echo "<h4><a href=http://twitch.tv/" . $row["twitch"] . "><img src='../res/Twitch_White_RGB.png' />" . $row["twitch"] . "</a></h4>";
      echo"</div>";
     }
 } else {
