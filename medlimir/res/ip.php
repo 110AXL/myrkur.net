@@ -1,6 +1,5 @@
 <?php
 //IP Grabber
-require_once 'medlimir/res/sqlcon.php';
 
 //Variables
 $ref = "";
