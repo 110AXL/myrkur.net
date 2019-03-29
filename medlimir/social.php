@@ -131,9 +131,9 @@ if(isset($_POST['twitter']))
     $twitterOk = 0;
 }
 if($twitterOk = 1){
-    $stmt = $mysqli->prepare("UPDATE users SET twitter=? WHERE id=?");
+    $stmt2 = $mysqli->prepare("UPDATE users SET twitter=? WHERE id=?");
   /* BK: always check whether the prepare() succeeded */
-  if ($stmt === false) {
+  if ($stmt2 === false) {
     trigger_error($mysqli->error, E_USER_ERROR);
     return;
   }
@@ -141,7 +141,7 @@ if($twitterOk = 1){
   /* Bind our params */
   /* BK: variables must be bound in the same order as the params in your SQL.
    * Some people prefer PDO because it supports named parameter. */
-  $stmt->bind_param('si', $twitter, $id);
+  $stmt2->bind_param('si', $twitter, $id);
 
   /* Set our params */
   /* BK: No need to use escaping when using parameters, in fact, you must not,
@@ -150,12 +150,12 @@ if($twitterOk = 1){
 
 
   /* Execute the prepared Statement */
-  $status = $stmt->execute();
+  $status2 = $stmt2->execute();
   /* BK: always check whether the execute() succeeded */
-  if ($status === false) {
-    trigger_error($stmt->error, E_USER_ERROR);
+  if ($status2 === false) {
+    trigger_error($stmt2->error, E_USER_ERROR);
   }
-  printf("%d Row inserted.\n", $stmt->affected_rows);
+  printf("%d Row inserted.\n", $stmt2->affected_rows);
 }
 
 ?>
