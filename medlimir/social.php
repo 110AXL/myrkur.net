@@ -108,7 +108,7 @@ if($twitchOk == 1){
   if ($status === false) {
     trigger_error($stmt->error, E_USER_ERROR);
   }
-  printf("%d Row inserted.\n", $stmt->affected_rows);
+  printf("stmt %d Row inserted.\n", $stmt->affected_rows);
 }
 
 /* Check if POST contains twitter url */
@@ -155,7 +155,7 @@ if($twitterOk = 1){
   if ($status2 === false) {
     trigger_error($stmt2->error, E_USER_ERROR);
   }
-  printf("%d Row inserted.\n", $stmt2->affected_rows);
+  printf("stmt2 %d Row inserted.\n", $stmt2->affected_rows);
 }
 
 ?>
