@@ -34,7 +34,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	<?php
     include '../res/sqlcon.php';
 
-$sql = "SELECT username, email, twitch FROM users";
+$sql = "SELECT username, email, twitch FROM users ORDER BY twitch, username ASC";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
