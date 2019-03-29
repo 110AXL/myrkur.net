@@ -21,12 +21,17 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <?php include('res/facebookPixelCode.php'); ?>
 </head>
 <body>
-    <div id="page-header">
-        <h1>Hy, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Velkominn á innri vef myrkur.net</h1><br/><h2><a href="addalbum.php">Add album</a><br/><a href="/movies/addmovie.php">Add movie</h2></a>
-    </div>
-    <div id="buttons">
-        <p style='float: left;'><a href="/reset-password.php">Endurstilla lykilorð (reset password)</a></p>
-        <p style='float: right;'><a href="/logout.php">Útskráning (log out)</a></p>
+  <div id="buttons">
+    <p style='float: left; color: #e1e114;
+        padding: 20px;
+        margin: 10px;'><a href="/reset-password.php">Endurstilla lykilorð (reset password)</a></p>
+    <p style='float: right;color: #89a203;
+        padding: 20px;
+        margin: 10px;'><a href="/logout.php">Útskráning (log out)</a></p>
+  </div>
+    <div>
+        <p style="font-family: 'Times New Roman', Times, serif;"><h1>Hy, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Velkominn á innri vef myrkur.net</h1></p>
+        <p style="font-family: 'Verdana', Verdana, sans-serif;"><h2><a href="addalbum.php">Add album</a><br/><a href="/movies/addmovie.php">Add movie</h2></a></p>
     </div>
   <?php
 require_once 'res/sqlcon.php';
@@ -47,7 +52,7 @@ if ($result->num_rows > 0) {
       </tr>
     </thead>";
     while($row = $result->fetch_assoc()) {
-        echo "<tr><td><a href=/medlimir/?nafn=" . $row["username"]. ">" . $row["username"] . "</a>";
+        echo "<tr style="font-family: 'Courier New', Courier, Monospace;"><td><a href=/medlimir/?nafn=" . $row["username"]. ">" . $row["username"] . "</a>";
         echo "<td><a href=mailto:" . $row["email"] . ">" . $row["email"] . "</a></td>";
         echo "<td>";
      if(!empty($row["twitter"]))
