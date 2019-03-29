@@ -88,7 +88,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // Twitch channel
     if(empty(trim($_POST["twitch"]))){
-        $twitch_err = "You can link your Twitch channel here, if you have one.";
+        $twitch_err = "You can link your Twitch handle here, if you have one.";
     } else{
         $twitch = trim($_POST["twitch"]);
     }
@@ -181,7 +181,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="help-block"><?php echo $twitter_err; ?></span>
             </div>
             <div class="form-group <?php echo (!empty($twitch_err)) ? 'has-error' : ''; ?>">
-                <label>Twitch channel</label>
+                <label>Twitch handle</label>
                 <input type="text" name="twitch" class="form-control" value="<?php echo $twitch; ?>">
                 <span class="help-block"><?php echo $twitch_err; ?></span>
             </div>
