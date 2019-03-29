@@ -1,6 +1,5 @@
 <?php
 //IP Grabber
-include('sqlcon.php');
 
 //Variables
 $ref = "";

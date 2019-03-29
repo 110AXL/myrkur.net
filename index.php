@@ -13,10 +13,10 @@
 <body bgcolor="black">
  <?php
 session_start();
-include 'medlimir/res/ip.php';
-include 'main/header.php';
-include 'medlimir/res/logo.php';
 require_once 'main/sqlcon.php';
+include 'medlimir/res/ip.php';
+include 'main/header.html';
+include 'medlimir/res/logo.html';
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);

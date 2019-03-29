@@ -1,6 +1,7 @@
 <div class="header">
 	<div class="add"><a href='https://www.myrkur.net/medlimir/addalbum.php'>
 		<button class="addbtn"><img class="left_centered" src="https://www.myrkur.net/main/add.png" width="9" height="9"/>&nbsp;&nbsp;&nbsp;Add</button></a>
+		 <?php echo $sqlcon; ?>
 		</div>
 		<div class="genre">
 	  <button class="genrebtn"><img class="right_centered" src="https://www.myrkur.net/main/down.png" width="9" height="9"/>&nbsp;&nbsp;&nbsp;Genre</button>
