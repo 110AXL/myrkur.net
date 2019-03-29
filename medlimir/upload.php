@@ -3,13 +3,13 @@
 <head>
 	<script src='https://www.google.com/recaptcha/api.js?render=6Le4LHsUAAAAAKwatXhyWMwqgwcoIG88JbmAXLas'></script>
     <meta charset="UTF-8">
-    <title>Add an album</title>
+    <title>Bæta við tónlist</title>
   	<link rel="stylesheet" type="text/css" href="res/default.css">
 		<style type="text/css">
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
     </style>
-	<?php include('.res/facebookPixelCode.php'); ?>
+	<?php include('res/facebookPixelCode.php'); ?>
 </head>
 <body>
 
