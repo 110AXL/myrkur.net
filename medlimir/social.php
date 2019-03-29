@@ -22,7 +22,7 @@
   require_once 'sqlcon.php';
   include 'res/ip.php';
   echo "<center>";
-  include 'res/logo.php';
+  include 'res/logo.html';
   echo "</center>";
   $year = date("Y");
   ?>
@@ -36,11 +36,11 @@
   		          <form action="social.php" method="post" enctype="multipart/form-data">
 
   		<label id="first">Twitch handle:</label><br/>
-  		<input type="text" name="artist" placeholder="<?php echo $param_twitch ?>" id="twitch"><br/>
+  		<input type="text" name="artist" placeholder="<?php /*echo $param_twitch*/ ?>" id="twitch"><br/>
   	</div>
   	<div class="form-group" >
   		<label id="first">Twitter handle (With @):</label><br/>
-  		<input type="text" name="album" placeholder="<?php echo $param_twitter ?>" id="twitter"><br/>
+  		<input type="text" name="album" placeholder="<?php /*echo $param_twitter*/ ?>" id="twitter"><br/>
   	</div>
   				<input type="submit" value="submit" name="submit">
       </form>
@@ -84,10 +84,10 @@ if(!isset($_POST['twitch']))
     $twitchOk = 0;
 }
 if($twitchOk = 1){
-    $stmt = $this->mysqli->prepare("UPDATE users SET twitch=? WHERE id=?");
+    $stmt = $mysqli->prepare("UPDATE users SET twitch=? WHERE id=?");
   /* BK: always check whether the prepare() succeeded */
   if ($stmt === false) {
-    trigger_error($this->mysqli->error, E_USER_ERROR);
+    trigger_error($mysqli->error, E_USER_ERROR);
     return;
   }
   $id = 1;
