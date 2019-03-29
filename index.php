@@ -5,7 +5,7 @@
 
 <html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href="res/default.css">
+<link rel="stylesheet" type="text/css" href="medlimir/res/default.css">
 
 <?php include('medlimir/res/facebookPixelCode.php'); ?>
 <link rel="shortcut icon" type="image/png" href="main/favicon-16x16.png"/>
@@ -13,7 +13,7 @@
 <body bgcolor="black">
  <?php
 session_start();
-require_once 'medlimir/res/sqlcon.php';
+require_once 'main/sqlcon.php';
 include 'medlimir/res/ip.php';
 include 'main/header.php';
 include 'medlimir/res/logo.php';
