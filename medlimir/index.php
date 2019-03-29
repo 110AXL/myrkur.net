@@ -2,7 +2,7 @@
 // Initialize the session
 session_start();
 // get sql config
-require_once 'sqlcon.php';
+require_once 'res/sqlcon.php';
  // Before using $_POST['value']
 if (isset($_GET['nafn']))
 {

@@ -32,7 +32,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	<h2>Registered users:
   <div class="row">
 	<?php
-require_once 'sqlcon.php';
+require_once 'res/sqlcon.php';
 
 $sql = "SELECT username, email, twitter, twitch FROM users ORDER BY twitch, twitter, username DESC";
 $result = $mysqli->query($sql);
@@ -45,7 +45,7 @@ if ($result->num_rows > 0) {
        echo "<h4><a href=http://twitter.com/" . $row["twitter"] . "><img src='Twitter_Logo_Blue.png' /> " . $row["twitter"] . "</a></h4>";
      echo"</div>";
      if(!empty($row["twitch"]))
-       echo "<h4><a href=http://twitch.tv/" . $row["twitch"] . "><img src='Twitch_White_RGB.png' />" . $row["twitch"] . "</a></h4>";
+       echo "<h4><a href=http://twitch.tv/" . $row["twitch"] . "><img src='Twitch_Purple_RGB.png' width="200" height="100" />" . $row["twitch"] . "</a></h4>";
      echo"</div>";
     }
 } else {
