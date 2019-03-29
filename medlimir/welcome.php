@@ -49,13 +49,14 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo "<tr><td><a href=/medlimir/?nafn=" . $row["username"]. ">" . $row["username"] . "</a>";
         echo "<td><a href=mailto:" . $row["email"] . ">" . $row["email"] . "</a></td>";
+        echo "<td>";
      if(!empty($row["twitter"]))
-       echo "<td><a href=http://twitter.com/" . $row["twitter"] . "><img src='res/Twitter_Logo_Blue.png' style='width:21px;height:21px;' /></a>";
+       echo "<a href=http://twitter.com/" . $row["twitter"] . "><img src='res/Twitter_Logo_Blue.png' style='width:21px;height:21px;' /></a>";
      if(!empty($row["twitch"])){
        echo " ";
-       echo "<a href=http://twitch.tv/" . $row["twitch"] . "><img src='res/Glitch_Purple_RGB.png' style='width:21px;height:21px;' /></a></td>";
+       echo "<a href=http://twitch.tv/" . $row["twitch"] . "><img src='res/Glitch_Purple_RGB.png' style='width:21px;height:21px;' /></a>";
      }
-     echo "<tr></div>";
+     echo "</td><tr></div>";
     }
 } else {
     echo "0 results";
