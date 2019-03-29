@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 // Define variables and initialize with empty values
 $twitter = $param_twitter = $twitch = $param_twitch = "";
 $twitchOk = 0;
