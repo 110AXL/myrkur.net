@@ -32,7 +32,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <?php
 require_once 'res/sqlcon.php';
 
-$sql = "SELECT username, email, twitter, twitch FROM users ORDER BY -twitch, -twitter DESC";
+$sql = "SELECT username, email, twitter, twitch FROM users ORDER BY twitch, twitter DESC";
 $result = $mysqli->query($sql);
 
 if ($result->num_rows > 0) {
@@ -51,9 +51,9 @@ if ($result->num_rows > 0) {
         echo "<tr><td style='font-family: Lucida Console;'><a href=/medlimir/?nafn=" . $row["username"]. ">" . $row["username"] . "</a>";
         echo "<td style='font-family: Courier New, Courier, Monospace;'><a href=mailto:" . $row["email"] . ">" . $row["email"] . "</a></td>";
         echo "<td>";
-     if(!empty($row["twitter"]))
+     if(!empty($row["twitch"]))
        echo "<a href=http://twitch.tv/" . $row["twitch"] . "><img src='res/Glitch_Purple_RGB.png' style='width:21px;height:21px;' /></a>";
-     if(!empty($row["twitch"])){
+     if(!empty($row["twitter"])){
        echo " ";
        echo "<a href=http://twitter.com/" . $row["twitter"] . "><img src='res/Twitter_Logo_Blue.png' style='width:21px;height:21px;' /></a>";
      }
