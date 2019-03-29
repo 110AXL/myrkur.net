@@ -8,7 +8,7 @@
 session_start();
 
 // Include config file
-require_once '../hidden/sqlcon.php';
+require_once './medlimir/sqlcon.php';
 
 $year = $linkUrl = $name = $user_id = "";
 

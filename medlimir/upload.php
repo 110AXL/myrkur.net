@@ -95,7 +95,7 @@ if (! @include_once( 'sqlcon.php' )) // @ - to suppress warnings,
   throw new Exception ('sqlcon.php does not exist');
 // or
 if (!file_exists('sqlcon.php' ))
-  throw new Exception ('./hidden/sqlcon.php does not exist');
+  throw new Exception ('sqlcon.php does not exist');
 else
   require_once('sqlcon.php' );
 }

@@ -10,8 +10,8 @@
 </head>
 <body bgcolor="black">
  <?php
+require_once './medlimir/sqlcon.php';
 include './res/ip.php';
-include './hidden/sqlcon.php';
 include './res/header.php';
 
 

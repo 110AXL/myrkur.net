@@ -32,7 +32,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	<h2>Registered users:
   <div class="row">
 	<?php
-    include './hidden/sqlcon.php';
+require_once 'sqlcon.php';
 
 $sql = "SELECT username, email, twitch FROM users ORDER BY twitch, username ASC";
 $result = $mysqli->query($sql);
