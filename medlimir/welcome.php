@@ -34,19 +34,19 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <?php
 require_once 'res/sqlcon.php';
 
-$sql = "SELECT username, email, twitter, twitch FROM users ORDER BY twitch DESC, twitter DESC, username ASC";
+$sql = "SELECT username, email, twitter, twitch, psn, discord, youtube FROM users ORDER BY twitch DESC, twitter DESC, username ASC";
 $result = $mysqli->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
   echo "<div class='w3-container'>
-    <h2>Skráðir notendur:</h2>
+    <h2>Current members:</h2>
   <table class='w3-table-all w3-hoverable'>
     <thead>
       <tr class='w3-light-grey'>
         <th>Username</th>
         <th>Email</th>
-        <th>Twitter & Twitch</th>
+        <th>Connections</th>
       </tr>
     </thead>";
     while($row = $result->fetch_assoc()) {
@@ -56,6 +56,10 @@ if ($result->num_rows > 0) {
      if(!empty($row["twitch"]))
        echo "<a href=http://twitch.tv/" . $row["twitch"] . "><img src='res/Glitch_Purple_RGB.png' style='width:21px;height:21px;' /></a>";
      if(!empty($row["twitter"])){
+       echo " ";
+       echo "<a href=http://twitter.com/" . $row["twitter"] . "><img src='res/Twitter_Logo_Blue.png' style='width:21px;height:21px;' /></a>";
+     }
+     if(!empty($row["discord"])){
        echo " ";
        echo "<a href=http://twitter.com/" . $row["twitter"] . "><img src='res/Twitter_Logo_Blue.png' style='width:21px;height:21px;' /></a>";
      }
