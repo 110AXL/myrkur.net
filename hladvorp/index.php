@@ -22,14 +22,9 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 echo "<div id='P'>";
 
-if (!empty($_GET["genre"])) {
- echo "<h1>Genre: " . $_GET["genre"] . "</h1>";
- $genre = $_GET["genre"];
-   $sql = "SELECT albums.id, albums.artist, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id WHERE albums.genre ='". $genre ."' ORDER BY albums.id DESC";
- }
- else {
-   $sql = "SELECT albums.id, albums.artist, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.id DESC";
- }
+
+$sql = "SELECT albums.id, albums.artist, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.id DESC";
+
 
 
 $result = $mysqli->query($sql);

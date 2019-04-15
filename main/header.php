@@ -3,6 +3,7 @@
 		<button class="addbtn"><img class="left_centered" src="https://www.myrkur.net/main/add.png" width="9" height="9"/>&nbsp;&nbsp;&nbsp;Add</button></a>
 		 <?php echo $sqlcon; ?>
 		</div>
+		<div class="center">myrkur.net</div>
 		<div class="genre">
 	  <button class="genrebtn"><img class="right_centered" src="https://www.myrkur.net/main/down.png" width="9" height="9"/>&nbsp;&nbsp;&nbsp;Genre</button>
 	  <div class="genre-content">

@@ -37,11 +37,6 @@ body {
   margin-bottom: 2em;
 }
 
-
-.center {
-
-}
-
 #P {
 	padding-left: 1em;
 	padding-right: 1em;
@@ -278,4 +273,9 @@ IMG.right_centered {
     color: #e1e114;
     padding: 20px;
     margin: 10px;
+}
+
+.center {
+  padding: 70px 0;
+  text-align: center;
 }
