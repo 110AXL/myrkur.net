@@ -82,6 +82,7 @@ a:active {
 }
 
 .info:hover  {
+  cursor: pointer;
 	color: #666;
 }
 
