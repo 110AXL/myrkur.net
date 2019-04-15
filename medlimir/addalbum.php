@@ -48,15 +48,6 @@ $year = date("Y");
 		<label id="first">Year released:</label><br/>
 		<input type="number" name="year" id="year" min="1860" value="<?php echo $year; ?>" max="<?php echo $year; ?>"><br/>
 	</div>
-	<p><label>Genre</label>
-             <select name="genre" id="genre">
-               <option id="genre" value = "idk" selected>I don't know dude, I just
-I just drink blood dude</option>
-               <option id="genre" name="genre" value = "rock">Rock</option>
-               <option id="genre" name="genre" value = "pop">Pop</option>
-               <option id="genre" name="genre" value = "metal">Metal</option>
-               <option id="genre" name="genre" value = "hiphop">Hiphop</option>
-			 </select></p>
 	<div class="form-group" >
 		<label id="first">Link to the music:</label><br/>
 		<input type="text" name="link1" id="link1"><br/>

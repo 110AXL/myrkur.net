@@ -46,8 +46,26 @@ $(document).ready(function() {
     <div id='P'>
       <div class='grid-container grid-container--fill'>
       <?php
+        $args = explode('/', rtrim($_SERVER['QUERY_STRING'], '/'));
+        $method = array_shift($args);
 
-        $sql = "SELECT albums.id, albums.artist, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.id DESC";
+        switch($method) {
+            case 'users':
+                $user_id = $args[2];
+
+                $sql = "SELECT albums.id, albums.artist, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.id WHERE users.id = " . $user_id . " DESC";
+                break;
+
+            case 'artists':
+                $artist_name = $args[2];
+
+                $sql = "SELECT albums.id, albums.artist, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.id WHERE albums.artist = " . $artist_name . " DESC";
+                break;
+
+            default:
+                $sql = "SELECT albums.id, albums.artist, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.id DESC";
+        }
+
         $result = $mysqli->query($sql);
 
         if ($result->num_rows > 0) {

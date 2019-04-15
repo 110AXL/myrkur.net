@@ -1,11 +1,14 @@
 <ul>
-  <li><a href="#">Link 1</a></li>
+  <li><a href="http://www.myrkur.net">Home</a></li>
   <li>
-    <a href="#">Link 2</a>
+    <a href="#">Sort by:</a>
     <ul class="fallback">
-      <li><a href="#">Sub-Link 1</a></li>
-      <li><a href="#">Sub-Link 2</a></li>
-      <li><a href="#">Sub-Link 3</a></li>
+      <li><a href="#">Artist</a></li>
+      <li><a href="#">Album name</a></li>
+      <li><a href="#">Date added</a></li>
+      <li><a href="#">Date released</a></li>
+      <li><a href="#">Clicks</a></li>
+      <li><a href="#">Uploader</a></li>
     </ul>
   </li>
   <li>
