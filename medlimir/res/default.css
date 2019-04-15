@@ -296,10 +296,10 @@ header {
   align-items: center;
 }
 
-nav { /*
+nav {
   grid-area: nav;
   margin-left: 0.5rem;
-*/}
+}
 
 main {
   grid-area: content;
@@ -347,7 +347,7 @@ label {
 label, #content {
   color: #aaa;
   height: 20px;
-  width: 100%;
+  width: 190px;
   display: inline-block;
 }
 
