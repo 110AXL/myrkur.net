@@ -1,23 +1,23 @@
-<ul id="menu">
-  <li>Parent 1
-    <ul>
-      <li> <a href="#">item 3</a> </li>
-      <li> <a href="#">Parent 3</a>
-        <ul>
-          <li> <a href="#">item 8</a> </li>
-          <li> <a href="#">item 9</a> </li>
-          <li> <a href="#">item 10</a> </li>
-        </ul>
-      </li>
-      <li> <a href="#">item 4</a> </li>
+<ul>
+  <li><a href="#">Link 1</a></li>
+  <li>
+    <a href="#">Link 2</a>
+    <ul class="fallback">
+      <li><a href="#">Sub-Link 1</a></li>
+      <li><a href="#">Sub-Link 2</a></li>
+      <li><a href="#">Sub-Link 3</a></li>
     </ul>
   </li>
-  <li> <a href="#">item 1</a> </li>
-  <li>Parent 2
-    <ul>
-      <li> <a href="#">item 5</a> </li>
-      <li> <a href="#">item 6</a> </li>
-      <li> <a href="#">item 7</a> </li>
+  <li>
+    <a href="#">Link 3</a>
+    <ul class="fallback">
+      <li><a href="#">Sub-Link 1</a></li>
+      <li><a href="#">Sub-Link 2</a></li>
+      <li><a href="#">Sub-Link 3</a></li>
+      <li><a href="#">Sub-Link 4</a></li>
     </ul>
   </li>
+  <li><a href="#">Link 4</a></li>
+  <li><a href="#">Link 5</a></li>
+  <li><a href="#">Link 6</a></li>
 </ul>

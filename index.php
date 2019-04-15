@@ -5,22 +5,24 @@
 
 <html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href="../medlimir/res/default.css">
-<script src="jquery-3.3.1.min.js"></script>
-<link rel="stylesheet" href="main/nav/cookcodesmenu.css">
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
-        crossorigin="anonymous"></script>
-<script src="main/nav/jquery.cookcodesmenu.js"></script>
-<script>
-  $(function() {
-    $('#menu').cookcodesmenu();
-  });
-</script>
+<link rel="stylesheet" type="text/css" href="medlimir/res/default.css">
+<link href="main/nav/lazeemenu.css" rel="stylesheet">
 <?php
   include('medlimir/res/facebookPixelCode.php');
 ?>
 <link rel="shortcut icon" type="image/png" href="main/favicon-16x16.png"/>
+<script src="jquery-3.3.1.min.js">
+$(document).ready(function() {
+  $('nav li ul').hide().removeClass('fallback');
+    $('nav li').hover(
+      function () {
+        $('ul', this).stop().slideDown(100);
+      },
+      function () {
+        $('ul', this).stop().slideUp(100);
+      }
+    );
+});</script>
 </head>
 <body bgcolor="black">
 <?php
