@@ -66,15 +66,13 @@ $(document).ready(function() {
         <ul id="sortBy" class="subMenu">
           <?php if($loggedIn == 0){
           echo "<li><a href=http://members.myrkur.net>Login</a></li>";
-          echo "<li><a href="?album">Register</a></li>";
-          }
-          <li><a href="?released">Profile</a></li>
-          <li><a href="?added">Add album</a></li>
+          echo "<li><a href=http://members.myrkur.net/register.php/>Register</a></li>";
+        } else if($loggedIn = 1){
+          echo "<li><a href=http://members.myrkur.net/welcome.php>Profile</a></li>";
+          echo "<li><a href=http://members.myrkur.net/addalbum.php>Add album</a></li>";
+        }
         </ul>
       </input>
-    <li>
-      <a href="http://members.myrkur.net">Members</a>
-   </li>
    </ul>
   </nav>
 
