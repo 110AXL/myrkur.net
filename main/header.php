@@ -1,4 +1,3 @@
-<div class="grid">
 	<div class="header">
 		<aside class="sidebar-left">
 			<div class="add"><a href='https://www.myrkur.net/medlimir/addalbum.php'>
@@ -34,4 +33,3 @@
 			</div>
 		</aside>
 	</div>
-</div>
