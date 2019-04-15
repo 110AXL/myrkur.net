@@ -203,6 +203,7 @@ label, #menu {
 
 .subMenu{
   margin-left: 70px;
+  width: auto;
 }
 
 ul {

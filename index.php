@@ -44,7 +44,7 @@ $(document).ready(function() {
      <li id="menu">
       <label for="sortBy-toggle">Sort by:</label>
        <input type="checkbox" id="sortBy-toggle">
-         <ul id="sortBy" class="fallback">
+         <ul id="sortBy" class="subMenu">
            <li><a href="?artist">Artist</a></li>
            <li><a href="?album">Album name</a></li>
            <li><a href="?added">Date added</a></li>
