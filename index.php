@@ -54,7 +54,7 @@ $(document).ready(function() {
        </ul>
      </li>
      <li>
-       <div id='content'>Below content<div/>
+       Below content
     </li>
    </ul>
   </nav>
