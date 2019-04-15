@@ -78,7 +78,10 @@ $(document).ready(function() {
          while($row = $result->fetch_assoc()) {
            $resized_link = $row["img"];
            $removed_spaces = str_replace(" ","%20",$resized_link);
-           echo "<div class='grid-element'><a target=_blank title='" . $row["artist"]. " - " . $row["album"]. " [" . $row["username"] . "]' href=main/link.php?i='" . $row["id"]."'><img width=200 height=200 src=medlimir/uploads/" . $removed_spaces . " /><div class='title'><p>" . $row["artist"] . " - " . $row["album"] . "</a></div></p><p>" . $row["year"] . " [" . $row["user"] . "] (" $row["clicks"] . ")</div>";
+           echo "<div class='grid-element'><a target=_blank title='" . $row["artist"]. " - " . $row["album"]. " [" . $row["username"] . "]' href=main/link.php?i='" . $row["id"]."'>";
+           echo "<img width=200 height=200 src=medlimir/uploads/" . $removed_spaces . " />";
+           echo "<div class='title'><p>" . $row["artist"] . " - " . $row["album"] . "</a></p></div>";
+           echo "<p>" . $row["year"] . " [" . $row["user"] . "] (" $row["clicks"] . ")</div>";
            }
          }
 
