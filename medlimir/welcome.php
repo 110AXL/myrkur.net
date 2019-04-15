@@ -22,16 +22,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </head>
 <body>
   <div id="buttons">
-    <p style='float: left; color: #e1e114; padding: 20px; margin: 10px;'><a href="/reset-password.php">Endurstilla lykilorð<br/>(reset password)</a></p>
-    <p style='float: right;color: #89a203; padding: 20px; margin: 10px;'><a href="/logout.php">Útskráning<br/>(log out)</a></p>
+    <p style='float: left; color: #e1e114; padding: 20px; margin: 10px;'><a href="/reset-password.php">Reset password</a></p>
+    <p style='float: right;color: #89a203; padding: 20px; margin: 10px;'><a href="/logout.php">Log out</a></p>
   </div>
   <?php include 'res/logo.html'; ?>
     <div>
-        <p style='font-family: Times New Roman, Times, serif;'><h1>Velkominn <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b> á innri vefinn.</h1></p>
-        <p style='font-family: Verdana, Verdana, sans-serif;'><h2><a href="addalbum.php">Bæta við tónlist</a><br/>
-        <a href="/movies/addmovie.php">Bæta við glápi</h2></a><br/>
-        <a href="/social.php">Tengja Twitch eða Twitter við reikning</h2></a><br/>
-      </p>
+        <p style='font-family: Times New Roman, Times, serif;'><h1>Welcome <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b> to the club</h1></p>
+        <p style='font-family: Verdana, Verdana, sans-serif;'><h2><a href="addalbum.php">Add album</a><br/></p>
+        <p><a href="/social.php">Update connections</h2></a></p>
     </div>
   <?php
 require_once 'res/sqlcon.php';
