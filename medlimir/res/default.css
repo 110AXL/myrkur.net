@@ -177,12 +177,14 @@ label {
 }
 
 label, #menu {
+  text-align: left;
   font-family: "Arial Narrow", Arial, sans-serif;
   height: 20px;
   width: inherit;
   display: inline-block;
 }
 #sortBy-toggle {
+  width: auto;
   display: none;
 }
 #sortBy {
@@ -197,6 +199,10 @@ label, #menu {
   width: inherit;
   margin-left: 70px;
   max-height: 300px;
+}
+
+.subMenu{
+  margin-left: 70px;
 }
 
 ul {
