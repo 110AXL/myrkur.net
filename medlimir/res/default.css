@@ -373,5 +373,5 @@ nav ul li:hover ul.fallback {display:block;}
   -webkit-transition: all 0.3s ease;
 }
 #menu-toggle:checked + #sortBy {
-  max-height: auto;
+  max-height: 500px;
 }
