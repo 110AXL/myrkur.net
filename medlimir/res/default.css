@@ -177,10 +177,9 @@ label {
 }
 
 label, #menu {
-  text-align: right;
   font-family: "Arial Narrow", Arial, sans-serif;
   height: 20px;
-  margin:15px 25px;
+  width: inherit;
   display: inline-block;
 }
 #sortBy-toggle {
