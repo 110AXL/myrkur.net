@@ -16,10 +16,10 @@ $(document).ready(function() {
   $('nav li ul').hide().removeClass('fallback');
     $('nav li').hover(
       function () {
-        $('ul', this).stop().slideDown(666);
+        $('ul', this).stop().slideDown(1111);
       },
       function () {
-        $('ul', this).stop().slideUp(666);
+        $('ul', this).stop().slideUp(1111);
       }
     );
 });</script>
