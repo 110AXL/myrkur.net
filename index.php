@@ -22,7 +22,7 @@ error_reporting(E_ALL);
 <div class="container">
   <header>
     asdf
-    <?php include 'medlimir/logo.html';?>
+    <?php include 'medlimir/res/logo.html';?>
   </header>
 
   <nav>
