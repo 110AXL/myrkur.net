@@ -1,4 +1,12 @@
-<!-- Example -->
+<?php
+// Initialize the session
+session_start();
+
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    $loggedIn = 0;
+}
+?>
 <!DOCTYPE html>
 
 
@@ -40,7 +48,6 @@ $(document).ready(function() {
 
   <nav>
    <ul>
-     <li><a href="http://members.myrkur.net">Members</a></li>
      <li>
       <label for="sortBy-toggle">Sort by:</label>
        <input type="checkbox" id="sortBy-toggle">
@@ -54,9 +61,20 @@ $(document).ready(function() {
          </ul>
        </input>
      </li>
-     <li>
-       <a href="http://members.myrkur.net">Membsers</a>
-    </li>
+     <label for="sortBy-toggle">Membership:</label>
+      <input type="checkbox" id="sortBy-toggle">
+        <ul id="sortBy" class="subMenu">
+          <?php if($loggedIn == 0){
+          echo "<li><a href=http://members.myrkur.net>Login</a></li>";
+          echo "<li><a href="?album">Register</a></li>";
+          }
+          <li><a href="?released">Profile</a></li>
+          <li><a href="?added">Add album</a></li>
+        </ul>
+      </input>
+    <li>
+      <a href="http://members.myrkur.net">Members</a>
+   </li>
    </ul>
   </nav>
 

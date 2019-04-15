@@ -79,15 +79,35 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         mysqli_stmt_close($stmt);
     }
     // Twitter handle
-    if(substr(trim($_POST["twitter"]), 0, 1) != "@"){
-        $twitter_err = "Twitter handle must start with @";
+    if(substr(trim($_POST["twitter"]), 0, 1) == "@"){
+        $twitter_err = "Twitter handle must not start with @";
     } else{
         $twitter = trim($_POST["twitter"]);
     }
 
     // Twitch channel
     if(!empty(trim($_POST["twitch"]))){
-      $twitch = trim($_POST["twitch"]);
+        $twitch = trim($_POST["twitch"]);
+    }
+
+    // Discord username
+    if(!empty(trim($_POST["discord"]))){
+        $discord = trim($_POST["discord"]);
+    }
+
+    // Playstation Network username
+    if(!empty(trim($_POST["psn"]))){
+        $psn = trim($_POST["psn"]);
+    }
+
+    // Youtube channel
+    if(substr(trim($_POST["youtube"]), 0, 8) == "https://"){
+        $youtube = trim($_POST["youtube"]);
+    } else if (substr(trim($_POST["youtube"]), 0, 7) == "http://")
+      {
+        $youtube = trim($_POST["youtube"]);
+    } else {
+        $youtube_err = "Youtube link must start with http:// or https://";
     }
 
     // Validate password
@@ -113,11 +133,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err)&& empty($email_err)&& empty($twitter_err)){
 
         // Prepare an insert statement
-        $sql = "INSERT INTO users (username, password, email, twitter, twitch) VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO users (username, password, email, twitter, twitch, discord, psn, youtube) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
         if($stmt = mysqli_prepare($mysqli, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sssss", $param_username, $param_password, $param_email, $param_twitter, $param_twitch);
+            mysqli_stmt_bind_param($stmt, "ssssssss", $param_username, $param_password, $param_email, $param_twitter, $param_twitch, $param_discord, $param_psn, $param_youtube);
 
             // Set parameters
             $param_username = $username;
@@ -125,10 +145,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $param_email = $email;
             $param_twitch = $twitch;
             $param_twitter = $twitter;
+            $param_discord = $discord;
+            $param_psn = $psn;
+            $param_youtube = $youtube;
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Redirect to login page
-                echo "<h1>Registration complete.</h1><h2>Redirecting in 5 seconds..</h2>";
+                echo "<h1>Registration complete.</h1><h2>Redirecting you in 5 seconds..</h2>";
 
                 $sql = "SELECT id, username FROM users WHERE username = ?";
 
@@ -192,11 +215,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <body>
     <div class="wrapper">
         <h2>Sign Up</h2>
-        <p>Please fill this form to create an account.</br> You will be redirected to Login upon completion.</p>
+        <p>Please fill out this form to create an account.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                <label>Username</label>
+                <label>Pick a Username for myrkur.net</label>
                 <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
                 <span class="help-block"><?php echo $username_err; ?></span>
             </div>
@@ -206,14 +228,29 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="help-block"><?php echo $email_err; ?></span>
             </div>
             <div class="form-group <?php echo (!empty($twitter_err)) ? 'has-error' : ''; ?>">
-                <label>Twitter handle (With @)</label>
-                <input type="text" name="twitter" placeholder="enter your twitter @username here" class="form-control" value="<?php echo $twitter; ?>">
+                <label>Twitter username (Without @)</label>
+                <input type="text" name="twitter" placeholder="enter your twitter username here" class="form-control" value="<?php echo $twitter; ?>">
                 <span class="help-block"><?php echo $twitter_err; ?></span>
             </div>
             <div class="form-group <?php echo (!empty($twitch_err)) ? 'has-error' : ''; ?>">
-                <label>Twitch handle</label>
+                <label>Twitch username</label>
                 <input type="text" name="twitch" placeholder="enter your twitch username here" class="form-control" value="<?php echo $twitch; ?>">
                 <span class="help-block"><?php echo $twitch_err; ?></span>
+            </div>
+            <div class="form-group <?php echo (!empty($discord_err)) ? 'has-error' : ''; ?>">
+                <label>Discord username</label>
+                <input type="text" name="discord" placeholder="enter your discord username here" class="form-control" value="<?php echo $discord; ?>">
+                <span class="help-block"><?php echo $discord_err; ?></span>
+            </div>
+            <div class="form-group <?php echo (!empty($psn_err)) ? 'has-error' : ''; ?>">
+                <label>Playstation Network username</label>
+                <input type="text" name="psn" placeholder="enter your playstation network username here" class="form-control" value="<?php echo $psn; ?>">
+                <span class="help-block"><?php echo $psn_err; ?></span>
+            </div>
+            <div class="form-group <?php echo (!empty($youtube_err)) ? 'has-error' : ''; ?>">
+                <label>Youtube channel link</label>
+                <input type="text" name="youtube" placeholder="enter your youtube channel link here (with http//)" class="form-control" value="<?php echo $youtube; ?>">
+                <span class="help-block"><?php echo $youtube_err; ?></span>
             </div>
             <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
                 <label>Password</label>

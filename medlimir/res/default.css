@@ -200,8 +200,8 @@ label, #menu {
   -webkit-transition: all 0.3s ease;
 }
 #sortBy-toggle:checked + #sortBy {
-  width: inherit;
   max-height: 300px;
+  margin-left: 52px;
 }
 
 .subMenu{
@@ -211,6 +211,7 @@ label, #menu {
 
 ul {
   list-style-type: none;
+  text-align: left;
 }
 
 li {
