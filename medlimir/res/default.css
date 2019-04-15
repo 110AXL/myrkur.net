@@ -204,9 +204,21 @@ label, #menu {
   margin-left: 52px;
 }
 
-.subMenu{
-  margin-left: 70px;
+#membership-toggle {
   width: auto;
+  display: none;
+}
+#membership {
+  text-align: left;
+  overflow: hidden;
+  max-height: 0;
+  padding: 0;
+  margin: 0 auto;
+  -webkit-transition: all 0.3s ease;
+}
+#membership-toggle:checked + #membership {
+  max-height: 300px;
+  margin-left: 52px;
 }
 
 ul {

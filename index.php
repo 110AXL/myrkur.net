@@ -34,7 +34,6 @@ $(document).ready(function() {
 </head>
 <body bgcolor="black">
 <?php
-  session_start();
   include 'medlimir/res/ip.php';
   require_once 'main/sqlcon.php';
   ini_set('display_errors', 1);
@@ -51,7 +50,7 @@ $(document).ready(function() {
      <li>
       <label for="sortBy-toggle">Sort by:</label>
        <input type="checkbox" id="sortBy-toggle">
-         <ul id="sortBy" class="subMenu">
+         <ul id="sortBy">
            <li><a href="?artist">Artist</a></li>
            <li><a href="?album">Album name</a></li>
            <li><a href="?added">Date added</a></li>
@@ -61,9 +60,9 @@ $(document).ready(function() {
          </ul>
        </input>
      </li>
-     <label for="sortBy-toggle">Membership:</label>
-      <input type="checkbox" id="sortBy-toggle">
-        <ul id="sortBy" class="subMenu">
+     <label for="membership-toggle">Membership:</label>
+      <input type="checkbox" id="membership-toggle">
+        <ul id="membership">
           <?php if($loggedIn == 0){
           echo "<li><a href=http://members.myrkur.net>Login</a></li>";
           echo "<li><a href=http://members.myrkur.net/register.php/>Register</a></li>";
