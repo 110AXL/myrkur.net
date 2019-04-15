@@ -6,8 +6,10 @@
 <html lang="en">
 <head>
 <link rel="stylesheet" type="text/css" href="../medlimir/res/default.css">
-
-<?php include('medlimir/res/facebookPixelCode.php'); ?>
+<?php
+  include('main/jQueryNavBar.html');
+  include('medlimir/res/facebookPixelCode.php');
+?>
 <link rel="shortcut icon" type="image/png" href="main/favicon-16x16.png"/>
 </head>
 <body bgcolor="black">
