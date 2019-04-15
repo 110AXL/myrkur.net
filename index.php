@@ -52,8 +52,8 @@ $(document).ready(function() {
          <li><a href="?clicks">Clicks</a></li>
          <li><a href="?user">User</a></li>
        </ul>
-       <div id='content'>Below content<div/>
      </li>
+    <div id='content'>Below content<div/>
    </ul>
   </nav>
 
