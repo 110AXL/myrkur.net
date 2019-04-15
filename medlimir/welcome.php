@@ -59,13 +59,17 @@ if ($result->num_rows > 0) {
        echo " ";
        echo "<a href=http://twitter.com/" . $row["twitter"] . "><img src='res/Twitter_Logo_Blue.png' style='width:21px;height:21px;' /></a>";
      }
-     if(!empty($row["discord"])){
-       echo " ";
-       echo "<img src='res/Discord-Logo-Color.png' style='width:21px;height:21px;' />" . $row["discord"] . " ";
-     }
      if(!empty($row["youtube"])){
        echo " ";
-       echo "<a href=" . $row["youtube"] . "><img src='res\youtube_social_icon_red.png' style='width:21px;height:21px;' /></a>";
+       echo "<a href=" . $row["youtube"] . "><img src='res\youtube_social_square_red.png' style='width:21px;height:21px;' /></a>";
+     }
+     if(!empty($row["discord"])){
+       echo " ";
+       echo "<img src='res/Discord-Logo-Color.png' style='width:21px;height:21px;' />:" . $row["discord"] . " ";
+     }
+     if(!empty($row["psn"])){
+       echo " ";
+       echo "><img src='res\playstation-logo.png' style='width:21px;height:21px;' />:" . $row["psn"];
      }
      echo "</td><tr></div>";
     }
