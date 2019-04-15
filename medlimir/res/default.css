@@ -305,10 +305,10 @@ header {
   align-items: center;
 }
 
-nav { /*
+nav { 
   grid-area: nav;
   margin-left: 0.5rem;
-*/}
+}
 
 main {
   grid-area: content;
@@ -361,7 +361,6 @@ nav ul li ul.fallback {display:none;}
 nav ul li:hover ul.fallback {display:block;}
 
 label {
-  color: #999;
   background-color: #111;
   cursor: pointer;
 }
@@ -386,5 +385,5 @@ label, #content {
   -webkit-transition: all 0.3s ease;
 }
 #menu-toggle:checked + #menu {
-  max-height: auto;
+  max-height: 300px;
 }
