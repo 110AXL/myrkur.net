@@ -176,14 +176,11 @@ label {
   cursor: pointer;
 }
 
-#menu {
-  background-color: #111;
-}
-
 label, #menu {
+  background-color: #111;
   height: 20px;
   width: 200px;
-  margin-botton: 10px;
+  padding:15px 25px;
   display: inline-block;
 }
 #sortBy-toggle {
