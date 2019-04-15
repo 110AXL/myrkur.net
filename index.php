@@ -52,7 +52,6 @@ $(document).ready(function() {
        <input type="checkbox" id="sortBy-toggle">
          <ul id="sortBy">
            <li><a href="?artist">Artist</a></li>
-           <li><a href="?album">Album name</a></li>
            <li><a href="?added">Date added</a></li>
            <li><a href="?released">Date released</a></li>
            <li><a href="?clicks">Clicks</a></li>
@@ -96,9 +95,6 @@ $(document).ready(function() {
             case 'clicks':
                 $sql = "SELECT albums.id, albums.clicks, albums.artist, albums.year, albums.created_at, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.clicks DESC";
                 break;
-            case 'album':
-                $sql = "SELECT albums.id, albums.clicks, albums.artist, albums.year, albums.created_at, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.album DESC";
-                break;
 
             default:
                 $sql = "SELECT albums.id, albums.clicks, albums.artist, albums.year, albums.created_at, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.id DESC";
@@ -114,7 +110,7 @@ $(document).ready(function() {
            echo "<div class='grid-element'><a target=_blank title='" . $row["artist"]. " - " . $row["album"]. " [" . $row["username"] . "]' href=main/link.php?i='" . $row["id"]."'>";
            echo "<img width=200 height=200 src=medlimir/uploads/" . $removed_spaces . " />";
            echo "<div class='title'><p>" . $row["artist"] . " - " . $row["album"] . "</a></p></div>";
-           echo "<p>" . $row["year"] . " [" . $row["username"] . "] (" . $row["clicks"] . ")</div>";
+           echo "<p class='info'>" . $row["year"] . " [" . $row["username"] . "] (" . $row["clicks"] . ")</p></div>";
            }
          }
 

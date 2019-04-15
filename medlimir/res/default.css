@@ -75,6 +75,16 @@ a:active {
 	color: #222;
 }
 
+.info {
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	margin: 4px;
+	color: #333;
+}
+
+.info:hover  {
+	color: #666;
+}
+
 .grid-element:hover {
     z-index: 50;
     background-image: linear-gradient(to right, #000 0%, #222 100%);
