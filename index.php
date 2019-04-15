@@ -12,21 +12,20 @@
 </head>
 <body bgcolor="black">
 <?php
-session_start();
-include 'medlimir/res/ip.php';
-require_once 'main/sqlcon.php';
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-?>
+  session_start();
+  include 'medlimir/res/ip.php';
+  require_once 'main/sqlcon.php';
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);
+  error_reporting(E_ALL);
+  ?>
 <div class="container">
   <header>
-    asdf
     <?php include 'medlimir/res/logo.html';?>
   </header>
 
   <nav>
-    <!-- Navigation -->
+    <?php include 'main/nav.php'?>
   </nav>
 
   <main>
