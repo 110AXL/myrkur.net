@@ -194,6 +194,8 @@ label, #menu {
   -webkit-transition: all 0.3s ease;
 }
 #sortBy-toggle:checked + #sortBy {
+  width: inherit;
+  margin-left: 70px;
   max-height: 300px;
 }
 
