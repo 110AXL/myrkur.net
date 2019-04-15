@@ -40,11 +40,11 @@ $(document).ready(function() {
 
   <nav>
    <ul>
-     <li><a href="http://members.myrkur.net">Members</a></li>
+     <li id="menu"><a href="http://members.myrkur.net">Members</a></li>
      <li>
-      <label for="menu-toggle">Sort by:</label>
-       <input type="checkbox" id="menu-toggle">
-         <ul id="menu" class="fallback">
+      <label for="sortBy-toggle">Sort by:</label>
+       <input type="checkbox" id="sortBy-toggle">
+         <ul id="sortBy" class="fallback">
            <li><a href="?artist">Artist</a></li>
            <li><a href="?album">Album name</a></li>
            <li><a href="?added">Date added</a></li>
@@ -54,7 +54,7 @@ $(document).ready(function() {
          </ul>
        </input>
      </li>
-     <li id="content">
+     <li id="menu">
        <a href="http://members.myrkur.net">Membsers</a>
     </li>
    </ul>

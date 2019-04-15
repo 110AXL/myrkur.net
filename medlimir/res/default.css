@@ -160,35 +160,37 @@ footer {
     margin: 0;
   }
 }
-/* --- ^ Holy Grail Grid ^ --- */
+/* --- ^ End of Holy Grail Grid ^ --- */
 
 body {
   text-align: center;
   font-family: Geneva, Arial, Helvetica, sans-serif;
-  color: #fff;
+  color: #999;
 }
+
 a {
-  color: #fff;
+  color: #999;
 }
+
 label {
-  background-color: #11cccc;
   cursor: pointer;
 }
-#content {
-  background-color: #9acd32;
+
+#menu {
+  background-color: #111;
 }
-label, #content {
+
+label, #menu {
   height: 20px;
   width: 200px;
   margin-botton: 10px;
-  border: 1px solid #fff;
   display: inline-block;
 }
-#menu-toggle {
+#sortBy-toggle {
   display: none;
 }
-#menu {
-  background-color: #ffa500;
+#sortBy {
+  background-color: #111;
   width: 200px;
   overflow: hidden;
   max-height: 0;
@@ -196,6 +198,10 @@ label, #content {
   margin: 0 auto;
   -webkit-transition: all 0.3s ease;
 }
-#menu-toggle:checked + #menu {
+#sortBy-toggle:checked + #sortBy {
   max-height: 300px;
+}
+
+ul {
+  list-style-type: none;
 }
