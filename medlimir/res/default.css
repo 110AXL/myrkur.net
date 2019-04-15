@@ -347,7 +347,7 @@ footer {
 }
 /* --- ^ Holy Grail Grid ^ --- */
 
- --- Nav bar a la https://ultimatecourses.com/blog/html5-and-jquery-super-simple-drop-down-nav
+/* --- Nav bar a la https://ultimatecourses.com/blog/html5-and-jquery-super-simple-drop-down-nav */
 nav {background:#000;float:left;}
 nav ul {text-align:center;}
 nav ul li {float:left;display:inline;}
