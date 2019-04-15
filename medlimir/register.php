@@ -4,9 +4,9 @@ session_start();
 require_once "sqlcon.php";
 
 // Define variables and initialize with empty values
-$username = $email = $password = $confirm_password  = $twitter = $twitch = "";
+$username = $email = $password = $confirm_password  = $twitter = $twitch = $discord = $youtube = $psn = "";
 
-$username_err = $password_err = $confirm_password_err = $email_err = $twitter_err = $twitch_err = "";
+$username_err = $password_err = $confirm_password_err = $email_err = $twitter_err = $twitch_err = $youtube_err = "";
 
 
 // Processing form data when form is submitted
@@ -91,7 +91,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Discord username
-    if(!empty(trim($_POST["discord"]))){
+    if(substr(trim($_POST["discord"]), -5, 1) == "#"){
+        $discord_err = "Your Discord username should look something like this: username#0000";
+    } else{
         $discord = trim($_POST["discord"]);
     }
 
@@ -223,7 +225,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="help-block"><?php echo $username_err; ?></span>
             </div>
 				    <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
-                <label>Email</label>
+                <label>Email address</label>
                 <input type="text" name="email" class="form-control" value="<?php echo $email; ?>">
                 <span class="help-block"><?php echo $email_err; ?></span>
             </div>

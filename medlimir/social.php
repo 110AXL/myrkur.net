@@ -30,8 +30,8 @@
   </head>
   <body>
       <div class="wrapper">
-          <h2>Tengja reikning</h2>
-          <p>Hér getur þú tengt Twitch og Twitter við reikninginn þinn.</p>
+          <h2>Update connections</h2>
+          <p>Here you can update your connections.</p>
   		    <div class="form-group" >
 
   		      <form action="socialupdate.php" method="post" enctype="multipart/form-data">
@@ -40,6 +40,17 @@
 				  		<input type="text" name="twitch" id="twitch"><br/>
 				  		<label id="twitter">Twitter handle (Without @):</label><br/>
 				  		<input type="text" name="twitter" id="twitter"><br/>
+							<label id="discord">Discord handle (username#0000):</label><br/>
+							<input type="text" name="discord" id="discord"><br/>
+							<label id="youtube">Youtube channel (with http:// or https://):</label><br/>
+							<input type="text" name="youtube" id="youtube"><br/>
+							<label id="discord">Playstation Network username:</label><br/>
+							<input type="text" name="psn" id="psn"><br/>
+							<label id="email">Email address:</label><br/>
+							<input type="text" name="email" id="email"><br/>
+
+								<label id="password">Please enter your password to continue.</label>
+								<input type='password' name='password' id="password">
 
 	  					<input type="submit" value="submit" name="submit">
       			</form>
