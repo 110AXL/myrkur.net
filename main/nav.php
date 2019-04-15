@@ -1,8 +1,9 @@
 <ul>
   <li><a href="http://members.myrkur.net">Members</a></li>
   <li>
+    <input type="checkbox" id="menu-toggle"/>
     <a href="#">Sort by:</a>
-    <ul class="fallback">
+    <ul id="sortBy" class="fallback">
       <li><a href="?artist">Artist</a></li>
       <li><a href="?album">Album name</a></li>
       <li><a href="?added">Date added</a></li>
