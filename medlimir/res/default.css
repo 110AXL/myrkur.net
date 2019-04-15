@@ -347,6 +347,33 @@ footer {
 }
 /* --- ^ Holy Grail Grid ^ --- */
 
+label {
+  cursor: pointer;
+}
+#content {
+  background-color: #333;
+}
+label, #content {
+  color: #aaa;
+  height: 20px;
+  width: auto;
+  margin-bottom: 10px;
+  display: block;
+}
+
+#menu-toggle {
+  display: none;
+}
+#menu {
+  overflow: hidden;
+  max-height: 0;
+  padding: 0;
+  margin: 0 auto;
+  -webkit-transition: all 0.3s ease;
+}
+#menu-toggle:checked + #menu {
+  max-height: 300px;
+}
 
 /* --- Nav bar a la https://ultimatecourses.com/blog/html5-and-jquery-super-simple-drop-down-nav */
 nav {background:#000;float:left;}
