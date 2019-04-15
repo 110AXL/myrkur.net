@@ -46,27 +46,29 @@ $(document).ready(function() {
     <div id='P'>
       <div class='grid-container grid-container--fill'>
       <?php
-        $args = explode('/', rtrim($_SERVER['QUERY_STRING'], '/'));
-        $method = array_shift($args);
 
-        switch($method) {
-            case 'users':
-                $user_id = (string)$args[1];
-                echo $user_id . "-*-*";
-
-
-                $sql = "SELECT albums.id, albums.artist, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.id WHERE user.id='{$user_id}' DESC";
+        switch($_SERVER['QUERY_STRING']) {
+            case 'user':
+                $sql = "SELECT albums.id, albums.clicks, albums.artist, albums.year, albums.created_at, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY user.id";
                 break;
-
-            case 'artists':
-                $artist_name = $args[1];
-                echo $artist_name;
-
-                $sql = "SELECT albums.id, albums.artist, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.id WHERE albums.artist = " . $artist_name . " DESC";
+            case 'artist':
+                $sql = "SELECT albums.id, albums.clicks, albums.artist, albums.year, albums.created_at, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.artist";
+                break;
+            case 'added':
+                $sql = "SELECT albums.id, albums.clicks, albums.artist, albums.year, albums.created_at, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.created_at";
+                break;
+            case 'released':
+                $sql = "SELECT albums.id, albums.clicks, albums.artist, albums.year, albums.created_at, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.year";
+                break;
+            case 'clicks':
+                $sql = "SELECT albums.id, albums.clicks, albums.artist, albums.year, albums.created_at, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.clicks";
+                break;
+            case 'album':
+                $sql = "SELECT albums.id, albums.clicks, albums.artist, albums.year, albums.created_at, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.album";
                 break;
 
             default:
-                $sql = "SELECT albums.id, albums.artist, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.id DESC";
+                $sql = "SELECT albums.id, albums.artist, albums.year, albums.created_at, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.id DESC";
         }
 
         $result = $mysqli->query($sql);

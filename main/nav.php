@@ -3,12 +3,12 @@
   <li>
     <a href="#">Sort by:</a>
     <ul class="fallback">
-      <li><a href="#">Artist</a></li>
+      <li><a href="?artist">Artist</a></li>
       <li><a href="#">Album name</a></li>
       <li><a href="#">Date added</a></li>
       <li><a href="#">Date released</a></li>
       <li><a href="#">Clicks</a></li>
-      <li><a href="#">Uploader</a></li>
+      <li><a href="#">User</a></li>
     </ul>
   </li>
   <li>
