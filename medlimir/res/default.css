@@ -305,10 +305,10 @@ header {
   align-items: center;
 }
 
-nav { 
+nav { /*
   grid-area: nav;
   margin-left: 0.5rem;
-}
+*/}
 
 main {
   grid-area: content;
