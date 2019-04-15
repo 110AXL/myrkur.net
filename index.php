@@ -54,7 +54,7 @@ $(document).ready(function() {
          </ul>
        </input>
      </li>
-     <li>
+     <li id="content">
        <a href="http://members.myrkur.net">Membsers</a>
     </li>
    </ul>
