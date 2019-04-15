@@ -53,7 +53,9 @@ $(document).ready(function() {
          <li><a href="?user">User</a></li>
        </ul>
      </li>
-    <div id='content'>Below content<div/>
+     <li>
+       <div id='content'>Below content<div/>
+    </li>
    </ul>
   </nav>
 
