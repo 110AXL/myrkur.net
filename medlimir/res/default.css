@@ -360,6 +360,21 @@ nav ul li ul li:hover a {background:#999;}
 nav ul li ul.fallback {display:none;}
 nav ul li:hover ul.fallback {display:block;}
 
+label {
+  background-color: #111;
+  cursor: pointer;
+}
+#content {
+  background-color: #333;
+}
+label, #content {
+  height: 20px;
+  width: auto;
+  margin-botton: 10px;
+  border: 1px solid #fff;
+  display: inline-block;
+}
+
 #menu-toggle {
   display: none;
 }
