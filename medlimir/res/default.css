@@ -192,7 +192,7 @@ label, #menu {
   overflow: hidden;
   max-height: 0;
   padding: 0;
-  margin: 20px auto;
+  margin: 0 auto;
   -webkit-transition: all 0.3s ease;
 }
 #sortBy-toggle:checked + #sortBy {
@@ -201,4 +201,11 @@ label, #menu {
 
 ul {
   list-style-type: none;
+}
+
+li {
+  font-family: "Arial Narrow", Arial, sans-serif;
+  text-align: left;
+  margin-left: 20px;
+  position: relative;
 }
