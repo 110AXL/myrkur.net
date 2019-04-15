@@ -361,6 +361,7 @@ nav ul li ul.fallback {display:none;}
 nav ul li:hover ul.fallback {display:block;}
 
 label {
+  color: #999;
   background-color: #111;
   cursor: pointer;
 }
@@ -370,8 +371,7 @@ label {
 label, #content {
   height: 20px;
   width: auto;
-  margin-botton: 10px;
-  border: 1px solid #fff;
+  margin-bottom: 10px;
   display: inline-block;
 }
 
@@ -386,5 +386,5 @@ label, #content {
   -webkit-transition: all 0.3s ease;
 }
 #menu-toggle:checked + #menu {
-  max-height: 100px;
+  max-height: auto;
 }
