@@ -349,7 +349,7 @@ label, #content {
   color: #aaa;
   height: 20px;
   width: 190px;
-  display: inline-block;
+  display: list-item;
 }
 
 #menu-toggle {
