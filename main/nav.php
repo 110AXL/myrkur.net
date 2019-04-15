@@ -1,8 +1,3 @@
-<script>
-$(function() {
-  $('#menu').cookcodesmenu();
-});
-</script>
 <ul id="menu">
   <li>Parent 1
     <ul>

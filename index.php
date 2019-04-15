@@ -12,7 +12,11 @@
         integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
         crossorigin="anonymous"></script>
 <script src="main/nav/jquery.cookcodesmenu.js"></script>
-
+<script>
+  $(function() {
+    $('#menu').cookcodesmenu();
+  });
+</script>
 <?php
   include('medlimir/res/facebookPixelCode.php');
 ?>
