@@ -34,8 +34,4 @@
 			</div>
 		</aside>
 	</div>
-
-  <footer>
-    Footer
-  </footer>
 </div>

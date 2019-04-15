@@ -299,6 +299,12 @@ header, footer {
 }
 
 /* Demo Specific Styles */
+body {
+  margin: 0 auto;
+  max-width: 56em;
+  padding: 1em 0;
+}
+
 
 .grid > * {
   display: flex;
