@@ -129,7 +129,22 @@ if (isset($pash))
 		/* Check if POST contains Youtube channel */
 		if(isset($_POST['youtube']))
 		{
-			$youtube = $_POST['youtube'];
+
+			if(substr(trim($_POST["youtube"]), 0, 23) == "https://www.youtube.com"){
+	        $youtube = trim($_POST["youtube"]);
+	    } else if (substr(trim($_POST["youtube"]), 0, 22) == "http://www.youtube.com")
+	      {
+	        $youtube = trim($_POST["youtube"]);
+	    } else if (substr(trim($_POST["youtube"]), 0, 19) == "https://youtube.com")
+	      {
+	        $youtube = trim($_POST["youtube"]);
+	    } else if (substr(trim($_POST["youtube"]), 0, 18) == "http://youtube.com")
+	      {
+	        $youtube = trim($_POST["youtube"]);
+	    } else {
+	        $youtube = "Error. Bad link.";
+	    }
+
 			echo "<p>Youtube channel set to: ". $youtube ."</p>";
 
 		  $stmt = $mysqli->prepare("UPDATE users SET youtube=? WHERE id=?");

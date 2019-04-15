@@ -61,7 +61,11 @@ if ($result->num_rows > 0) {
      }
      if(!empty($row["discord"])){
        echo " ";
-       echo "<a href=http://twitter.com/" . $row["twitter"] . "><img src='res/Twitter_Logo_Blue.png' style='width:21px;height:21px;' /></a>";
+       echo "<img src='res/Discord-Logo-Color.png' style='width:21px;height:21px;' />" . $row["discord"] . " ";
+     }
+     if(!empty($row["youtube"])){
+       echo " ";
+       echo "<a href=" . $row["youtube"] . "><img src='res\youtube_social_icon_red.png' style='width:21px;height:21px;' /></a>";
      }
      echo "</td><tr></div>";
     }

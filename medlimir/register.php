@@ -103,13 +103,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Youtube channel
-    if(substr(trim($_POST["youtube"]), 0, 8) == "https://"){
+    if(substr(trim($_POST["youtube"]), 0, 23) == "https://www.youtube.com"){
         $youtube = trim($_POST["youtube"]);
-    } else if (substr(trim($_POST["youtube"]), 0, 7) == "http://")
+    } else if (substr(trim($_POST["youtube"]), 0, 22) == "http://www.youtube.com")
+      {
+        $youtube = trim($_POST["youtube"]);
+    } else if (substr(trim($_POST["youtube"]), 0, 19) == "https://youtube.com")
+      {
+        $youtube = trim($_POST["youtube"]);
+    } else if (substr(trim($_POST["youtube"]), 0, 18) == "http://youtube.com")
       {
         $youtube = trim($_POST["youtube"]);
     } else {
-        $youtube_err = "Youtube link must start with http:// or https://";
+        $youtube_err = "Youtube link must start with http://www.youtube.com , https://www.youtube.com , http://youtube.com or https://youtube.com";
     }
 
     // Validate password
