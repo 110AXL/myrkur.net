@@ -1,49 +1,18 @@
-<ul class="nav">
-  <li>
-    <a href="#">
-      No dropdown
-    </a>
-  </li>
-  <li class="button-dropdown">
-    <a href="javascript:void(0)" class="dropdown-toggle">
-      Dropdown 1 <span>▼</span>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="#">
-          Drop Item 1
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          Drop Item 2
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          Drop Item 3
-        </a>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <a href="#">
-      No dropdown
-    </a>
-  </li>
-  <li class="button-dropdown">
-    <a href="javascript:void(0)" class="dropdown-toggle">
-      Dropdown 2 <span>▼</span>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="#">
-          asdf
-        </a>
-      </li>
-    </ul>
-  </li>
+<ul>
+    <li>Example 1</li>
+    <li class="open">Example 2
+        <ul>
+            <li>Sub Example 2.1</li>
+            <li>Sub Example 2.2</li>
+            <li>Sub Example 2.3</li>
+            <li>Sub Example 2.4</li>
+        </ul>
+    </li>
+    <li class="open2">Example 3
+        <ul>
+            <li>Sub Example 3.1</li>
+            <li>Sub Example 3.2</li>
+            <li>Sub Example 3.3</li>
+        </ul>
+    <li>
 </ul>
-
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>

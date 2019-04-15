@@ -6,8 +6,18 @@
 <html lang="en">
 <head>
 <link rel="stylesheet" type="text/css" href="../medlimir/res/default.css">
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+  var menu = $('li.open ul');
+  menu.css('display','none');
+  $('li:has(ul)').hover(function() {
+      $(this).find('ul').slideDown(400);
+    }, function() {
+      $(this).find('ul').slideUp(400);
+    })
+  $('li ul').hide();
+</script>
 <?php
-  include('main/jQueryNavBar.html');
   include('medlimir/res/facebookPixelCode.php');
 ?>
 <link rel="shortcut icon" type="image/png" href="main/favicon-16x16.png"/>
