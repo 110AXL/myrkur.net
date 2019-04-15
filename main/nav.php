@@ -1,4 +1,4 @@
-/* <ul>
+ <ul>
   <li><a href="http://members.myrkur.net">Members</a></li>
   <li>
     <input type="checkbox" id="menu-toggle"/>
@@ -12,7 +12,7 @@
       <li><a href="?user">User</a></li>
     </ul>
   </li>
-</ul> */
+</ul>
 
 <label for="menu-toggle">Toggle menu</label>
 <input type="checkbox" id="menu-toggle"/>
