@@ -188,13 +188,10 @@ label, #menu {
 }
 #sortBy {
   text-align: left;
-  width: 200px;
   overflow: hidden;
   max-height: 0;
   padding: 0;
   margin: 0 auto;
-  position: relative;
-  margin: 30px;
   -webkit-transition: all 0.3s ease;
 }
 #sortBy-toggle:checked + #sortBy {
