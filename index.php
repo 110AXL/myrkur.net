@@ -41,7 +41,7 @@ $(document).ready(function() {
   <nav>
    <ul>
      <li id="menu"><a href="http://members.myrkur.net">Members</a></li>
-     <li>
+     <li id="menu">
       <label for="sortBy-toggle">Sort by:</label>
        <input type="checkbox" id="sortBy-toggle">
          <ul id="sortBy" class="fallback">
