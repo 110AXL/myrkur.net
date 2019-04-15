@@ -259,6 +259,20 @@ IMG.right_centered {
 
 /* --- Holy Grail Grid start: --- */
 
+
+/* --- Nav bar a la https://ultimatecourses.com/blog/html5-and-jquery-super-simple-drop-down-nav */
+nav {background:#000;float:left;}
+nav ul {text-align:center;}
+nav ul li {float:left;display:inline;}
+nav ul li:hover {background:#111;}
+nav ul li a {display:block;padding:15px 25px;color:#333;}
+nav ul li ul {position:absolute;width:110px;background:#111;}
+nav ul li ul li {width:110px;}
+nav ul li ul li a {display:block;padding:15px 10px;color:#777;}
+nav ul li ul li:hover a {background:#999;}
+nav ul li ul.fallback {display:none;}
+nav ul li:hover ul.fallback {display:block;}
+
 .container {
   display: grid;
 
@@ -350,16 +364,3 @@ label, #content {
 #menu-toggle:checked + #menu {
   max-height: 300px;
 }
-
-/* --- Nav bar a la https://ultimatecourses.com/blog/html5-and-jquery-super-simple-drop-down-nav */
-nav {background:#000;float:left;}
-nav ul {text-align:center;}
-nav ul li {float:left;display:inline;}
-nav ul li:hover {background:#111;}
-nav ul li a {display:block;padding:15px 25px;color:#333;}
-nav ul li ul {position:absolute;width:110px;background:#111;}
-nav ul li ul li {width:110px;}
-nav ul li ul li a {display:block;padding:15px 10px;color:#777;}
-nav ul li ul li:hover a {background:#999;}
-nav ul li ul.fallback {display:none;}
-nav ul li:hover ul.fallback {display:block;}
