@@ -347,7 +347,7 @@ footer {
 }
 /* --- ^ Holy Grail Grid ^ --- */
 
-/* --- Nav bar a la https://ultimatecourses.com/blog/html5-and-jquery-super-simple-drop-down-nav
+ --- Nav bar a la https://ultimatecourses.com/blog/html5-and-jquery-super-simple-drop-down-nav
 nav {background:#000;float:left;}
 nav ul {text-align:center;}
 nav ul li {float:left;display:inline;}
@@ -358,36 +358,12 @@ nav ul li ul li {width:110px;}
 nav ul li ul li a {display:block;padding:15px 10px;color:#777;}
 nav ul li ul li:hover a {background:#999;}
 nav ul li ul.fallback {display:none;}
-nav ul li:hover ul.fallback {display:block;} */
-body {
-  background-color: #fa8072;
-  text-align: center;
-  font-family: Geneva, Arial, Helvetica, sans-serif;
-  color: #fff;
-}
-a {
-  color: #fff;
-}
-label {
-  background-color: #11cccc;
-  cursor: pointer;
-}
-#content {
-  background-color: #9acd32;
-}
-label, #content {
-  height: 20px;
-  width: 200px;
-  margin-bottom: 10px;
-  border: 1px solid #fff;
-  display: inline-block;
-}
+nav ul li:hover ul.fallback {display:block;}
+
 #menu-toggle {
   display: none;
 }
 #menu {
-  background-color: #ffa500;
-  width: 200px;
   overflow: hidden;
   max-height: 0;
   padding: 0;

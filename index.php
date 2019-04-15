@@ -39,12 +39,12 @@ $(document).ready(function() {
   </header>
 
   <nav>
-    <?php /* <ul>
+   <ul>
      <li><a href="http://members.myrkur.net">Members</a></li>
      <li>
+      <label for="menu-toggle">Sort by:</label>
        <input type="checkbox" id="menu-toggle"/>
-       <a href="#">Sort by:</a>
-       <ul id="sortBy" class="fallback">
+       <ul id="menu" class="fallback">
          <li><a href="?artist">Artist</a></li>
          <li><a href="?album">Album name</a></li>
          <li><a href="?added">Date added</a></li>
@@ -52,10 +52,11 @@ $(document).ready(function() {
          <li><a href="?clicks">Clicks</a></li>
          <li><a href="?user">User</a></li>
        </ul>
+       <div id='content'>Below content<div/>
      </li>
-   </ul> */ ?>
+   </ul>
 
-   <label for="menu-toggle">Toggle menu</label>
+
    <input type="checkbox" id="menu-toggle"/>
    <ul id="menu">
      <li><a href="#">Item 1</a></li>
