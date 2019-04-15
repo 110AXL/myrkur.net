@@ -43,18 +43,19 @@ $(document).ready(function() {
      <li><a href="http://members.myrkur.net">Members</a></li>
      <li>
       <label for="menu-toggle">Sort by:</label>
-       <input type="checkbox" id="menu-toggle"/>
-       <ul id="menu" class="fallback">
-         <li><a href="?artist">Artist</a></li>
-         <li><a href="?album">Album name</a></li>
-         <li><a href="?added">Date added</a></li>
-         <li><a href="?released">Date released</a></li>
-         <li><a href="?clicks">Clicks</a></li>
-         <li><a href="?user">User</a></li>
-       </ul>
+       <input type="checkbox" id="menu-toggle">
+         <ul id="menu" class="fallback">
+           <li><a href="?artist">Artist</a></li>
+           <li><a href="?album">Album name</a></li>
+           <li><a href="?added">Date added</a></li>
+           <li><a href="?released">Date released</a></li>
+           <li><a href="?clicks">Clicks</a></li>
+           <li><a href="?user">User</a></li>
+         </ul>
+       </input>
      </li>
      <li>
-       Below content
+       <a href="http://members.myrkur.net">Membsers</a>
     </li>
    </ul>
   </nav>
