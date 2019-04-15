@@ -54,7 +54,7 @@ $(document).ready(function() {
                 $user_id = $args[1];
                 echo $user_id . "-*-*";
 
-                $sql = "SELECT albums.id, albums.artist, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.id WHERE users.id = " . $user_id . " DESC";
+                $sql = "SELECT albums.id, albums.artist, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.id WHERE users.id = `{$user_id}`;
                 break;
 
             case 'artists':
