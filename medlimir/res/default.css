@@ -20,6 +20,13 @@
   position:relative;
 }
 
+#clicks {
+  font-size:15px;
+  position:absolute;
+  bottom:0;
+  right:0;
+}
+
 #P {
 	padding-left: 1em;
 	padding-right: 1em;
