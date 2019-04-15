@@ -164,7 +164,7 @@ footer {
 
 body {
   text-align: center;
-  font-family: Geneva, Arial, Helvetica, sans-serif;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   color: #999;
 }
 
@@ -177,17 +177,17 @@ label {
 }
 
 label, #menu {
-  background-color: #111;
+  text-align: right;
+  font-family: "Arial Narrow", Arial, sans-serif;
   height: 20px;
   width: 200px;
-  padding:15px 25px;
+  margin:15px 25px;
   display: inline-block;
 }
 #sortBy-toggle {
   display: none;
 }
 #sortBy {
-  background-color: #111;
   width: 200px;
   overflow: hidden;
   max-height: 0;
