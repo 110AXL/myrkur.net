@@ -174,14 +174,17 @@ a {
 
 label {
   cursor: pointer;
+  width: auto;
+}
+
+#menu {
+    height: 20px;
+    width: auto;
 }
 
 label, #menu {
   text-align: left;
   font-family: "Arial Narrow", Arial, sans-serif;
-  height: 20px;
-  width: inherit;
-  margin: 10px;
   display: inline-block;
 }
 #sortBy-toggle {
