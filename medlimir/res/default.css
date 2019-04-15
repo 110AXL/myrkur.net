@@ -187,11 +187,12 @@ label, #menu {
   display: none;
 }
 #sortBy {
+  text-align: left;
   width: 200px;
   overflow: hidden;
   max-height: 0;
   padding: 0;
-  margin: 0 auto;
+  margin: 20px auto;
   -webkit-transition: all 0.3s ease;
 }
 #sortBy-toggle:checked + #sortBy {
