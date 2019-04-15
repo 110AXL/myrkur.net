@@ -340,6 +340,7 @@ footer {
 
 label {
   cursor: pointer;
+  text-align: center;
 }
 #content {
   background-color: #333;
