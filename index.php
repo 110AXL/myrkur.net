@@ -70,7 +70,7 @@ $(document).ready(function() {
         } else if($loggedIn = 1){
           echo "<li><a href=http://members.myrkur.net/welcome.php>Profile</a></li>";
           echo "<li><a href=http://members.myrkur.net/addalbum.php>Add album</a></li>";
-        }
+        } ?>
         </ul>
       </input>
    </ul>
