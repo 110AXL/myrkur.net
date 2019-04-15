@@ -387,5 +387,5 @@ label, #content {
   -webkit-transition: all 0.3s ease;
 }
 #menu-toggle:checked + #menu {
-  max-height: auto;
+  max-height: 100px;
 }
