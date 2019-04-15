@@ -142,7 +142,7 @@ if (isset($pash))
 	      {
 	        $youtube = trim($_POST["youtube"]);
 	    } else {
-	        $youtube = "Error. Bad link.";
+	        $youtube = "#";
 	    }
 
 			echo "<p>Youtube channel set to: ". $youtube ."</p>";
