@@ -372,6 +372,6 @@ nav ul li:hover ul.fallback {display:block;}
   margin: 0 auto;
   -webkit-transition: all 0.3s ease;
 }
-#menu-toggle:checked + #menu {
+#menu-toggle:checked + #sortBy {
   max-height: auto;
 }
