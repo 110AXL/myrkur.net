@@ -51,14 +51,14 @@ $(document).ready(function() {
 
         switch($method) {
             case 'users':
-                $user_id = $args[2];
+                $user_id = $args[1];
                 echo $user_id . "-*-*";
 
                 $sql = "SELECT albums.id, albums.artist, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.id WHERE users.id = " . $user_id . " DESC";
                 break;
 
             case 'artists':
-                $artist_name = $args[2];
+                $artist_name = $args[1];
                 echo $artist_name;
 
                 $sql = "SELECT albums.id, albums.artist, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.id WHERE albums.artist = " . $artist_name . " DESC";
