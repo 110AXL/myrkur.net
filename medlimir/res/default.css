@@ -356,9 +356,8 @@ label {
 label, #content {
   color: #aaa;
   height: 20px;
-  width: auto;
-  margin-bottom: 10px;
-  display: block;
+  width: 100%;
+  display: inline-block;
 }
 
 #menu-toggle {
