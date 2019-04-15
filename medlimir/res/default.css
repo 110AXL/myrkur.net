@@ -377,7 +377,7 @@ label {
 }
 label, #content {
   height: 20px;
-  width: 800px;
+  width: 200px;
   margin-botton: 10px;
   border: 1px solid #fff;
   display: inline-block;
@@ -387,7 +387,7 @@ label, #content {
 }
 #menu {
   background-color: #ffa500;
-  width: 780px;
+  width: 200px;
   overflow: hidden;
   max-height: 0;
   padding: 0;
