@@ -72,7 +72,7 @@ a:active {
 .title {
 	font-family: Georgia, serif;
 	padding: 4px;
-	color: black;
+	color: #222;
 }
 
 .grid-element:hover {
@@ -86,181 +86,16 @@ a:active {
     padding: 0px;
 }
 
-.header {
-    height: 20px;
-    background-color: #333;
-	padding-right: 33px;
-	padding-bottom: 3px;
-	padding-left: 33px;
-	-webkit-border-top-left-radius: 8px;
-    -webkit-border-top-right-radius: 8px;
-    -moz-border-radius-topleft: 4px;
-    -moz-border-radius-topright: 4px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-	text-align: right;
-}
-
-.add {
-  position: relative;
-  display: inline-block;
-  float: left;
-}
-
-.addbtn {
-  background-color: #666;
-  color: #aaa;
-  font-size: 9px;
-  border: none;
-  height: 16px;
-  cursor: pointer;
-  text-align: left;
-}
-
-.addbtn:hover {
-  color: #eee;
-}
-
-IMG.left_centered {
-    display: inline;
-	margin-bottom: -1px;
-    margin-left: -3px;
-    margin-right: 0px
-	}
-
-IMG.right_centered {
-    display: inline;
-	margin-bottom: -1px;
-    margin-right: 0px;
-    margin-left: 0px
-	}
-
-/*--------------------------------------------*/
-
- /* Dropdown Button */
-.dropbtn {
-  background-color: #666;
-  color: #aaa;
-  font-size: 9px;
-  border: none;
-  height: 16px;
-  cursor: pointer;
-  padding: 3px;
-  padding-left: 4px;
-}
-
-.dropbtn:hover {
-  color: #eee;
-}
-
-/* The container <div> - needed to position the dropdown content */
-
-.genrebtn {
-  background-color: #666;
-  color: #aaa;
-  font-size: 9px;
-  border: none;
-  height: 16px;
-  cursor: pointer;
-  padding: 3px;
-  padding-right: 24px;
-  text-align: center;
-}
-
-.genrebtn:hover {
-  color: #eee;
-}
-
-/* Genre drop down */
-
-.genre {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.genre-content {
-  text-align: left;
-  display: none;
-  position: absolute;
-  background-color: #333;
-  min-width: 66px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.genre-content a {
-  color: black;
-  padding: 3px 3px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of genre links on hover */
-.genre-content a:hover {background-color: #666}
-
-/* Show the genre menu on hover */
-.genre:hover .genre-content {	display: block;}
-
-/* Change the background color of the genre button when the genre content is shown */
-.genre:hover .dropbtn {background-color: #333;}
-
-/* Dropdown div */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  text-align: left;
-  display: none;
-  position: absolute;
-  background-color: #333;
-  min-width: 66px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 3px 3px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #666}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {	display: block;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #333;}
-
-#page-header {
-    background-color: #ccc;
-    padding: 20px;
-    margin: 10px;
-}
-
-#buttons {
-    color: #e1e114;
-    padding: 20px;
-    margin: 10px;
-}
 
 .center {
   text-align: center;
   color: black;
 }
+/* --- Nav bar a la https://ultimatecourses.com/blog/html5-and-jquery-super-simple-drop-down-nav r.i.p. */
 
 /* --- Holy Grail Grid start: --- */
 
 
-/* --- Nav bar a la https://ultimatecourses.com/blog/html5-and-jquery-super-simple-drop-down-nav r.i.p. */
 
 .container {
   display: grid;
