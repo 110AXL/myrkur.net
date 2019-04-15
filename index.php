@@ -40,8 +40,8 @@ $(document).ready(function() {
 
   <nav>
    <ul>
-     <li id="menu"><a href="http://members.myrkur.net">Members</a></li>
-     <li id="menu">
+     <li><a href="http://members.myrkur.net">Members</a></li>
+     <li>
       <label for="sortBy-toggle">Sort by:</label>
        <input type="checkbox" id="sortBy-toggle">
          <ul id="sortBy" class="subMenu">
@@ -54,7 +54,7 @@ $(document).ready(function() {
          </ul>
        </input>
      </li>
-     <li id="menu">
+     <li>
        <a href="http://members.myrkur.net">Membsers</a>
     </li>
    </ul>
