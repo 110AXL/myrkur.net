@@ -263,10 +263,9 @@ if(empty($password_err)){
 			}
 
 			// Close statement
-			mysqli_stmt_close($stmt);
+			mysqli_stmt_close($state);
 	}
 
 	// Close connection
 	mysqli_close($mysqli);
-}
 ?>
