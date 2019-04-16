@@ -21,6 +21,7 @@ $twitter = $youtube = $twitch = $psn = $email = $discord = "";
 
 
 $pash = md5($_POST['password']);
+echo $pash . "<br/>";
 
 if (isset($pash))
 {
@@ -28,6 +29,7 @@ if (isset($pash))
 	include "sqlcon.php";
 	$sql = "SELECT password FROM users WHERE id='$id'";
 	$result = $mysqli->query($sql);
+	echo $result;
 
 	// if hash provided matches database hash continue
 	if($pash==$result)
