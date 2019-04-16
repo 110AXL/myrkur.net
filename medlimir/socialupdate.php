@@ -17,10 +17,10 @@ if(!isset($_POST["password"])){
 }
 
 // Define variables and initialize with empty values
-$twitter = $youtube = $twitch = $psn = $email = $discord = "";
+$twitter = $youtube = $twitch = $psn = $email = $discord = $passi= "";
 
 
-$pash = md5($_POST['password']);
+$pash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 echo $pash . " <- pash <br/>";
 
 if (isset($pash))
@@ -29,8 +29,16 @@ if (isset($pash))
 	include "sqlcon.php";
 	$sql = "SELECT password FROM users WHERE id='$id'";
 	$result = $mysqli->query($sql);
+
+	if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        $passi = $row["password"];
+    }
+		} else {
+		    echo "0 results";
+		}
 	echo $sql . " <- sql<br/>";
-	echo $result . " <- result";
+	echo $passi . " <- result";
 
 	// if hash provided matches database hash continue
 	if($pash==$result)
