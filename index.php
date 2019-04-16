@@ -5,10 +5,10 @@ session_start();
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     $loggedIn = 0;
-     echo "not logged in.<br/>"
+     echo "not logged in.<br/>";
 } if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
    $loggedIn = 1;
-   echo "logged in.<br/>"
+   echo "logged in.<br/>";
 }
 ?>
 <!DOCTYPE html>
