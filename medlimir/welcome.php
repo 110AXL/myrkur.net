@@ -6,6 +6,11 @@ session_start();
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: index.php");
     exit;
+} else if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)
+{
+  $_SESSION["loggedin"] = true;
+  $_SESSION["id"] = $id;
+  $_SESSION["username"] = $username;
 }
 ?>
 
