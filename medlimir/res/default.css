@@ -31,7 +31,17 @@
   right:0px;
 }
 
-.username:hover{
+#username {
+  position:absolute;
+  font-size:19
+  color:#111;
+  bottom:0;
+  left:0;
+  margin-bottom:10;
+  margin-left:10;
+}
+
+#username:hover{
   cursor:pointer;
   color:#444;
 }
