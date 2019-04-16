@@ -21,10 +21,17 @@
 }
 
 #clicks {
-  font-size:15px;
+  font-size:19px;
   position:absolute;
-  bottom:0;
-  right:0;
+  margin-right: 10px;
+  margin-bottom:10px;
+  color:#333;
+  bottom:0px;
+  right:0px;
+}
+
+.username:hover{
+  color:#666;
 }
 
 #P {
