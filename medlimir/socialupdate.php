@@ -239,4 +239,5 @@ if (isset($pash))
 		echo "Wrong password. Redirecting you back in 5 seconds..";
 		header( "refresh:5;url=social.php" );
 	}
+}
 ?>
