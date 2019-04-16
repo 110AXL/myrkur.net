@@ -69,7 +69,7 @@ if ($result->num_rows > 0) {
      }
      if(!empty($row["psn"])){
        echo " ";
-       echo "><img src='res\playstation-logo.png' style='width:21px;height:21px;' />:" . $row["psn"];
+       echo "<img src='res\playstation-logo.png' style='width:21px;height:21px;' />:" . $row["psn"];
      }
      echo "</td><tr></div>";
     }
