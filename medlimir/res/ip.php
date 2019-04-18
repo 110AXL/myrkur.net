@@ -19,13 +19,36 @@ if(isset($_SERVER['HTTP_REFERER'])) {
 };
 
 
-// prepare and bind
-$stmt = $mysqli->prepare("INSERT INTO log (ip, hostname, port, user_agent, protocol, referer, site) VALUES (?, ?, ?, ?, ?, ?, ?)");
-$stmt->bind_param("ssissss", $ip, $hostname, $port, $agent, $protocol, $ref, $site);
+$sql2 = "SELECT ip from log ORDER BY id DESC LIMIT 1";
+$result2 = $mysqli->query($sql2);
 
-$stmt->execute();
-$stmt->close();
-$mysqli->close();
+if(isset($result2) == TRUE){
+if ($result2->num_rows > 0) {
+		// output data of each row
+	 while($row = $result2->fetch_assoc()) {
+		 if($row["ip"] != NULL)
+		 	$last_ip = $row["ip"];
+		}
+		 if($last_ip != $ip){
+			 $stmt = $mysqli->prepare("INSERT INTO log (ip, hostname, port, user_agent, protocol, referer, site) VALUES (?, ?, ?, ?, ?, ?, ?)");
+			 $stmt->bind_param("ssissss", $ip, $hostname, $port, $agent, $protocol, $ref, $site);
+		 }
+
+		 $stmt->execute();
+		 $stmt->close();
+		 $mysqli->close();
+	 }
+ }
+
+		/*
+		if(!$row["album"] == NULL)
+			echo "<a target=_blank title='" . $row["artist"]. " - " . $row["album"]. "' href='" . $row["link1"]. "'><img width=200 height=200 src=/uploads/" . $removed_spaces . " /></a>";
+	} */
+
+// prepare and bind
+
+
+
 
 
 /* --- Old log file ---

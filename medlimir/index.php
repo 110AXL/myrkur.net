@@ -39,25 +39,25 @@ if(isset($nafn) === FALSE){
 
 
 		if(isset($result2) == TRUE){
-		if ($result2->num_rows > 0) {
-			echo "<html lang='en'>
-				<head>
-					<meta charset='UTF-8'>
-					<title>Login</title>
-					<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css'>";
-					include(__DIR__.'/res/facebookPixelCode.php');
+			if ($result2->num_rows > 0) {
+				echo "<html lang='en'>
+					<head>
+						<meta charset='UTF-8'>
+						<title>Login</title>
+						<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css'>";
+						include(__DIR__.'/res/facebookPixelCode.php');
 
-		echo "<link rel='shortcut icon' type='image/png' href=".__DIR__."'/res/favicon-16x16.png'/>
-				</head>";
-				// output data of each row
-			while($row = $result2->fetch_assoc()) {
+			echo "<link rel='shortcut icon' type='image/png' href=".__DIR__."'/res/favicon-16x16.png'/>
+					</head>";
+					// output data of each row
+				while($row = $result2->fetch_assoc()) {
 
-				$resized_link = $row["img"];
-				$removed_spaces = str_replace(" ","%20",$resized_link);
+					$resized_link = $row["img"];
+					$removed_spaces = str_replace(" ","%20",$resized_link);
 
-				if(!$row["album"] == NULL)
-					echo "<a target=_blank title='" . $row["artist"]. " - " . $row["album"]. "' href='" . $row["link1"]. "'><img width=200 height=200 src=/uploads/" . $removed_spaces . " /></a>";
-			}
+					if(!$row["album"] == NULL)
+						echo "<a target=_blank title='" . $row["artist"]. " - " . $row["album"]. "' href='" . $row["link1"]. "'><img width=200 height=200 src=/uploads/" . $removed_spaces . " /></a>";
+				}
 		echo "</body>";
 		}
 	$mysqli->close();
@@ -112,7 +112,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         if(password_verify($password, $hashed_password)){
 														// set cookie on root
 														session_set_cookie_params(0,"/webapp/");
-														ini_set('session.cookie_domain', '.example.com' );
+														ini_set('session.cookie_domain', '.myrkur.net' );
                             // Password is correct, so start a new session
                             session_start();
 
