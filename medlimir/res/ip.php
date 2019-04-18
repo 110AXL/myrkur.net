@@ -28,15 +28,18 @@ if ($result2->num_rows > 0) {
 	 while($row = $result2->fetch_assoc()) {
 		 if($row["ip"] != NULL)
 		 	$last_ip = $row["ip"];
+			echo $last_ip . " - ";
+			echo $ip
 		}
 		 if($last_ip != $ip){
 			 $stmt = $mysqli->prepare("INSERT INTO log (ip, hostname, port, user_agent, protocol, referer, site) VALUES (?, ?, ?, ?, ?, ?, ?)");
 			 $stmt->bind_param("ssissss", $ip, $hostname, $port, $agent, $protocol, $ref, $site);
+			 $stmt->execute();
+			 $stmt->close();
+			 $mysqli->close();
 		 }
 
-		 $stmt->execute();
-		 $stmt->close();
-		 $mysqli->close();
+
 	 }
  }
 
