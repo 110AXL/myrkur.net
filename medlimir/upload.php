@@ -19,6 +19,7 @@ session_start();
 if(!isset($_SESSION['username'])){
    header("Location:index.php");
 }
+$uploadOk = 0;
 
 include 'res/ip.php';
 echo "<center>";
@@ -141,7 +142,7 @@ if(!empty($_POST['img_url']))
 		file_put_contents($localUrl, file_get_contents($_POST['img_url']));
 
 		/* add url located info to MySQL server */
-		if (!$stmt->bind_param("ssissssi", $artist, $album, $year, $link1, $link2, $rImg, $userId)) {
+		if (!$stmt->bind_param("ssisssi", $artist, $album, $year, $link1, $link2, $rImg, $userId)) {
 			echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
 		}
 
@@ -307,7 +308,7 @@ else if(empty($_POST['img_url']) && !empty($_FILES['fileToUpload']['name']))
 			echo "</pre>";
 		} else if($urlOk == 1) {
 			echo "<pre>";
-			print_r(file_get_contents($_POST['img_url']));
+			echo "Link was successfully downloaded."
 			echo "</pre>";
 		}
 		echo "<pre>";
