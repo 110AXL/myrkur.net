@@ -1,3 +1,4 @@
+<?php
 // This class deals with functions that should happen before the page outputs to the browswer
 class   HeaderProcessor
     {
@@ -55,3 +56,4 @@ class   HeaderProcessor
                 date_default_timezone_set($timezone);
             }
     }
+?>

@@ -1,3 +1,4 @@
+<?php
 // This is a simple query engine. It allows for binding (or not binding)
 class   QueryEngine
     {
@@ -50,3 +51,4 @@ class   QueryEngine
                 return (!empty($result))? $result : 0;
             }
     }
+?>

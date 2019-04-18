@@ -1,3 +1,4 @@
+<?php
 // This is your database. Fill out the credentials in the connect() method
 // I use PDO because I think personally it's easier to use
 class   DatabaseConfig
@@ -24,3 +25,4 @@ class   DatabaseConfig
                 return $conn;
             }
     }
+?>
