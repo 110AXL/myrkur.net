@@ -27,7 +27,6 @@ include '../medlimir/res/ip.php';
 
   <main><ul>
     <h2>Podcasts:</h2>
-      <li><a href='https://player.fm/series/grinland'>Grínland</a></li>
       <li><a href='https://snorribjorns.libsyn.com/'>The Snorri Björns Podcast Show</a></li>
       <li><a href='https://player.fm/series/filalag'>Fílalag</a></li>
       <li><a href='https://www.podparadise.com/Podcast/1300530703'>Markmannshanskarnir hans Alberts Camus</a></li>
@@ -49,7 +48,7 @@ include '../medlimir/res/ip.php';
       <li><a href='https://www.livescore.com/'>Livescore</a></li>
       <li><a href='https://firstsrowsports.tv'>Firstrow Sports</a></li>
     </ul><ul>
-    <h2>TV & Movies</h2>    
+    <h2>TV & Movies</h2>
       <li><a href='http://vumoo.to/'>Vumoo</a></li>
       <li><a href='https://www11.fmovies.io/'>F Movies</a></li>
       <li><a href='http://vexmovies.org'>Vex Movies</a></li>
