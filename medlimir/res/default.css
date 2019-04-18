@@ -209,6 +209,8 @@ a {
   color: #aaa;
 }
 
+.wrapper{ width: 350px; padding: 20px; }
+
 label {
   text-align: left;
   font-family: "Arial Narrow", Arial, sans-serif;

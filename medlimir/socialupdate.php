@@ -1,7 +1,16 @@
 <?php
-session_start();
-include 'res/logo.html';
+session_start(); ?>
+<body>
+  <div class="container">
+    <header>
+      <?php include(__DIR__.'/res/logo.html');?>
+    </header>
 
+    <nav>
+         <?php include(__DIR__.'/res/navbar.php');?>
+    </nav>
+
+    <main>
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: index.php");

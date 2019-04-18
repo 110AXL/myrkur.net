@@ -44,14 +44,10 @@ if(isset($nafn) === FALSE){
 				<head>
 					<meta charset='UTF-8'>
 					<title>Login</title>
-					<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css'>
-					<style type='text/css'>
-						body{ font: 14px sans-serif; }
-						.wrapper{ width: 350px; padding: 20px; }
-					</style>";
+					<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css'>";
 					include(__DIR__.'/res/facebookPixelCode.php');
-					echo "
-					<link rel='shortcut icon' type='image/png' href=".__DIR__."'/res/favicon-16x16.png'/>
+
+		echo "<link rel='shortcut icon' type='image/png' href=".__DIR__."'/res/favicon-16x16.png'/>
 				</head>";
 				// output data of each row
 			while($row = $result2->fetch_assoc()) {
