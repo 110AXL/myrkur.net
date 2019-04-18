@@ -3,37 +3,12 @@
 require(__DIR__."/medlimir/config.php");
 ?><!DOCTYPE html>
 <html>
+<head>
+<title>Facebook Login JavaScript Example</title>
+<meta charset="UTF-8">
+</head>
 <body>
-  <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>  
-  <script>
-
-  // This function is called when someone finishes with the Login
-  // Button.  See the onlogin handler attached to it in the sample
-  // code below.
-  function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
-  }
-
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId            : '316701355598726',
-      autoLogAppEvents : true,
-      xfbml            : true,
-      version          : 'v3.2'
-    });
-    FB.login(function(response) {
-      if (response.authResponse) {
-       console.log('Welcome!  Fetching your information.... ');
-       FB.api('/me', function(response) {
-         console.log('Good to see you, ' + response.name + '.');
-       });
-      } else {
-       console.log('User cancelled login or did not fully authorize.');
-      }
-  });
-  };
+<script>
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
@@ -52,6 +27,23 @@ require(__DIR__."/medlimir/config.php");
     }
   }
 
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '316701355598726',
+      cookie     : true,  // enable cookies to allow the server to access
+                          // the session
+      xfbml      : true,  // parse social plugins on this page
+      version    : 'v2.3' // The Graph API version to use for the call
+    });
 
     // Now that we've initialized the JavaScript SDK, we call
     // FB.getLoginStatus().  This function gets the state of the
@@ -103,6 +95,6 @@ require(__DIR__."/medlimir/config.php");
 
 <div id="status">
 </div>
-asdf
+
 </body>
 </html>
