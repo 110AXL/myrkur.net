@@ -214,7 +214,7 @@ a {
 label {
   cursor: pointer;
   width: auto;
-  font-size:19px;
+  font-size:40px;
 }
 
 #menu {
@@ -227,11 +227,15 @@ label, #menu {
   font-family: "Arial Narrow", Arial, sans-serif;
   display: inline-block;
 }
-#sortBy-toggle {
+#sortBy-toggle,
+#membership-toggle,
+#gate-toggle {
   width: auto;
   display: none;
 }
-#sortBy {
+#sortBy,
+#membership,
+#gate {
   text-align: left;
   overflow: hidden;
   max-height: 0;
@@ -239,27 +243,22 @@ label, #menu {
   margin: 0 auto;
   -webkit-transition: all 0.3s ease;
 }
+
 #sortBy-toggle:checked + #sortBy {
   max-height: 300px;
   margin-left: 52px;
 }
 
-#membership-toggle {
-  width: auto;
-  display: none;
-}
-#membership {
-  text-align: left;
-  overflow: hidden;
-  max-height: 0;
-  padding: 0;
-  margin: 0 auto;
-  -webkit-transition: all 0.3s ease;
-}
 #membership-toggle:checked + #membership {
   max-height: 300px;
   margin-left: 52px;
 }
+
+#gate-toggle:checked + #gate {
+  max-height: 300px;
+  margin-left: 52px;
+}
+
 
 ul {
   list-style-type: none;

@@ -55,32 +55,7 @@ $(document).ready(function() {
   </header>
 
   <nav>
-   <ul>
-     <li>
-      <label for="sortBy-toggle">Sort by:</label>
-       <input type="checkbox" id="sortBy-toggle">
-         <ul id="sortBy">
-           <li><a href="?artist">Artist</a></li>
-           <li><a href="?added">Date added</a></li>
-           <li><a href="?released">Date released</a></li>
-           <li><a href="?clicks">Clicks</a></li>
-           <li><a href="?user">User</a></li>
-         </ul>
-       </input>
-     </li>
-     <label for="membership-toggle">Membership:</label>
-      <input type="checkbox" id="membership-toggle">
-        <ul id="membership">
-          <?php if($loggedIn == 0){
-          echo "<li><a href=http://members.myrkur.net>Login</a></li>";
-          echo "<li><a href=http://members.myrkur.net/register.php/>Register</a></li>";
-        } else if($loggedIn = 1){
-          echo "<li><a href=http://members.myrkur.net/welcome.php>Profile</a></li>";
-          echo "<li><a href=http://members.myrkur.net/addalbum.php>Add album</a></li>";
-        } ?>
-        </ul>
-      </input>
-   </ul>
+       <?php include '"../main/navbar.php"';?>
   </nav>
 
   <main>
