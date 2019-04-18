@@ -112,6 +112,10 @@ $("img").on("error", function () {
 
   <aside>
     <!-- Sidebar / Ads -->
+    <?php
+      // Echo session variables
+      echo $_SESSION["username"];
+    ?>
   </aside>
 
   <footer>
