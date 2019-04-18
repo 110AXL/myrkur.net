@@ -52,9 +52,6 @@ if(isset($nafn) === FALSE){
 					include(__DIR__.'/res/facebookPixelCode.php');
 					echo "
 					<link rel='shortcut icon' type='image/png' href=".__DIR__."'/res/favicon-16x16.png'/>
-					$('img').on('error', function () {
-					  $(this).unbind('error').attr('src', ''/res/noid.jpg');
-					});
 				</head>";
 				// output data of each row
 			while($row = $result2->fetch_assoc()) {
