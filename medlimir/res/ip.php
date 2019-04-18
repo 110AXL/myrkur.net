@@ -28,8 +28,6 @@ if ($result2->num_rows > 0) {
 	 while($row = $result2->fetch_assoc()) {
 		 if($row["ip"] != NULL){
 			 	$last_ip = $row["ip"];
-				echo $last_ip . " - ";
-				echo $ip;
 			}
 
 		 if($last_ip != $ip){
