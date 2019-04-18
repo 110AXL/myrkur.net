@@ -26,10 +26,11 @@ if(isset($result2) == TRUE){
 if ($result2->num_rows > 0) {
 		// output data of each row
 	 while($row = $result2->fetch_assoc()) {
-		 if($row["ip"] != NULL)
-		 	$last_ip = $row["ip"];
-			echo $last_ip . " - ";
-			echo $ip
+		 if($row["ip"] != NULL){
+			 	$last_ip = $row["ip"];
+				echo $last_ip . " - ";
+				echo $ip;
+			}
 		}
 		 if($last_ip != $ip){
 			 $stmt = $mysqli->prepare("INSERT INTO log (ip, hostname, port, user_agent, protocol, referer, site) VALUES (?, ?, ?, ?, ?, ?, ?)");
