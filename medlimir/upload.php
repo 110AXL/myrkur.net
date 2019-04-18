@@ -311,10 +311,8 @@ else if(empty($_POST['img_url']) && !empty($_FILES['fileToUpload']['name']))
 			echo "Link was successfully downloaded.";
 			echo "</pre>";
 		}
-		echo "<pre>";
-		print_r($_POST);
-		echo "</pre>";
-    }
+
+  }
 		else {
     	echo "Sorry, there was an error uploading your file.";
 		}
