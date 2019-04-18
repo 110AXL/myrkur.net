@@ -22,7 +22,7 @@ include '../res/ip.php';
 
   <nav>
     <!-- Navigation -->
-    <?php include '"../main/navbar.php"';?>
+    <?php include '../main/navbar.php';?>
   </nav>
 
   <main>
