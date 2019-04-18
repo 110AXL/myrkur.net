@@ -31,7 +31,7 @@ if ($result2->num_rows > 0) {
 				echo $last_ip . " - ";
 				echo $ip;
 			}
-		}
+
 		 if($last_ip != $ip){
 			 $stmt = $mysqli->prepare("INSERT INTO log (ip, hostname, port, user_agent, protocol, referer, site) VALUES (?, ?, ?, ?, ?, ?, ?)");
 			 $stmt->bind_param("ssissss", $ip, $hostname, $port, $agent, $protocol, $ref, $site);
@@ -43,7 +43,7 @@ if ($result2->num_rows > 0) {
 
 	 }
  }
-
+}
 		/*
 		if(!$row["album"] == NULL)
 			echo "<a target=_blank title='" . $row["artist"]. " - " . $row["album"]. "' href='" . $row["link1"]. "'><img width=200 height=200 src=/uploads/" . $removed_spaces . " /></a>";
