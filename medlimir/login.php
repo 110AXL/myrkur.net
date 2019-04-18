@@ -14,7 +14,7 @@ require($_SERVER['DOCUMENT_ROOT'] ."/config.php");
 <?php    include(__DIR__.'/res/facebookPixelCode.php'); ?>
   </head>
   <body>
-    <?php include(__DIR__.'res/logo.html'); ?>
+    <?php include(__DIR__.'/res/logo.html'); ?>
     <div class='wrapper'>
       <h2>Login</h2>
       <p>Please fill in your credentials to login.</p>
