@@ -40,9 +40,12 @@ $(document).ready(function() {
       }
     );
 });
+</script>
+<script>
 $("img").on("error", function () {
   $(this).unbind("error").attr("src", "/res/noid.jpg");
-});</script>
+});
+</script>
 </head>
 <body bgcolor="black">
 <?php
