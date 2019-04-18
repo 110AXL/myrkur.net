@@ -22,7 +22,7 @@ include '../medlimir/res/ip.php';
 
   <nav>
     <!-- Navigation -->
-    <?php include '../main/navbar.php';?>
+    <?php include '../medlimir/navbar.php';?>
   </nav>
 
   <main><ul>

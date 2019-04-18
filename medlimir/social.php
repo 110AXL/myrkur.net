@@ -35,7 +35,7 @@
 		  </header>
 
 		  <nav>
-		       <?php include(__DIR__.'/main/navbar.php');?>
+		       <?php include(__DIR__.'/medlimir/navbar.php');?>
 		  </nav>
 
 		  <main>
@@ -44,22 +44,22 @@
   		    <div class="form-group" >
 
   		      <form action="socialupdate.php" method="post" enctype="multipart/form-data">
-
+							<ul>
 				  		<label id="twitch">Twitch handle:</label><br/>
-				  		<input type="text" name="twitch" id="twitch"><br/>
+				  		<li><input type="text" name="twitch" id="twitch"><br/></li>
 				  		<label id="twitter">Twitter handle (Without @):</label><br/>
-				  		<input type="text" name="twitter" id="twitter"><br/>
+				  		<li><input type="text" name="twitter" id="twitter"><br/></li>
 							<label id="discord">Discord handle (username#0000):</label><br/>
-							<input type="text" name="discord" id="discord"><br/>
+							<li><input type="text" name="discord" id="discord"><br/></li>
 							<label id="youtube">Youtube channel (with http:// or https://):</label><br/>
-							<input type="text" name="youtube" id="youtube"><br/>
-							<label id="discord">Playstation Network username:</label><br/>
-							<input type="text" name="psn" id="psn"><br/>
+							<li><input type="text" name="youtube" id="youtube"><br/></li>
+							<label id="psn">Playstation Network username:</label><br/>
+							<li><input type="text" name="psn" id="psn"><br/></li>
 							<label id="email">Email address:</label><br/>
-							<input type="text" name="email" id="email"><br/>
+							<li><input type="text" name="email" id="email"><br/></li>
 
 								<label id="password">Please enter your password to continue.</label>
-								<input type='password' name='password' id="password">
+								<li><input type='password' name='password' id="password"></li>
 
 	  					<input type="submit" value="submit" name="submit">
       			</form>

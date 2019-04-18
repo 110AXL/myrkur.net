@@ -61,7 +61,7 @@ $("img").on("error", function () {
   </header>
 
   <nav>
-       <?php include(__DIR__.'/main/navbar.php');?>
+       <?php include(__DIR__.'/medlimir/navbar.php');?>
   </nav>
 
   <main>
