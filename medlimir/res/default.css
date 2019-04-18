@@ -209,7 +209,7 @@ a {
   color: #aaa;
 }
 
-label {
+label .navbar {
   cursor: pointer;
   width: auto;
   font-size:40px;
