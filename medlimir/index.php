@@ -1,6 +1,6 @@
 <?php
 // Initialize the session
-session_start();
+require(__DIR__."/config.php");
 // get sql config
 require_once 'sqlcon.php';
  // Before using $_POST['value']
@@ -50,9 +50,9 @@ if(isset($nafn) === FALSE){
 						body{ font: 14px sans-serif; }
 						.wrapper{ width: 350px; padding: 20px; }
 					</style>";
-					include('res/facebookPixelCode.php');
+					include(__DIR__.'/res/facebookPixelCode.php');
 					echo "
-				<link rel='shortcut icon' type='image/png' href='res/favicon-16x16.png'/>
+				<link rel='shortcut icon' type='image/png' href=".__DIR__."'/res/favicon-16x16.png'/>
 				</head>";
 				echo "<body bgcolor='black'>";
 				// output data of each row
@@ -150,9 +150,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 if(isset($_SESSION["loggedin"]) === false){
 		Include('login.php');
-		echo "</body>";
-		echo "</html>";
+
 	exit;
 	}
 
 ?>
+</body>
+</html>
