@@ -120,7 +120,7 @@ $("img").on("error", function () {
             echo "<a href=" . __DIR__ . "?nafn=" . $_COOKIE['user'] . ">" . $_COOKE['user'] . "</a>";
         }
         if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-      		echo "<h1>Logged in. yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy</h1>"
+      		echo "<h1>Logged in. yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy</h1>";
       	}
     ?>
   </aside>
