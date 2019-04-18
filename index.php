@@ -95,7 +95,7 @@ $("img").on("error", function () {
           if ($result->num_rows > 0) {
            // output data of each row
            while($row = $result->fetch_assoc()) {
-             echo "<div class='wrapper'>;"
+             echo "<div class='wrapper'>";
              $resized_link = $row["img"];
              $removed_spaces = str_replace(" ","%20",$resized_link);
              echo "<div class='grid-element'><a target=_blank title='" . $row["artist"]. " - " . $row["album"]. " [" . $row["username"] . "]' href=main/link.php?i='" . $row["id"]."'>";
