@@ -227,12 +227,14 @@ label, #menu {
   font-family: "Arial Narrow", Arial, sans-serif;
   display: inline-block;
 }
+
 #sortBy-toggle,
 #membership-toggle,
 #gate-toggle {
   width: auto;
   display: none;
 }
+
 #sortBy,
 #membership,
 #gate {
