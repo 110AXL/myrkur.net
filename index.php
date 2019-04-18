@@ -55,7 +55,7 @@ $(document).ready(function() {
   </header>
 
   <nav>
-       <?php include '"/main/navbar.php"';?>
+       <?php include '/main/navbar.php';?>
   </nav>
 
   <main>
