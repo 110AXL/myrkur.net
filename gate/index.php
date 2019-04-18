@@ -25,9 +25,8 @@ include '../medlimir/res/ip.php';
     <?php include '../main/navbar.php';?>
   </nav>
 
-  <main>
+  <main><ul>
     <h2>Podcasts:</h2>
-    <ul>
       <li><a href='https://player.fm/series/grinland'>Grínland</a></li>
       <li><a href='https://snorribjorns.libsyn.com/'>The Snorri Björns Podcast Show</a></li>
       <li><a href='https://player.fm/series/filalag'>Fílalag</a></li>
@@ -42,15 +41,15 @@ include '../medlimir/res/ip.php';
       <li><a href='https://soundcloud.com/kjarninn/sets/ukl'>Þukl</a></li>
       <li><a href='https://soundcloud.com/kjarninn/sets/grettistak'>Grettistak</a></li>
       <li><a href='https://soundcloud.com/kjarninn/sets/taeknivarpi'>Tæknivarpið</a></li>
-    <h2>Sports:</h2>
+    </ul>
     <ul>
+    <h2>Sports:</h2>
       <li><a href='https://stats.nba.com/schedule/'>NBA Schedule</a></li>
       <li><a href='https://footyroom.com/'>Footyroom</a></li>
       <li><a href='https://www.livescore.com/'>Livescore</a></li>
       <li><a href='https://firstsrowsports.tv'>Firstrow Sports</a></li>
-    </ul>
-    <h2>TV & Movies</h2>
-    <ul>
+    </ul><ul>
+    <h2>TV & Movies</h2>    
       <li><a href='http://vumoo.to/'>Vumoo</a></li>
       <li><a href='https://www11.fmovies.io/'>F Movies</a></li>
       <li><a href='http://vexmovies.org'>Vex Movies</a></li>
