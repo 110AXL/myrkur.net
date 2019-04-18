@@ -9,7 +9,7 @@ session_start(); ?>
 <head>
 <link rel="stylesheet" type="text/css" href="/res/default.css">
 
-<?php include('/res/facebookPixelCode.php'); ?>
+<?php include(__DIR__.'/res/facebookPixelCode.php'); ?>
 <link rel="shortcut icon" type="image/png" href="/res/favicon-16x16.png"/>
 </head>
 <body>
