@@ -23,13 +23,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 <html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href="medlimir/res/default.css">
+<link rel="stylesheet" type="text/css" href="/res/default.css">
 <link href="main/nav/lazeemenu.css" rel="stylesheet">
 <?php
-  include('medlimir/res/facebookPixelCode.php');
+  include('res/facebookPixelCode.php');
 ?>
-<link rel="shortcut icon" type="image/png" href="medlimir/res/favicon-16x16.png"/>
-<script src="jquery-3.3.1.min.js">
+<link rel="shortcut icon" type="image/png" href="res/favicon-16x16.png"/>
+<script src="res/jquery-3.4.0.min.js">
 $(document).ready(function() {
   $('nav li ul').hide().removeClass('fallback');
     $('nav li').hover(
@@ -44,7 +44,7 @@ $(document).ready(function() {
 </head>
 <body bgcolor="black">
 <?php
-  include 'medlimir/res/ip.php';
+  include 'res/ip.php';
   require_once 'main/sqlcon.php';
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
@@ -52,7 +52,7 @@ $(document).ready(function() {
   ?>
 <div class="container">
   <header>
-    <?php include 'medlimir/res/logo.html';?>
+    <?php include 'res/logo.html';?>
   </header>
 
   <nav>
@@ -118,7 +118,7 @@ $(document).ready(function() {
            $resized_link = $row["img"];
            $removed_spaces = str_replace(" ","%20",$resized_link);
            echo "<div class='grid-element'><a target=_blank title='" . $row["artist"]. " - " . $row["album"]. " [" . $row["username"] . "]' href=main/link.php?i='" . $row["id"]."'>";
-           echo "<img width=200 height=200 src=medlimir/uploads/" . $removed_spaces . " />";
+           echo "<img width=200 height=200 src=members/uploads/" . $removed_spaces . " />";
            echo "<div class='title'><p>" . $row["artist"] . " - " . $row["album"] . "</a></p></div>";
            echo "<p class='info' title='Year & link clicks.'><a href=main/link.php?i='" . $row["id"]."'>" . $row["year"] . "</a></p><div id=username>" . $row["username"] . "</div><div id=clicks>" . $row["clicks"] . "</div></div>";
            }

@@ -214,6 +214,7 @@ a {
 label {
   cursor: pointer;
   width: auto;
+  font-size:19px;
 }
 
 #menu {

@@ -5,15 +5,15 @@
 
 <html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href="../medlimir/res/default.css">
+<link rel="stylesheet" type="text/css" href="../res/default.css">
 
-<?php include('../medlimir/res/facebookPixelCode.php'); ?>
+<?php include('../res/facebookPixelCode.php'); ?>
 <link rel="shortcut icon" type="image/png" href="../main/favicon-16x16.png"/>
 </head>
 <body bgcolor="black">
 <?php
 session_start();
-include '../medlimir/res/ip.php';
+include '../res/ip.php';
 ?>
 <div class="container">
   <header>
@@ -46,7 +46,7 @@ include '../medlimir/res/ip.php';
      while($row = $result->fetch_assoc()) {
        $resized_link = $row["img"];
        $removed_spaces = str_replace(" ","%20",$resized_link);
-       echo "<div class='grid-element'><a target=_blank title='" . $row["artist"]. " - " . $row["album"]. " [" . $row["username"] . "]' href=main/link.php?i='" . $row["id"]."'><img width=200 height=200 src=medlimir/uploads/" . $removed_spaces . " /><div class='title'><p>" . $row["artist"] . " - " . $row["album"] . "</a></div></p></div>";
+       echo "<div class='grid-element'><a target=_blank title='" . $row["artist"]. " - " . $row["album"]. " [" . $row["username"] . "]' href=main/link.php?i='" . $row["id"]."'><img width=200 height=200 src=members/uploads/" . $removed_spaces . " /><div class='title'><p>" . $row["artist"] . " - " . $row["album"] . "</a></div></p></div>";
        }
      }
 

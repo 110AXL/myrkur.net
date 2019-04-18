@@ -32,7 +32,7 @@
 session_start();
 
 // Include config file
-require_once "medlimir/res/sqlcon.php";
+require_once "members/res/sqlcon.php";
 
 $year = $link = $name = $user_id = "";
 

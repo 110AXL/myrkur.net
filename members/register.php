@@ -187,7 +187,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                     $_SESSION["loggedin"] = true;
                                     $_SESSION["id"] = $id;
                                     $_SESSION["username"] = $username;
-
+                                    ini_set('session.gc_maxlifetime', 3600);
                                     // Redirect user to welcome page
                                     header("location: welcome.php");
                                 }
