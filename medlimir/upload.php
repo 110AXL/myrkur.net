@@ -24,7 +24,7 @@ include 'res/ip.php';
 echo "<center>";
 include 'res/logo.html';
 echo "</center>";
-echo "<p>Uploading file..</p><p>Genre: " . $_POST['genre'] . "</p>";
+echo "<p>Uploading file..</p>"; /* <p>Genre: " . $_POST['genre'] . "</p>" */
 
 // Define variables and initialize with empty values
 $artist = $album = $link1 = $link2 = $userId = $genre = $year = $data = $file = "";
@@ -39,7 +39,7 @@ catch (exception $e) {
 
 $artist = str_replace("'","",htmlspecialchars($_POST["artist"]));
 $album = str_replace("'","",htmlspecialchars($_POST["album"]));
-$genre = $_POST["genre"];
+/* $genre = $_POST["genre"]; */
 $year = $_POST["year"];
 $link1 = htmlspecialchars($_POST["link1"]);
 $link2 = htmlspecialchars($_POST["link2"]);
@@ -98,7 +98,7 @@ if (strpos($link2, 'https') !== false) {
 }
 
 /* Prepared statement, stage 1: prepare */
-if (!($stmt = $mysqli->prepare("INSERT INTO albums(artist, album, year, genre, link1, link2, img, user_id) VALUES (?,?,?,?,?,?,?,?)"))) {
+if (!($stmt = $mysqli->prepare("INSERT INTO albums(artist, album, year, link1, link2, img, user_id) VALUES (?,?,?,?,?,?,?)"))) {
 	echo "Prepare failed: (" . $mysqli->errno . ") " . $mysqli->error;
 }
 
@@ -141,7 +141,7 @@ if(!empty($_POST['img_url']))
 		file_put_contents($localUrl, file_get_contents($_POST['img_url']));
 
 		/* add url located info to MySQL server */
-		if (!$stmt->bind_param("ssissssi", $artist, $album, $year, $genre , $link1, $link2, $rImg, $userId)) {
+		if (!$stmt->bind_param("ssissssi", $artist, $album, $year, $link1, $link2, $rImg, $userId)) {
 			echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
 		}
 
@@ -287,7 +287,7 @@ else if(empty($_POST['img_url']) && !empty($_FILES['fileToUpload']['name']))
 		}
 
 		/* Add locally uploaded info to database */
-		if (!$stmt->bind_param("ssissssi", $artist, $album, $year, $genre, $link1, $link2, $rImg, $userId)) {
+		if (!$stmt->bind_param("ssissssi", $artist, $album, $year, $link1, $link2, $rImg, $userId)) {
 		echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
 		}
 
