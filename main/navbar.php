@@ -3,11 +3,11 @@
    <label for="sortBy-toggle">Sort by:</label>
     <input type="checkbox" id="sortBy-toggle">
       <ul id="sortBy">
-        <li><a href="?artist">Artist</a></li>
-        <li><a href="?added">Date added</a></li>
-        <li><a href="?released">Date released</a></li>
-        <li><a href="?clicks">Clicks</a></li>
-        <li><a href="?user">User</a></li>
+        <li><a href="http://myrkur.net?artist">Artist</a></li>
+        <li><a href="http://myrkur.net?added">Date added</a></li>
+        <li><a href="http://myrkur.net?released">Date released</a></li>
+        <li><a href="http://myrkur.net?clicks">Clicks</a></li>
+        <li><a href="http://myrkur.net?user">User</a></li>
       </ul>
     </input>
   </li>
@@ -21,4 +21,10 @@
      } ?>
      </ul>
    </input>
+   <label for="Gate-toggle">Gate:</label>
+    <input type="checkbox" id="gate-toggle">
+      <ul id="gate">
+       <li><a href='http://myrkur.net/gate/'>Links</a></li>
+      </ul>
+    </input>
 </ul>
