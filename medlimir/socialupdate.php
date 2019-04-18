@@ -81,7 +81,7 @@ if(empty($password_err)){
 														/* Check if POST contains discord username */
 														if(isset($_POST['discord']))
 														{
-															$twitch = $_POST['discord'];
+															$discord = $_POST['discord'];
 															echo "<p>Discord account set to: ". $discord ."</p>";
 
 														  $stmt = $mysqli->prepare("UPDATE users SET discord=? WHERE id=?");
@@ -170,7 +170,7 @@ if(empty($password_err)){
 														  /* Bind our params */
 														  /* BK: variables must be bound in the same order as the params in your SQL.
 														   * Some people prefer PDO because it supports named parameter. */
-														  $stmt->bind_param('si', $discord, $id);
+														  $stmt->bind_param('si', $youtube, $id);
 
 														  /* Set our params */
 														  /* BK: No need to use escaping when using parameters, in fact, you must not,
@@ -201,7 +201,7 @@ if(empty($password_err)){
 														  /* Bind our params */
 														  /* BK: variables must be bound in the same order as the params in your SQL.
 														   * Some people prefer PDO because it supports named parameter. */
-														  $stmt->bind_param('si', $discord, $id);
+														  $stmt->bind_param('si', $email, $id);
 
 														  /* Set our params */
 														  /* BK: No need to use escaping when using parameters, in fact, you must not,
