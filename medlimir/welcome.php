@@ -18,21 +18,21 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <style type="text/css">
         body{ font: 14px sans-serif; text-align: center; }
     </style>
-<?php include(__DIR__.'res/facebookPixelCode.php'); ?>
+<?php include(__DIR__.'/res/facebookPixelCode.php'); ?>
 </head>
 <body>
   <div id="buttons">
     <p style='float: left; color: #e1e114; padding: 20px; margin: 10px;'><a href="/reset-password.php">Reset password</a></p>
     <p style='float: right;color: #89a203; padding: 20px; margin: 10px;'><a href="/logout.php">Log out</a></p>
   </div>
-  <?php include(__DIR__.'res/logo.html'); ?>
+  <?php include(__DIR__.'/res/logo.html'); ?>
     <div>
         <p style='font-family: Times New Roman, Times, serif;'><h1>Welcome <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b> to the mainframe</h1></p>
         <p style='font-family: Verdana, Verdana, sans-serif;'><h2><a href="addalbum.php">Add album</a><br/></p>
         <p><a href="/social.php">Update connections</h2></a></p>
     </div>
   <?php
-require_once (__DIR__.'res/sqlcon.php');
+require_once (__DIR__.'/res/sqlcon.php');
 
 $sql = "SELECT username, email, twitter, twitch, psn, discord, youtube FROM users ORDER BY twitch DESC, twitter DESC, username ASC";
 $result = $mysqli->query($sql);

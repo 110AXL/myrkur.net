@@ -2,7 +2,7 @@
 // add in the config file
 require(__DIR__."/config.php");
 $loggedIn = 0;
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)
+if(isset($_SESSION["loggedin"]))
 {
   $loggedIn = 1;
   echo "logged in";
@@ -25,10 +25,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <head>
 <link rel="stylesheet" type="text/css" href='<?php echo __DIR__;?>/res/default.css'>
 <?php
-  include(__DIR__.'res/facebookPixelCode.php');
+  include(__DIR__.'/res/facebookPixelCode.php');
 ?>
 <link rel="shortcut icon" type="image/png" href='<?php echo __DIR__;?>/res/favicon-16x16.png'/>
-<script src="res/jquery-3.4.0.min.js">
+<script src="/res/jquery-3.4.0.min.js">
 $(document).ready(function() {
   $('nav li ul').hide().removeClass('fallback');
     $('nav li').hover(
@@ -51,7 +51,7 @@ $(document).ready(function() {
   ?>
 <div class="container">
   <header>
-    <?php include(__DIR__.'res/logo.html');?>
+    <?php include(__DIR__.'/res/logo.html');?>
   </header>
 
   <nav>
