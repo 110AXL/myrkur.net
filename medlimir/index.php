@@ -1,6 +1,6 @@
 <?php
 // Initialize the session
-require(__DIR__."/config.php");
+require(__DIR__."/sqlcon.php");
 // get sql config
  // Before using $_POST['value']
 if (isset($_GET['nafn']))
