@@ -1,6 +1,6 @@
 <?php
 // Initialize the session
-require($_SERVER['DOCUMENT_ROOT'] ."/config.php");
+require($_SERVER['DOCUMENT_ROOT'] ."../config.php");
 // get sql config
 require_once 'sqlcon.php';
  // Before using $_POST['value']
