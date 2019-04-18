@@ -1,6 +1,6 @@
 <?php
-// Initialize the session
-session_start();
+// add in the config file
+require(__DIR__."/config.php");
 $loggedIn = 0;
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)
 {
