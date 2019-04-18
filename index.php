@@ -65,7 +65,7 @@ $("img").on("error", function () {
   </nav>
 
   <main>
-    <div id='P'>
+    <div id='P' class='wrapper'>
       <div class='grid-container grid-container--fill'>
       <?php
 
