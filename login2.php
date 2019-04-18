@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/php-graph-sdk/src/Facebook/autoload.php';
 // add in the config file
 require(__DIR__."/medlimir/config.php");
 ?><!DOCTYPE html>
@@ -57,6 +58,15 @@ require(__DIR__."/medlimir/config.php");
       {emailAddress: emailAddress},
       loginCallback
     );
+  }
+</script>
+<script>
+  function loginCallback(response) {
+    if (response.status === "PARTIALLY_AUTHENTICATED") {
+      document.getElementById("code").value = response.code;
+      document.getElementById("csrf").value = response.state;
+      document.getElementById("login_success").submit();
+    }
   }
 </script>
 </head>
