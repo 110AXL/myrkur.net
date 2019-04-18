@@ -1,6 +1,6 @@
 <?php
 // Initialize the session
-require(base_url()."/../config.php");
+require("/../config.php");
 // get sql config
 require_once 'sqlcon.php';
  // Before using $_POST['value']
