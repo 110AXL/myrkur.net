@@ -65,7 +65,6 @@ $("img").on("error", function () {
   </nav>
 
   <main>
-    <div class='wrapper'>
       <div id='P'>
         <div class='grid-container grid-container--fill'>
         <?php
@@ -96,12 +95,13 @@ $("img").on("error", function () {
           if ($result->num_rows > 0) {
            // output data of each row
            while($row = $result->fetch_assoc()) {
+             echo "<div class='wrapper'>;"
              $resized_link = $row["img"];
              $removed_spaces = str_replace(" ","%20",$resized_link);
              echo "<div class='grid-element'><a target=_blank title='" . $row["artist"]. " - " . $row["album"]. " [" . $row["username"] . "]' href=main/link.php?i='" . $row["id"]."'>";
              echo "<img width=200 height=200 src=/medlimir/uploads/" . $removed_spaces . " />";
              echo "<div class='title'><p>" . $row["artist"] . " - " . $row["album"] . "</a></p></div>";
-             echo "<p class='info' title='Year & link clicks.'><a href=main/link.php?i='" . $row["id"]."'>" . $row["year"] . "</a></p><div id=username>" . $row["username"] . "</div><div id=clicks>" . $row["clicks"] . "</div></div>";
+             echo "<p class='info' title='Year & link clicks.'><a href=main/link.php?i='" . $row["id"]."'>" . $row["year"] . "</a></p><div id=username>" . $row["username"] . "</div><div id=clicks>" . $row["clicks"] . "</div></div></div>";
              }
            }
 
