@@ -111,6 +111,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
 														// set cookie on root
+														session_set_cookie_params(0,"/webapp/");
 														ini_set('session.cookie_domain', '.example.com' );
                             // Password is correct, so start a new session
                             session_start();
