@@ -1,6 +1,6 @@
 <?php
 // Initialize the session
-require(__DIR__."/config.php");
+require($_SERVER['DOCUMENT_ROOT'] ."/config.php");
 // get sql config
 require_once 'sqlcon.php';
  // Before using $_POST['value']
@@ -150,7 +150,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 if(isset($_SESSION["loggedin"]) === false){
 		Include('login.php');
-
 	exit;
 	}
 

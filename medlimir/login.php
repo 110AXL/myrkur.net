@@ -1,4 +1,7 @@
-  <!DOCTYPE html>
+<?php
+// add in the config file
+require($_SERVER['DOCUMENT_ROOT'] ."/config.php");
+?><!DOCTYPE html>
   <html lang='en'>
   <head>
     <meta charset='UTF-8'>
@@ -8,10 +11,10 @@
       body{ font: 14px sans-serif; }
       .wrapper{ width: 350px; padding: 20px; }
     </style>
-<?php    include('res/facebookPixelCode.php'); ?>
+<?php    include(__DIR__.'/res/facebookPixelCode.php'); ?>
   </head>
   <body>
-    <?php include 'res/logo.html'; ?>
+    <?php include(__DIR__.'res/logo.html'); ?>
     <div class='wrapper'>
       <h2>Login</h2>
       <p>Please fill in your credentials to login.</p>

@@ -23,12 +23,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 <html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href="/res/default.css">
-<link href="main/nav/lazeemenu.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href='<?php echo __DIR__;?>/res/default.css'>
 <?php
-  include('res/facebookPixelCode.php');
+  include(__DIR__.'res/facebookPixelCode.php');
 ?>
-<link rel="shortcut icon" type="image/png" href="res/favicon-16x16.png"/>
+<link rel="shortcut icon" type="image/png" href='<?php echo __DIR__;?>/res/favicon-16x16.png'/>
 <script src="res/jquery-3.4.0.min.js">
 $(document).ready(function() {
   $('nav li ul').hide().removeClass('fallback');
@@ -44,7 +43,7 @@ $(document).ready(function() {
 </head>
 <body bgcolor="black">
 <?php
-  include 'res/ip.php';
+  include(__DIR__.'/res/ip.php');
   require_once 'main/sqlcon.php';
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
@@ -52,7 +51,7 @@ $(document).ready(function() {
   ?>
 <div class="container">
   <header>
-    <?php include 'res/logo.html';?>
+    <?php include(__DIR__.'res/logo.html');?>
   </header>
 
   <nav>
