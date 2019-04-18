@@ -43,7 +43,7 @@ $(document).ready(function() {
 </head>
 <body bgcolor="black">
 <?php
-  include('/medlimir/res/ip.php');
+  include(__DIR__.'/medlimir/res/ip.php');
   require_once 'main/sqlcon.php';
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
