@@ -71,6 +71,24 @@ require(__DIR__."/medlimir/config.php");
 </script>
 </head>
 <body>
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '316701355598726',
+      xfbml      : true,
+      version    : 'v3.2'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
     <form id="loginForm" method="post" action="">
         <input name="username" type="text" />
         <input name="password" type="password" />
@@ -84,5 +102,11 @@ require(__DIR__."/medlimir/config.php");
         <input placeholder="email" id="email"/>
         <button onclick="emailLogin();">Login via Email</button>
     </form>
+    <div
+      class="fb-like"
+      data-share="true"
+      data-width="450"
+      data-show-faces="true">
+    </div>
 </body>
 </html>
