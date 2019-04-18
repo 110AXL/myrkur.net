@@ -20,7 +20,7 @@
       <li><a href='http://members.myrkur.net/addalbum.php'>Add album</a></li>
      </ul>
    </input>
-   <label for="Gate-toggle">Gate:</label>
+   <label for="gate-toggle">Gate:</label>
     <input type="checkbox" id="gate-toggle">
       <ul id="gate">
         <li><a href='http://myrkur.net/gate/'>Links</a></li>
