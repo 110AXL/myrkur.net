@@ -11,14 +11,13 @@
       </ul>
     </input>
   </li>
-  <label for="membership-toggle">Membership:</label>
+  <label for="membership-toggle">Members:</label>
    <input type="checkbox" id="membership-toggle">
      <ul id="membership">
       <li><a href='http://members.myrkur.net'>Login</a></li>
-      <li><a href='http://members.myrkur.net/register.php'>Register</a></li>;
+      <li><a href='http://members.myrkur.net/register.php'>Register</a></li>
       <li><a href='http://members.myrkur.net/welcome.php'>Mainframe</a></li>
       <li><a href='http://members.myrkur.net/addalbum.php'>Add album</a></li>
-     } ?>
      </ul>
    </input>
    <label for="Gate-toggle">Gate:</label>

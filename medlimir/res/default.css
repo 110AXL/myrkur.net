@@ -244,17 +244,9 @@ label, #menu {
   -webkit-transition: all 0.3s ease;
 }
 
+#gate-toggle:checked + #gate,
+#membership-toggle:checked + #membership,
 #sortBy-toggle:checked + #sortBy {
-  max-height: 300px;
-  margin-left: 52px;
-}
-
-#membership-toggle:checked + #membership {
-  max-height: 300px;
-  margin-left: 52px;
-}
-
-#gate-toggle:checked + #gate {
   max-height: 300px;
   margin-left: 52px;
 }
