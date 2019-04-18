@@ -31,11 +31,11 @@
   <body>
 		<div class="container">
 		  <header>
-		    <?php include(__DIR__.'/medlimir/res/logo.html');?>
+		    <?php include(__DIR__.'/res/logo.html');?>
 		  </header>
 
 		  <nav>
-		       <?php include(__DIR__.'/medlimir/navbar.php');?>
+		       <?php include(__DIR__.'/res/navbar.php');?>
 		  </nav>
 
 		  <main>
