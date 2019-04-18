@@ -13,9 +13,15 @@ require(__DIR__."/medlimir/config.php");
       version          : 'v3.2'
     });
     FB.ui({
-      method: 'share',
-      href: 'https://developers.facebook.com/docs/'
-    }, function(response){});
+      method: 'share_open_graph',
+      action_type: 'og.likes',
+      action_properties: JSON.stringify({
+        object:'https://developers.facebook.com/docs/javascript/examples',
+      })
+    }, function(response){
+      // Debug response (optional)
+      console.log(response);
+    });
   };
 </script>
 <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
