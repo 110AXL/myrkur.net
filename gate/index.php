@@ -26,7 +26,7 @@ include '../medlimir/res/ip.php';
   </nav>
 
   <main>
-    <h1>Podcasts:</h1>
+    <h2>Podcasts:</h2>
     <p>
       <a href='https://player.fm/series/grinland'><h3>Grínland</a></h3>
       <a href='https://snorribjorns.libsyn.com/'><h3>The Snorri Björns Podcast Show</a></h3>
@@ -39,18 +39,18 @@ include '../medlimir/res/ip.php';
       <a href='http://www.kop.is/gamalt/podcast/'><h3>Gullkastið</a></h3>
       <a href='https://soundcloud.com/kjarninn/sets/hismid'><h3>Hismið</a></h3>
       <a href='https://soundcloud.com/kjarninn/sets/kvikan'><h3>Kvikan</a></h3>
-      <a href='https://soundcloud.com/kjarninn/sets/ukl'><h3>Þukl</a></h3><br/>
+      <a href='https://soundcloud.com/kjarninn/sets/ukl'><h3>Þukl</a></h3>
       <a href='https://soundcloud.com/kjarninn/sets/grettistak'><h3>Grettistak</a></h3>
       <a href='https://soundcloud.com/kjarninn/sets/taeknivarpi'><h3>Tæknivarpið</a></h3>
     <p/>
-    <h1>Sports:</h1>
+    <h2>Sports:</h2>
     <p>
       <a href='https://stats.nba.com/schedule/'><h3>NBA Schedule</a></h3>
       <a href='https://footyroom.com/'><h3>Footyroom</a></h3>
       <a href='https://www.livescore.com/'><h3>Livescore</a></h3>
       <a href='https://firstsrowsports.tv'><h3>Firstrow Sports</a></h3>
     </p>
-    <h1>TV & Movies</h1>
+    <h2>TV & Movies</h2>
     <p>
       <a href='http://vumoo.to/'><h3>Vumoo</a></h3>
       <a href='https://www11.fmovies.io/'><h3>F Movies</a></h3>
