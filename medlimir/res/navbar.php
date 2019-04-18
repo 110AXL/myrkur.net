@@ -1,6 +1,6 @@
 <ul>
   <li>
-   <label class='navbar' for="sortBy-toggle">Music:</label>
+   <label id='navbar' for="sortBy-toggle">Music:</label>
     <input type="checkbox" id="sortBy-toggle">
       <ul id="sortBy">
         <li><a href="http://myrkur.net?artist">Artist</a></li>
@@ -11,7 +11,7 @@
       </ul>
     </input>
   </li>
-  <label class='navbar' for="membership-toggle">Members:</label>
+  <label id='navbar' for="membership-toggle">Members:</label>
    <input type="checkbox" id="membership-toggle">
      <ul id="membership">
       <li><a href='http://members.myrkur.net'>Login</a></li>
@@ -20,7 +20,7 @@
       <li><a href='http://members.myrkur.net/addalbum.php'>Add album</a></li>
      </ul>
    </input>
-   <label class='navbar' for="gate-toggle">Gate:</label>
+   <label id='navbar' for="gate-toggle">Gate:</label>
     <input type="checkbox" id="gate-toggle">
       <ul id="gate">
         <li><a href='http://myrkur.net/gate/'>Links</a></li>

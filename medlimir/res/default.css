@@ -210,12 +210,14 @@ a {
 }
 
 label {
-  cursor: pointer;
-  width: auto;
-  font-size:40px;
   text-align: left;
   font-family: "Arial Narrow", Arial, sans-serif;
   display: inline-block;
+}
+
+#navbar{
+  cursor: pointer;
+  font-size:40px;
 }
 
 #twitch,
