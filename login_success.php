@@ -77,6 +77,24 @@ $email = isset($data['email']) ? $data['email']['address'] : '';
 </head>
 <body>
 <script>
+window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '316701355598726',
+    xfbml      : true,
+    version    : 'v3.2'
+  });
+  FB.AppEvents.logPageView();
+};
+
+(function(d, s, id){
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) {return;}
+   js = d.createElement(s); js.id = id;
+   js.src = "https://connect.facebook.net/en_US/sdk.js";
+   fjs.parentNode.insertBefore(js, fjs);
+ }(document, 'script', 'facebook-jssdk'));
+</script>
+<script>
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
@@ -160,7 +178,12 @@ $email = isset($data['email']) ? $data['email']['address'] : '';
 
 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
-
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
 <div id="status">
 </div>
 
