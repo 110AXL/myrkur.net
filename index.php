@@ -114,7 +114,11 @@ $("img").on("error", function () {
     <!-- Sidebar / Ads -->
     <?php
       // Echo session variables
-      echo $_SESSION["username"];
+      if(!isset($_COOKIE['user'])) {
+            echo "Not logged in.";
+        } else {
+            echo "<a href=" . __DIR__ . "?nafn=" . $_COOKIE['user'] . ">" . $_COOKE['user'] . "</a>";
+        }
     ?>
   </aside>
 
