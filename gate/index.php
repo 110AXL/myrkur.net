@@ -40,6 +40,7 @@ include '../medlimir/res/ip.php';
       <li><a href='https://soundcloud.com/kjarninn/sets/ukl'>Þukl</a></li>
       <li><a href='https://soundcloud.com/kjarninn/sets/grettistak'>Grettistak</a></li>
       <li><a href='https://soundcloud.com/kjarninn/sets/taeknivarpi'>Tæknivarpið</a></li>
+      <li><a href='https://player.fm/series/grinland'>Grínland</a></li>
     </ul>
     <ul>
     <h2>Sports:</h2>
