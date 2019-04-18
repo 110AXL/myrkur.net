@@ -51,9 +51,11 @@ if(isset($nafn) === FALSE){
 					</style>";
 					include(__DIR__.'/res/facebookPixelCode.php');
 					echo "
-				<link rel='shortcut icon' type='image/png' href=".__DIR__."'/res/favicon-16x16.png'/>
+					<link rel='shortcut icon' type='image/png' href=".__DIR__."'/res/favicon-16x16.png'/>
+					$('img').on('error', function () {
+					  $(this).unbind('error').attr('src', ''/res/noid.jpg');
+					});
 				</head>";
-				echo "<body bgcolor='black'>";
 				// output data of each row
 			while($row = $result2->fetch_assoc()) {
 
@@ -61,7 +63,7 @@ if(isset($nafn) === FALSE){
 				$removed_spaces = str_replace(" ","%20",$resized_link);
 
 				if(!$row["album"] == NULL)
-					echo "<a target=_blank title='" . $row["artist"]. " - " . $row["album"]. "' href='" . $row["link1"]. "'><img width=200 height=200 src=/uploads/" . $removed_spaces . " onError='this.onerror=null;this.src=/res/noid.jpg' /></a>";
+					echo "<a target=_blank title='" . $row["artist"]. " - " . $row["album"]. "' href='" . $row["link1"]. "'><img width=200 height=200 src=/uploads/" . $removed_spaces . " /></a>";
 			}
 		echo "</body>";
 		}
