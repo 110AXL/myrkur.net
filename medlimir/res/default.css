@@ -13,10 +13,11 @@
 
 .grid-element {
   background-color: #000;
-  padding: 10px;
+  padding: 0px;
   color: #000;
   border: 1px solid #000;
   margin-bottom: 2em;
+  margin-right: 2em;
   position:relative;
   height: 350px;
 }
