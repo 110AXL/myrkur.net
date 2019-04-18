@@ -92,7 +92,7 @@ $(document).ready(function() {
            $resized_link = $row["img"];
            $removed_spaces = str_replace(" ","%20",$resized_link);
            echo "<div class='grid-element'><a target=_blank title='" . $row["artist"]. " - " . $row["album"]. " [" . $row["username"] . "]' href=main/link.php?i='" . $row["id"]."'>";
-           echo "<img width=200 height=200 src=/medlimir/uploads/" . $removed_spaces . " />";
+           echo "<img width=200 height=200 onError='this.onerror=null;this.src='/res/noid.jpg' src=/medlimir/uploads/" . $removed_spaces . " />";
            echo "<div class='title'><p>" . $row["artist"] . " - " . $row["album"] . "</a></p></div>";
            echo "<p class='info' title='Year & link clicks.'><a href=main/link.php?i='" . $row["id"]."'>" . $row["year"] . "</a></p><div id=username>" . $row["username"] . "</div><div id=clicks>" . $row["clicks"] . "</div></div>";
            }
