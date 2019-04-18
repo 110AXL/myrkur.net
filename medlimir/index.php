@@ -111,10 +111,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
 														// set cookie on root
+														session_set_cookie_params(time() + (864000 * 30),"/", ".myrkur.net", true);
 														$cookie_name = "user";
 														$cookie_value = $username;
 														setcookie($cookie_name, $cookie_value, time() + (864000 * 30), "/"); // 864000 = 10 days
-														session_set_cookie_params(0,"/");
 														ini_set('session.cookie_domain', '.myrkur.net' );
                             // Password is correct, so start a new session
                             session_start();
