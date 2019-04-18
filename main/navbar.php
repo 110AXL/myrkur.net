@@ -5,7 +5,7 @@
       <ul id="sortBy">
         <li><a href="http://myrkur.net?artist">Artist</a></li>
         <li><a href="http://myrkur.net?added">Date added</a></li>
-        <li><a href="http://myrkur.net?released">Date released</a></li>
+        <li><a href="http://myrkur.net?released">Release date</a></li>
         <li><a href="http://myrkur.net?clicks">Clicks</a></li>
         <li><a href="http://myrkur.net?user">User</a></li>
       </ul>
