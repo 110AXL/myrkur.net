@@ -1,5 +1,17 @@
 <?php
 session_start(); ?>
+<!-- Example -->
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="/res/default.css">
+
+<?php include('/res/facebookPixelCode.php'); ?>
+<link rel="shortcut icon" type="image/png" href="/res/favicon-16x16.png"/>
+</head>
 <body>
   <div class="container">
     <header>
