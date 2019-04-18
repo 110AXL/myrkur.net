@@ -11,6 +11,7 @@ session_start(); ?>
     </nav>
 
     <main>
+      <?php
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: index.php");
@@ -278,3 +279,13 @@ if(empty($password_err)){
 	// Close connection
 	mysqli_close($mysqli);
 ?>
+<aside>
+  <!-- Sidebar / Ads -->
+</aside>
+
+<footer>
+  <!-- Footer content -->
+</footer>
+</div>
+</body>
+</html>
