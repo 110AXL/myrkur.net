@@ -1,6 +1,10 @@
 
 
 <?php
+// add in the config file
+require(__DIR__."/medlimir/config.php");
+require_once __DIR__ . '/php-graph-sdk/src/Facebook/autoload.php';
+
 // Initialize variables
 $app_id = '<facebook_app_id>';
 $secret = '<account_kit_app_secret>';
@@ -45,5 +49,3 @@ $email = isset($data['email']) ? $data['email']['address'] : '';
   <div>Access Token: <?php echo $user_access_token; ?></div>
   <div>Refresh Interval: <?php echo $refresh_interval; ?></div>
 </body>
-
-    
