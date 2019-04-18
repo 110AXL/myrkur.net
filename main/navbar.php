@@ -16,14 +16,14 @@
      <ul id="membership">
       <li><a href='http://members.myrkur.net'>Login</a></li>
       <li><a href='http://members.myrkur.net/register.php'>Register</a></li>
-      <li><a href='http://members.myrkur.net/welcome.php'>Mainframe</a></li>
+      <li><a href='http://members.myrkur.net/welcome.php'>Settings</a></li>
       <li><a href='http://members.myrkur.net/addalbum.php'>Add album</a></li>
      </ul>
    </input>
    <label for="Gate-toggle">Gate:</label>
     <input type="checkbox" id="gate-toggle">
       <ul id="gate">
-       <li><a href='http://myrkur.net/gate/'>Links</a></li>
+        <li><a href='http://myrkur.net/gate/'>Links</a></li>
       </ul>
     </input>
 </ul>
