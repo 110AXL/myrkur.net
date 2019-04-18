@@ -209,13 +209,15 @@ a {
   color: #aaa;
 }
 
-label .navbar {
+label {
   cursor: pointer;
   width: auto;
   font-size:40px;
+  text-align: left;
+  font-family: "Arial Narrow", Arial, sans-serif;
+  display: inline-block;
 }
 
-label,
 #twitch,
 #discord,
 #youtube,
@@ -224,18 +226,7 @@ label,
 #twitter{
   cursor: default;
   width: auto;
-  font-size:20px;
-}
-
-#menu {
-    height: 20px;
-    width: auto;
-}
-
-label, #menu {
-  text-align: left;
-  font-family: "Arial Narrow", Arial, sans-serif;
-  display: inline-block;
+  font-size:19px;
 }
 
 #sortBy-toggle,
