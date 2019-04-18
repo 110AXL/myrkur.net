@@ -12,16 +12,16 @@ require(__DIR__."/medlimir/config.php");
       xfbml            : true,
       version          : 'v3.2'
     });
-    FB.ui({
-      method: 'share_open_graph',
-      action_type: 'og.likes',
-      action_properties: JSON.stringify({
-        object:'https://developers.facebook.com/docs/javascript/examples',
-      })
-    }, function(response){
-      // Debug response (optional)
-      console.log(response);
-    });
+    FB.login(function(response) {
+      if (response.authResponse) {
+       console.log('Welcome!  Fetching your information.... ');
+       FB.api('/me', function(response) {
+         console.log('Good to see you, ' + response.name + '.');
+       });
+      } else {
+       console.log('User cancelled login or did not fully authorize.');
+      }
+  });
   };
 </script>
 <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
