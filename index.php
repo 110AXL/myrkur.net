@@ -105,6 +105,7 @@ $(document).ready(function() {
 
   <aside>
     <!-- Sidebar / Ads -->
+    <img src="im34age.png" onerror="imgError(this);"/>
   </aside>
 
   <footer>
