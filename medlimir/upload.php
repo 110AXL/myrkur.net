@@ -288,7 +288,7 @@ else if(empty($_POST['img_url']) && !empty($_FILES['fileToUpload']['name']))
 		}
 
 		/* Add locally uploaded info to database */
-		if (!$stmt->bind_param("ssissssi", $artist, $album, $year, $link1, $link2, $rImg, $userId)) {
+		if (!$stmt->bind_param("ssisssi", $artist, $album, $year, $link1, $link2, $rImg, $userId)) {
 		echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
 		}
 
