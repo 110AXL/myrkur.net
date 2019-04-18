@@ -21,9 +21,6 @@
   }
 	include 'sqlcon.php';
   include 'res/ip.php';
-  echo "<center>";
-  include 'res/logo.html';
-  echo "</center>";
   $year = date("Y");
   ?>
 

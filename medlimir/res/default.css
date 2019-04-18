@@ -42,7 +42,7 @@
   margin-left:10px;
 }
 
-#username:hover{
+#username, #clicks:hover{
   cursor:pointer;
   color:#444;
 }
@@ -205,10 +205,11 @@ body {
   text-align: center;
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   color: #999;
+  background-color: black;
 }
 
 a {
-  color: #999;
+  color: #aaa;
 }
 
 label {
