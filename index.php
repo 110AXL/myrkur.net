@@ -1,6 +1,6 @@
 <?php
 // add in the config file
-require(__DIR__."/config.php");
+require(__DIR__."medlimir/config.php");
 $loggedIn = 0;
 if(isset($_SESSION["loggedin"]))
 {
