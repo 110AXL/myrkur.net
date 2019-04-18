@@ -1,6 +1,4 @@
 <?php
-// add in the config file
-require($_SERVER['DOCUMENT_ROOT'] ."/config.php");
 ?><!DOCTYPE html>
   <html lang='en'>
   <head>
