@@ -3,7 +3,6 @@
 <?php
 // add in the config file
 require(__DIR__."/medlimir/config.php");
-require_once __DIR__ . '/php-graph-sdk/src/Facebook/autoload.php';
 /*
 // Initialize variables
 $app_id = '<facebook_app_id>';
