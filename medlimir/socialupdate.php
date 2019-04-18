@@ -70,7 +70,7 @@ if(empty($password_err)){
 													{
 
 														/* Check if POST contains twitch url */
-														if(isset($_POST['twitch']))
+														if(!empty($_POST['twitch']))
 														{
 															$twitch = $_POST['twitch'];
 															echo "<p>Twitch account set to: ". $twitch ."</p>";
@@ -101,7 +101,7 @@ if(empty($password_err)){
 														}
 
 														/* Check if POST contains discord username */
-														if(isset($_POST['discord']))
+														if(!empty($_POST['discord']))
 														{
 															$discord = $_POST['discord'];
 															echo "<p>Discord account set to: ". $discord ."</p>";
@@ -132,7 +132,7 @@ if(empty($password_err)){
 														}
 
 														/* Check if POST contains Playstation network username */
-														if(isset($_POST['psn']))
+														if(!empty($_POST['psn']))
 														{
 															$psn = $_POST['psn'];
 															echo "<p>Playstation Network account set to: ". $psn ."</p>";
@@ -163,7 +163,7 @@ if(empty($password_err)){
 														}
 
 														/* Check if POST contains Youtube channel */
-														if(isset($_POST['youtube']))
+														if(!empty($_POST['youtube']))
 														{
 
 															if(substr(trim($_POST["youtube"]), 0, 23) == "https://www.youtube.com"){
@@ -178,7 +178,7 @@ if(empty($password_err)){
 													      {
 													        $youtube = trim($_POST["youtube"]);
 													    } else {
-													        $youtube = "#";
+													        $youtube = "";
 													    }
 
 															echo "<p>Youtube channel set to: ". $youtube ."</p>";
@@ -209,7 +209,7 @@ if(empty($password_err)){
 														}
 
 														/* Check if POST contains Email address */
-														if(isset($_POST['email']))
+														if(!empty($_POST['email']))
 														{
 															$email = $_POST['email'];
 															echo "<p>Email address set to: ". $email ."</p>";
@@ -240,7 +240,7 @@ if(empty($password_err)){
 														}
 
 														/* Check if POST contains twitter url */
-														if(isset($_POST['twitter']))
+														if(!empty($_POST['twitter']))
 														{
 															$twitter = $_POST['twitter'] ?: '';
 														  	echo "<p>Twitter account set to: ". $twitter ."</p>";

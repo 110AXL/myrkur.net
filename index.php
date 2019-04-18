@@ -2,7 +2,7 @@
 // add in the config file
 require(__DIR__."/medlimir/config.php");
 $loggedIn = 0;
-if(isset($_SESSION["loggedin"]))
+if(!empty($_SESSION["loggedin"]))
 {
   $loggedIn = 1;
   echo "logged in";
