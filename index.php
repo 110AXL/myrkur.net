@@ -115,7 +115,7 @@ $("img").on("error", function () {
     <?php
       // Echo session variables
       if(!isset($_COOKIE['user'])) {
-            echo "Not logged in.";
+            echo "<h1>Not logged in. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h1>";
         } else {
             echo "<a href=" . __DIR__ . "?nafn=" . $_COOKIE['user'] . ">" . $_COOKE['user'] . "</a>";
         }
