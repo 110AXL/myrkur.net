@@ -1,5 +1,4 @@
 <?php
-session_start();
 // add in the config file
 require(__DIR__."/medlimir/config.php");
 $loggedIn = 0;
