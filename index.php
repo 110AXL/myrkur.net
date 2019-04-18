@@ -66,7 +66,7 @@ $("img").on("error", function () {
 
   <main>
       <div id='P'>
-        <div class='grid-container grid-container--fll'>
+        <div class='grid-container grid-container--fill'>
         <?php
 
           switch($_SERVER['QUERY_STRING']) {
