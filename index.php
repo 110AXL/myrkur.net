@@ -23,12 +23,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 <html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href='<?php echo __DIR__;?>/res/default.css'>
+<link rel="stylesheet" type="text/css" href='/medlimir/res/default.css'>
 <?php
-  include(__DIR__.'/res/facebookPixelCode.php');
+  include(__DIR__.'/medlimir/res/facebookPixelCode.php');
 ?>
-<link rel="shortcut icon" type="image/png" href='<?php echo __DIR__;?>/res/favicon-16x16.png'/>
-<script src="/res/jquery-3.4.0.min.js">
+<link rel="shortcut icon" type="image/png" href='/medlimir/res/favicon-16x16.png'/>
+<script src="/medlimir/res/jquery-3.4.0.min.js">
 $(document).ready(function() {
   $('nav li ul').hide().removeClass('fallback');
     $('nav li').hover(
@@ -43,7 +43,7 @@ $(document).ready(function() {
 </head>
 <body bgcolor="black">
 <?php
-  include(__DIR__.'/res/ip.php');
+  include('/medlimir/res/ip.php');
   require_once 'main/sqlcon.php';
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
@@ -51,7 +51,7 @@ $(document).ready(function() {
   ?>
 <div class="container">
   <header>
-    <?php include(__DIR__.'/res/logo.html');?>
+    <?php include(__DIR__.'/medlimir/res/logo.html');?>
   </header>
 
   <nav>
