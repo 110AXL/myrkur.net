@@ -217,6 +217,16 @@ label {
   font-size:40px;
 }
 
+label
+#twitch,
+#Discord,
+#youtube,
+#psn,
+#email{
+  width: auto;
+  font-size:20px;
+}
+
 #menu {
     height: 20px;
     width: auto;

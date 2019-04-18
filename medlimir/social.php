@@ -29,7 +29,16 @@
 
   </head>
   <body>
-      <div class="wrapper">
+		<div class="container">
+		  <header>
+		    <?php include(__DIR__.'/medlimir/res/logo.html');?>
+		  </header>
+
+		  <nav>
+		       <?php include(__DIR__.'/main/navbar.php');?>
+		  </nav>
+
+		  <main>
           <h2>Update connections</h2>
           <p>Here you can update your connections.</p>
   		    <div class="form-group" >
@@ -58,15 +67,22 @@
 
 
   			 <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
-  				  <script>
-  				  grecaptcha.ready(function() {
-  					  grecaptcha.execute('reCAPTCHA_site_key', {action: 'homepage'}).then(function(token) {
-  						 ...
-  					  });
-  				  });
-  			 </script>
-          </form>
+			   <script>
+			  		grecaptcha.ready(function() {
+				  	grecaptcha.execute('reCAPTCHA_site_key', {action: 'homepage'}).then(function(token) {
+						 ...
+				  	});
+			  	});
+		 		</script>
+				</main>
+
+				<aside>
+					<!-- Sidebar / Ads -->
+				</aside>
+
+				<footer>
+					<!-- Footer content -->
+				</footer>
       </div>
-</div>
 </body>
 </html>
