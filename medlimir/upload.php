@@ -308,7 +308,7 @@ else if(empty($_POST['img_url']) && !empty($_FILES['fileToUpload']['name']))
 			echo "</pre>";
 		} else if($urlOk == 1) {
 			echo "<pre>";
-			echo "Link was successfully downloaded."
+			echo "Link was successfully downloaded.";
 			echo "</pre>";
 		}
 		echo "<pre>";
