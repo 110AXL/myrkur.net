@@ -1,6 +1,6 @@
 <ul>
   <li>
-   <label for="sortBy-toggle">Sort by:</label>
+   <label for="sortBy-toggle">Music:</label>
     <input type="checkbox" id="sortBy-toggle">
       <ul id="sortBy">
         <li><a href="http://myrkur.net?artist">Artist</a></li>
