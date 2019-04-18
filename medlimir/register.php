@@ -6,7 +6,7 @@ require_once "sqlcon.php";
 // Define variables and initialize with empty values
 $username = $email = $password = $confirm_password  = $twitter = $twitch = $discord = $youtube = $psn = "";
 
-$username_err = $password_err = $confirm_password_err = $email_err = $twitter_err = $twitch_err = $discord_err = $youtube_err = "";
+$username_err = $password_err = $confirm_password_err = $email_err = $twitter_err = $twitch_err = $psn_err = $discord_err = $youtube_err = "";
 
 
 // Processing form data when form is submitted
