@@ -5,8 +5,8 @@
 session_start();
 // Define common places
 define("ROOT_DIR",__DIR__);
-define("CLASS_DIR",ROOT_DIR.'/medlimir/core.processor/classes');
-define("FUNCTIONS_DIR",ROOT_DIR.'/medlimir/core.processor/functions');
+define("CLASS_DIR",ROOT_DIR.'/core.processor/classes');
+define("FUNCTIONS_DIR",ROOT_DIR.'/core.processor/functions');
 // Require the page initializer class
 require_once(CLASS_DIR."/class.HeaderProcessor.php");
 // Initialize the autoloader for classes
