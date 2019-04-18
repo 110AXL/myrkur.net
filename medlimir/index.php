@@ -61,7 +61,7 @@ if(isset($nafn) === FALSE){
 				$removed_spaces = str_replace(" ","%20",$resized_link);
 
 				if(!$row["album"] == NULL)
-					echo "<a target=_blank title='" . $row["artist"]. " - " . $row["album"]. "' href='" . $row["link1"]. "'><img width=200 height=200 onError='this.onerror=null;this.src=/res/noid.jpg' src=/uploads/" . $removed_spaces . " /></a>";
+					echo "<a target=_blank title='" . $row["artist"]. " - " . $row["album"]. "' href='" . $row["link1"]. "'><img width=200 height=200 src=/uploads/" . $removed_spaces . " onError='this.onerror=null;this.src=/res/noid.jpg' /></a>";
 			}
 		echo "</body>";
 		}
