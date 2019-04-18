@@ -250,7 +250,7 @@ label, #menu {
 #membership-toggle:checked + #membership,
 #sortBy-toggle:checked + #sortBy {
   max-height: 300px;
-  margin-left: 52px;
+  margin-left: 33px;
 }
 
 
@@ -261,6 +261,6 @@ ul {
 
 li {
   font-family: "Arial Narrow", Arial, sans-serif;
-  font-size:25px;
+  font-size:20px;
   position: relative;
 }
