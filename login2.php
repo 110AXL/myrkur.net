@@ -89,11 +89,14 @@ require(__DIR__."/medlimir/config.php");
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
-    <form id="loginForm" method="post" action="">
+    <form id="login_success" method="post" action="/login_success.php">
         <input name="username" type="text" />
         <input name="password" type="password" />
         <input name="action" type="hidden" value="login" />
         <input type="submit" value="LOGIN" />
+
+        <input id="csrf" type="hidden" name="csrf" />
+        <input id="code" type="hidden" name="code" />
 
         <input value="+354" id="country_code" />
         <input placeholder="phone number" id="phone_number"/>
