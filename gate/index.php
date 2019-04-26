@@ -7,13 +7,13 @@
 <head>
 <link rel="stylesheet" type="text/css" href="../medlimir/res/default.css">
 
-<?php include('../medlimir/res/facebookPixelCode.php'); ?>
+<?php include(__DIR__.’../medlimir/res/facebookPixelCode.php'); ?>
 <link rel="shortcut icon" type="image/png" href="../medlimir/res/favicon-16x16.png"/>
 </head>
 <body bgcolor="black">
 <?php
 session_start();
-include __DIR__.’../medlimir/res/ip.php';
+include (__DIR__.’../medlimir/res/ip.php');
 ?>
 <div class="container">
   <header>
@@ -22,7 +22,7 @@ include __DIR__.’../medlimir/res/ip.php';
 
   <nav>
     <!-- Navigation -->
-    <?php include '../medlimir/navbar.php';?>
+    <?php include (__DIR__.’../medlimir/navbar.php';?>
   </nav>
 
   <main><ul>
