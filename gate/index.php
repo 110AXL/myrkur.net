@@ -22,7 +22,7 @@ include (__DIR__.’../medlimir/res/ip.php');
 
   <nav>
     <!-- Navigation -->
-    <?php include (__DIR__.’../medlimir/navbar.php';?>
+    <?php include(__DIR__.'../medlimir/navbar.php');?>
   </nav>
 
   <main><ul>
