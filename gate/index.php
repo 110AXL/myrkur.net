@@ -13,11 +13,11 @@
 <body bgcolor="black">
 <?php
 session_start();
-include '../medlimir/res/ip.php';
+include __DIR__.’../medlimir/res/ip.php';
 ?>
 <div class="container">
   <header>
-      <?php include('../medlimir/res/logo.html');?>
+      <?php include(__DIR__.'../medlimir/res/logo.html');?>
   </header>
 
   <nav>
