@@ -13,7 +13,7 @@
 <body bgcolor="black">
 <?php
 session_start();
-include (__DIR__.’../medlimir/res/ip.php');
+include(__DIR__.'../medlimir/res/ip.php');
 ?>
 <div class="container">
   <header>
