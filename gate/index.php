@@ -7,7 +7,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="../medlimir/res/default.css">
 
-<?php include(__DIR__.’../medlimir/res/facebookPixelCode.php'); ?>
+<?php include(__DIR__.'../medlimir/res/facebookPixelCode.php'); ?>
 <link rel="shortcut icon" type="image/png" href="../medlimir/res/favicon-16x16.png"/>
 </head>
 <body bgcolor="black">
@@ -22,7 +22,7 @@ include (__DIR__.’../medlimir/res/ip.php');
 
   <nav>
     <!-- Navigation -->
-    <?php include(__DIR__.'../medlimir/navbar.php');?>
+    <?php include(__DIR__.'../medlimir/res/navbar.php');?>
   </nav>
 
   <main><ul>
