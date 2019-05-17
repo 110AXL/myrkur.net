@@ -7,7 +7,6 @@ if(!empty($_SESSION["loggedin"]))
   $loggedIn = 1;
   echo "logged in";
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,19 +37,10 @@ if(!empty($_SESSION["loggedin"]))
 
 <body id="page-top">
 
-  <!-- PHP Includes -->
-  <?php
-    include(__DIR__.'/medlimir/res/ip.php');
-    require_once 'main/sqlcon.php';
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
-  ?>
-
   <!-- Navigation -->
   <nav id="mainNav" class="navbar navbar-expand-lg navbar-light fixed-top py-3">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Myrkur.net</a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">ProgrammingKnowledge</a>
       <button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navBarResponsive" aria-controls="navBarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -63,7 +53,7 @@ if(!empty($_SESSION["loggedin"]))
               <a class="nav-link js-scroll-trigger" href="#services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+              <a class="nav-link js-scroll-trigger" href="#portfoliot">Portfolio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -78,11 +68,11 @@ if(!empty($_SESSION["loggedin"]))
   <div class="container h-100">
       <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-10 align-self-end">
-          <h1 class="text-uppercase text-white font-weight-bold">Your Favorite Source of New Music </h1>
+          <h1 class="text-uppercase text-white font-weight-bold">Your Favorite Source of FREE Video Tutorials </h1>
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
-            <p class="text-white-75 font-weight-light mb-5">Music from all corners of the globe. Membership required to add your own albums.</p>
+            <p class="text-white-75 font-weight-light mb-5">ProgrammingKnowledge can help you build better application by just following video tutorials! You can be whatever you want to be!</p>
             <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
         </div>
       </div>
@@ -96,7 +86,7 @@ if(!empty($_SESSION["loggedin"]))
         <div class="col-lg-8 text-center">
             <h2 class="text-white mt-0">We've got what you need!</h2>
             <hr class="divider light my-4">
-            <p class="text-white-50 mb-5">Myrkur.net has everything you need to get you started! Browse our awesome collection of albums!</p>
+            <p class="text-white-50 mb-5">ProgrammingKnowledge has everything you need to get you started! Browse our awesome collection of video tutorials!</p>
             <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
         </div>
     </div>
