@@ -147,7 +147,7 @@ if(!empty($_SESSION["loggedin"]))
   <!-- Portfolio Section -->
 <section id="portfolio">
   <div class="container-fluid p-0">
-    <div class='grid-container grid-container--fill'>
+        <div class="row no-gutters">
     <?php
 
       switch($_SERVER['QUERY_STRING']) {
@@ -178,17 +178,17 @@ if(!empty($_SESSION["loggedin"]))
        while($row = $result->fetch_assoc()) {
          $resized_link = $row["img"];
          $removed_spaces = str_replace(" ","%20",$resized_link);
-         echo "<div class='grid-element'><a target=_blank title='" . $row["artist"]. " - " . $row["album"]. " [" . $row["username"] . "]' href=main/link.php?i='" . $row["id"]."'>";
-         echo "<img width=200 height=200 src=/medlimir/uploads/" . $removed_spaces . " />";
-         echo "<div class='title'><p>" . $row["artist"] . " - " . $row["album"] . "</a></p></div>";
-         echo "<p class='info' title='Year & link clicks.'><a href=main/link.php?i='" . $row["id"]."'>" . $row["year"] . "</a></p><div id=username>" . $row["username"] . "</div><div id=clicks>" . $row["clicks"] . "</div></div>";
+         echo "<div class='col-lg-4 col-sm-6'><a class='portfolio-box' target=_blank title='" . $row["artist"]. " - " . $row["album"]. " [" . $row["username"] . "]' href=main/link.php?i='" . $row["id"]."'>";
+         echo "<img class='img-fluid' src=/medlimir/uploads/" . $removed_spaces . " />";
+         echo "<div class='portfolio-box-caption'>";
+         echo "<div class='project-category text-white-50'>" . $row["artist"] . "</div>";
+         echo "<div class='project-name'>" . $row["album"] . "</a></div></div></div>";
+         // echo "<p class='info' title='Year & link clicks.'><a href=main/link.php?i='" . $row["id"]."'>" . $row["year"] . "</a></p><div id=username>" . $row["username"] . "</div><div id=clicks>" . $row["clicks"] . "</div></div>";
          }
        }
 
       $mysqli->close();?>
-    </div>
-    <!--
-    <div class="row no-gutters">
+    <!-- Default shit
         <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg" >
             <img class="img-fluid" src="img/portfolio/fullsize/1.jpg" alt="">
@@ -276,9 +276,9 @@ if(!empty($_SESSION["loggedin"]))
 
             </div>
           </a>
-        </div>
+        </div> -->
     </div>
- -->
+
   </div>
 
 </section>
