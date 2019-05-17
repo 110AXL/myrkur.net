@@ -65,9 +65,6 @@ if(!empty($_SESSION["loggedin"]))
               <a class="nav-link js-scroll-trigger" href="https://members.myrkur.net/">System</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="https://members.myrkur.net/addalbum.php">Quick Add</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
             </li>
           </ul>
@@ -80,12 +77,12 @@ if(!empty($_SESSION["loggedin"]))
   <div class="container h-100">
       <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-10 align-self-end">
-          <h1 class="text-uppercase text-white font-weight-bold">Your Favorite Source of NEW Music ! </h1>
+          <h1 class="text-uppercase text-white font-weight-bold">New music!</h1>
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
-            <p class="text-white-75 font-weight-light mb-5">Myrkur.net strives to be the top quality Music directory of the Internet!</p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+            <p class="text-white-75 font-weight-light mb-5">Myrkur.net strives to be the top quality music directory of the Internet!</p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="https://members.myrkur.net/addalbum.php">Add your own album!</a>
         </div>
       </div>
   </div>
