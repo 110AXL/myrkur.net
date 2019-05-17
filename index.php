@@ -178,7 +178,7 @@ if(!empty($_SESSION["loggedin"]))
        while($row = $result->fetch_assoc()) {
          $resized_link = $row["img"];
          $removed_spaces = str_replace(" ","%20",$resized_link);
-         echo "<div class='col-lg-6 col-sm-6'>";
+         echo "<div class='col-lg-2 col-sm-4'>";
           echo "<a class='portfolio-box' target=_blank title='" . $row["artist"]. " - " . $row["album"]. " [" . $row["username"] . "]' href=main/link.php?i='" . $row["id"]."'>";
           echo "<img class='img-fluid' src=/medlimir/uploads/" . $removed_spaces . " >";
           echo "<div class='portfolio-box-caption'>";
