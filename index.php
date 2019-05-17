@@ -18,7 +18,7 @@ if(!empty($_SESSION["loggedin"]))
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>ProgrammingKnowledge | Home</title>
+  <title>Myrkur.net | Home</title>
 
   <!-- Font Awesome Icons -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
