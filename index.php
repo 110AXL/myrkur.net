@@ -7,127 +7,294 @@ if(!empty($_SESSION["loggedin"]))
   $loggedIn = 1;
   echo "logged in";
 }
-/*
-// Check if the user is logged in, if not then redirect him to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    $loggedIn = 0;
-     echo "not logged in.<br/>";
-} if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-   $loggedIn = 1;
-   echo "logged in.<br/>";
-}*/
+
 ?>
 <!DOCTYPE html>
-
-
-
 <html lang="en">
+
 <head>
-<link rel="stylesheet" type="text/css" href='/medlimir/res/default.css'>
-<?php
-  include(__DIR__.'/medlimir/res/facebookPixelCode.php');
-?>
-<link rel="shortcut icon" type="image/png" href='/medlimir/res/favicon-16x16.png'/>
-<script src="/medlimir/res/jquery-3.4.0.min.js">
-$(document).ready(function() {
-  $('nav li ul').hide().removeClass('fallback');
-    $('nav li').hover(
-      function () {
-        $('ul', this).stop().slideDown(1111);
-      },
-      function () {
-        $('ul', this).stop().slideUp(1111);
-      }
-    );
-});
-</script>
-<script>
-$("img").on("error", function () {
-  $(this).unbind("error").attr("src", "/res/noid.jpg");
-});
-</script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>ProgrammingKnowledge | Home</title>
+
+  <!-- Font Awesome Icons -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+  <!-- Plugin CSS -->
+  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+  <!-- Theme CSS - Includes Bootstrap -->
+  <link href="css/creative.css" rel="stylesheet">
+
 </head>
-<body bgcolor="black">
-<?php
-  include(__DIR__.'/medlimir/res/ip.php');
-  require_once 'main/sqlcon.php';
-  ini_set('display_errors', 1);
-  ini_set('display_startup_errors', 1);
-  error_reporting(E_ALL);
+
+<body id="page-top">
+
+  <!-- PHP Includes -->
+  <?php
+    include(__DIR__.'/medlimir/res/ip.php');
+    require_once 'main/sqlcon.php';
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
   ?>
-<div class="container">
-  <header>
-    <?php include(__DIR__.'/medlimir/res/logo.html');?>
-  </header>
 
-  <nav>
-       <?php include(__DIR__.'/medlimir/res/navbar.php');?>
-  </nav>
-
-  <main>
-      <div id='P'>
-        <div class='grid-container grid-container--fill'>
-        <?php
-
-          switch($_SERVER['QUERY_STRING']) {
-              case 'user':
-                  $sql = "SELECT albums.id, albums.clicks, albums.artist, albums.year, albums.created_at, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY users.username DESC";
-                  break;
-              case 'artist':
-                  $sql = "SELECT albums.id, albums.clicks, albums.artist, albums.year, albums.created_at, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.artist DESC";
-                  break;
-              case 'added':
-                  $sql = "SELECT albums.id, albums.clicks, albums.artist, albums.year, albums.created_at, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.created_at DESC";
-                  break;
-              case 'released':
-                  $sql = "SELECT albums.id, albums.clicks, albums.artist, albums.year, albums.created_at, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.year DESC";
-                  break;
-              case 'clicks':
-                  $sql = "SELECT albums.id, albums.clicks, albums.artist, albums.year, albums.created_at, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.clicks DESC";
-                  break;
-
-              default:
-                  $sql = "SELECT albums.id, albums.clicks, albums.artist, albums.year, albums.created_at, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.id DESC";
-          }
-
-          $result = $mysqli->query($sql);
-
-          if ($result->num_rows > 0) {
-           // output data of each row
-           while($row = $result->fetch_assoc()) {
-             $resized_link = $row["img"];
-             $removed_spaces = str_replace(" ","%20",$resized_link);
-             echo "<div class='grid-element'><a target=_blank title='" . $row["artist"]. " - " . $row["album"]. " [" . $row["username"] . "]' href=main/link.php?i='" . $row["id"]."'>";
-             echo "<img width=200 height=200 src=/medlimir/uploads/" . $removed_spaces . " />";
-             echo "<div class='title'><p>" . $row["artist"] . " - " . $row["album"] . "</a></p></div>";
-             echo "<p class='info' title='Year & link clicks.'><a href=main/link.php?i='" . $row["id"]."'>" . $row["year"] . "</a></p><div id=username>" . $row["username"] . "</div><div id=clicks>" . $row["clicks"] . "</div></div>";
-             }
-           }
-
-          $mysqli->close();?>
-        </div>
+  <!-- Navigation -->
+  <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Myrkur.net</a>
+      <button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navBarResponsive" aria-controls="navBarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navBarResponsive">
+          <ul class="navbar-nav ml-auto my-2 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfoliot">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </ul>
       </div>
     </div>
-  </main>
+  </nav>
 
-  <aside>
-    <!-- Sidebar / Ads -->
-    <?php
-      // Echo session variables
-      if(!isset($_COOKIE['user'])) {
-            echo "<h1>No cookie. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h1>";
-        } else {
-            echo "<a href=" . __DIR__ . "?nafn=" . $_COOKIE['user'] . ">" . $_COOKE['user'] . "</a>";
-        }
-        if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-      		echo "<h1>Logged in. yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy</h1>";
-      	}
-    ?>
-  </aside>
+  <!-- Masthead -->
+<header class="masthead">
+  <div class="container h-100">
+      <div class="row h-100 align-items-center justify-content-center text-center">
+        <div class="col-lg-10 align-self-end">
+          <h1 class="text-uppercase text-white font-weight-bold">Your Favorite Source of New Music </h1>
+          <hr class="divider my-4">
+        </div>
+        <div class="col-lg-8 align-self-baseline">
+            <p class="text-white-75 font-weight-light mb-5">Music from all corners of the globe. Membership required to add your own albums.</p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+        </div>
+      </div>
+  </div>
+</header>
 
-  <footer>
-    <!-- Footer content -->
-  </footer>
-</div>
+  <!-- About Section -->
+<section class="page-section bg-primary" id="about">
+  <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+            <h2 class="text-white mt-0">We've got what you need!</h2>
+            <hr class="divider light my-4">
+            <p class="text-white-50 mb-5">Myrkur.net has everything you need to get you started! Browse our awesome collection of albums!</p>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+        </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Services Section -->
+<section class="page-section" id="services">
+  <div class="container">
+    <h2 class="text-center mt-0">At Your Service</h2>
+    <hr class="divider my-4">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 text-center">
+          <div class="mt-5">
+              <i class="fas fa-4x fa-gem text-primary mb-4"></i>
+              <h3 class="h4 mb-2">Rare Videos</h3>
+              <p class="text-muted mb-0">High Quality Video Tutorials for FREE!</p>
+          </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 text-center">
+          <div class="mt-5">
+              <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
+              <h3 class="h4 mb-2">Up to Date</h3>
+              <p class="text-muted mb-0">All new technology, we got you covered.</p>
+          </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 text-center">
+          <div class="mt-5">
+              <i class="fas fa-4x fa-globe text-primary mb-4"></i>
+              <h3 class="h4 mb-2">Ready to Share</h3>
+              <p class="text-muted mb-0">You can share our videos for FREE!</p>
+          </div>
+      </div>
+
+
+      <div class="col-lg-3 col-md-6 text-center">
+          <div class="mt-5">
+              <i class="fas fa-4x fa-heart text-primary mb-4"></i>
+              <h3 class="h4 mb-2">Made with Love</h3>
+              <p class="text-muted mb-0">We poured our hearts into these tutorials</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Portfolio Section -->
+<section id="portfolio">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+        <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg" >
+            <img class="img-fluid" src="img/portfolio/fullsize/1.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                Category
+              </div>
+              <div class="project-name">
+                Project Name
+              </div>
+
+            </div>
+            </a>
+        </div>
+
+
+        <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/portfolio/fullsize/2.jpg" alt="">
+            <img class="img-fluid" src="img/portfolio/fullsize/2.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                Category
+              </div>
+              <div class="project-name">
+                Project Name 2
+              </div>
+
+            </div>
+            </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/portfolio/fullsize/3.jpg" alt="">
+            <img class="img-fluid" src="img/portfolio/fullsize/3.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                Category
+              </div>
+              <div class="project-name">
+                Project Name 3
+              </div>
+
+            </div>
+            </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/portfolio/fullsize/4.jpg" alt="">
+            <img class="img-fluid" src="img/portfolio/fullsize/4.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                Category
+              </div>
+              <div class="project-name">
+                Project Name 4
+              </div>
+
+            </div>
+            </a>
+        </div>
+
+        <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/portfolio/fullsize/5.jpg" alt="">
+            <img class="img-fluid" src="img/portfolio/fullsize/5.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                Category
+              </div>
+              <div class="project-name">
+                Project Name 5
+              </div>
+
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg" alt="">
+            <img class="img-fluid" src="img/portfolio/fullsize/6.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                Category
+              </div>
+              <div class="project-name">
+                Project Name 6
+              </div>
+
+            </div>
+          </a>
+        </div>
+    </div>
+
+  </div>
+
+</section>
+  <!-- Call to Action Section -->
+<section class="page-section bg-dark text-white">
+  <div class="container text-center">
+    <h2 class="mb-4">Free Video Tutorials</h2>
+    <hr class="divider light my-4">
+    <p class="text-white-50 mb-4">You can have High Quality Video Tutorials for absolutely FREE!</p>
+    <a class="btn btn-light btn-xl" href="#">Download Now!</a>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+<section class="page-section" id="contact">
+  <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+            <h2 class="mt-0">Let's Get In Touch</h2>
+            <hr class="divider my-4">
+            <p class="text-muted mb-5">Ready to start your next project with us? Give us a call or send us an email and we will get bak to you as soon as possible.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 ml-auto text-center">
+          <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+          <div> +1(202) 555-00149</div>
+        </div>
+        <div class="col-lg-4 mr-auto text-center">
+          <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+          <a class="d-block" href="mailto:contact@yourwebsite.com">programmingknowledge@gmailc.com</a>
+        </div>
+      </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+<footer class="bg-light py-5">
+  <div class="container">
+      <div class="small text-center text-muted">
+          Copyright &copy; 2019 - ProgrammingKnowledge
+      </div>
+  </div>
+</footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/creative.js"></script>
+
 </body>
+
 </html>
