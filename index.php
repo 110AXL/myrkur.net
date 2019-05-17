@@ -56,13 +56,16 @@ if(!empty($_SESSION["loggedin"]))
       <div class="collapse navbar-collapse" id="navBarResponsive">
           <ul class="navbar-nav ml-auto my-2 my-lg-0">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Albums</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="https://members.myrkur.net/">System</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="https://members.myrkur.net/addalbum.php">Quick Add</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -77,18 +80,18 @@ if(!empty($_SESSION["loggedin"]))
   <div class="container h-100">
       <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-10 align-self-end">
-          <h1 class="text-uppercase text-white font-weight-bold">Your Favorite Source of FREE Video Tutorials </h1>
+          <h1 class="text-uppercase text-white font-weight-bold">Your Favorite Source of NEW Music ! </h1>
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
-            <p class="text-white-75 font-weight-light mb-5">ProgrammingKnowledge can help you build better application by just following video tutorials! You can be whatever you want to be!</p>
+            <p class="text-white-75 font-weight-light mb-5">Myrkur.net strives to be the top quality Music directory of the Internet!</p>
             <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
         </div>
       </div>
   </div>
 </header>
 
-  <!-- About Section -->
+  <!-- About Section
 <section class="page-section bg-primary" id="about">
   <div class="container">
     <div class="row justify-content-center">
@@ -100,7 +103,7 @@ if(!empty($_SESSION["loggedin"]))
         </div>
     </div>
   </div>
-</section>
+</section> -->
 
   <!-- Services Section -->
 <section class="page-section" id="services">
@@ -111,8 +114,8 @@ if(!empty($_SESSION["loggedin"]))
       <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
               <i class="fas fa-4x fa-gem text-primary mb-4"></i>
-              <h3 class="h4 mb-2">Rare Videos</h3>
-              <p class="text-muted mb-0">High Quality Video Tutorials for FREE!</p>
+              <h3 class="h4 mb-2">Rare Albums</h3>
+              <p class="text-muted mb-0">High Quality Music for FREE!</p>
           </div>
       </div>
 
@@ -120,7 +123,7 @@ if(!empty($_SESSION["loggedin"]))
           <div class="mt-5">
               <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
               <h3 class="h4 mb-2">Up to Date</h3>
-              <p class="text-muted mb-0">All new technology, we got you covered.</p>
+              <p class="text-muted mb-0">New releases get top place.</p>
           </div>
       </div>
 
@@ -128,7 +131,7 @@ if(!empty($_SESSION["loggedin"]))
           <div class="mt-5">
               <i class="fas fa-4x fa-globe text-primary mb-4"></i>
               <h3 class="h4 mb-2">Ready to Share</h3>
-              <p class="text-muted mb-0">You can share our videos for FREE!</p>
+              <p class="text-muted mb-0">You can share these albums for FREE!</p>
           </div>
       </div>
 
@@ -136,8 +139,8 @@ if(!empty($_SESSION["loggedin"]))
       <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
               <i class="fas fa-4x fa-heart text-primary mb-4"></i>
-              <h3 class="h4 mb-2">Made with Love</h3>
-              <p class="text-muted mb-0">We poured our hearts into these tutorials</p>
+              <h3 class="h4 mb-2">Made with No Love</h3>
+              <p class="text-muted mb-0">Fuck everybody!</p>
           </div>
       </div>
     </div>
@@ -168,7 +171,7 @@ if(!empty($_SESSION["loggedin"]))
               break;
 
           default:
-              $sql = "SELECT albums.id, albums.clicks, albums.artist, albums.year, albums.created_at, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.id DESC";
+              $sql = "SELECT albums.id, albums.clicks, albums.artist, albums.year, albums.created_at, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.year DESC";
       }
 
       $result = $mysqli->query($sql);
@@ -286,9 +289,9 @@ if(!empty($_SESSION["loggedin"]))
   <!-- Call to Action Section -->
 <section class="page-section bg-dark text-white">
   <div class="container text-center">
-    <h2 class="mb-4">Free Video Tutorials</h2>
+    <h2 class="mb-4">Free Music Albums</h2>
     <hr class="divider light my-4">
-    <p class="text-white-50 mb-4">You can have High Quality Video Tutorials for absolutely FREE!</p>
+    <p class="text-white-50 mb-4">You can have High Quality Music Albums for absolutely FREE!</p>
     <a class="btn btn-light btn-xl" href="#">Download Now!</a>
   </div>
 </section>
@@ -300,17 +303,17 @@ if(!empty($_SESSION["loggedin"]))
         <div class="col-lg-8 text-center">
             <h2 class="mt-0">Let's Get In Touch</h2>
             <hr class="divider my-4">
-            <p class="text-muted mb-5">Ready to start your next project with us? Give us a call or send us an email and we will get bak to you as soon as possible.</p>
+            <p class="text-muted mb-5">Need more music?</p>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-4 ml-auto text-center">
           <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-          <div> +1(202) 555-00149</div>
+          <div> +354 894-5585</div>
         </div>
         <div class="col-lg-4 mr-auto text-center">
           <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-          <a class="d-block" href="mailto:contact@yourwebsite.com">programmingknowledge@gmailc.com</a>
+          <a class="d-block" href="mailto:system@myrkur.net">system@myrkur.net</a>
         </div>
       </div>
   </div>
@@ -320,7 +323,7 @@ if(!empty($_SESSION["loggedin"]))
 <footer class="bg-light py-5">
   <div class="container">
       <div class="small text-center text-muted">
-          Copyright &copy; 2019 - ProgrammingKnowledge
+          Copyright &copy; not included
       </div>
   </div>
 </footer>
