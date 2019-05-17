@@ -142,6 +142,7 @@ if(!empty($_SESSION["loggedin"]))
           </div>
       </div>
     </div>
+<<<<<<< HEAD
   </div>
 </section>
 
@@ -295,6 +296,18 @@ if(!empty($_SESSION["loggedin"]))
   <!-- Custom scripts for this template -->
   <script src="js/creative.js"></script>
 
+=======
+  </main>
+
+  <aside>
+    <!-- Sidebar / Ads -->
+  </aside>
+
+  <footer>
+    <!-- Footer content -->
+  </footer>
+</div>
+>>>>>>> 8cfa7b9c1fbd15a3f01a4dee1199ae444be3b89a
 </body>
 
 </html>
