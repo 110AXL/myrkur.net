@@ -49,7 +49,7 @@ if(!empty($_SESSION["loggedin"]))
   <!-- Navigation -->
   <nav id="mainNav" class="navbar navbar-expand-lg navbar-light fixed-top py-3">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">ProgrammingKnowledge</a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Myrkur.net</a>
       <button type="button" class="navbar-toggler collapsed navbar-toggler-right" data-toggle="collapse" data-target="#navBarResponsive" aria-controls="navBarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -62,7 +62,7 @@ if(!empty($_SESSION["loggedin"]))
               <a class="nav-link js-scroll-trigger" href="#services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfoliot">Portfolio</a>
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
