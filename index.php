@@ -120,7 +120,7 @@ if(!empty($_SESSION["loggedin"]))
           <div class="mt-5">
               <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
               <h3 class="h4 mb-2">Up to Date</h3>
-              <p class="text-muted mb-0">New releases get top place.</p>
+              <p class="text-muted mb-0">New releases added weekly</p>
           </div>
       </div>
 
@@ -168,7 +168,7 @@ if(!empty($_SESSION["loggedin"]))
               break;
 
           default:
-              $sql = "SELECT albums.id, albums.clicks, albums.artist, albums.year, albums.created_at, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.year DESC";
+              $sql = "SELECT albums.id, albums.clicks, albums.artist, albums.year, albums.created_at, albums.album, albums.link1, albums.img, users.username FROM albums LEFT JOIN users ON albums.user_id = users.id ORDER BY albums.id DESC";
       }
 
       $result = $mysqli->query($sql);
