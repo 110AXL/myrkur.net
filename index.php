@@ -42,7 +42,7 @@ if(!empty($_SESSION["loggedin"]))
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">ProgrammingKnowledge</a>
       <button type="button" class="navbar-toggler collapsed navbar-toggler-right" data-toggle="collapse" data-target="#navBarResponsive" aria-controls="navBarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon">a</span>
+        <span class="navbar-toggler-icon"></span><i class="fa fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navBarResponsive">
           <ul class="navbar-nav ml-auto my-2 my-lg-0">
