@@ -63,7 +63,7 @@ if(!empty($_SESSION["loggedin"]))
               <a class="nav-link js-scroll-trigger" href="#services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfoliot">Portfolio</a>
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -142,7 +142,6 @@ if(!empty($_SESSION["loggedin"]))
           </div>
       </div>
     </div>
-<<<<<<< HEAD
   </div>
 </section>
 
@@ -296,18 +295,6 @@ if(!empty($_SESSION["loggedin"]))
   <!-- Custom scripts for this template -->
   <script src="js/creative.js"></script>
 
-=======
-  </main>
-
-  <aside>
-    <!-- Sidebar / Ads -->
-  </aside>
-
-  <footer>
-    <!-- Footer content -->
-  </footer>
-</div>
->>>>>>> 8cfa7b9c1fbd15a3f01a4dee1199ae444be3b89a
 </body>
 
 </html>
