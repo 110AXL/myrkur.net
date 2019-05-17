@@ -77,11 +77,11 @@ if(!empty($_SESSION["loggedin"]))
   <div class="container h-100">
       <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-10 align-self-end">
-          <h1 class="text-uppercase text-white font-weight-bold">New music album galore!</h1>
+          <h1 class="text-uppercase text-white font-weight-bold">New music!</h1>
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
-            <p class="text-white-75 font-weight-light mb-5">Quality music for the everyday listener</p>
+            <p class="text-white-75 font-weight-light mb-5">Quality music for the everyday listener.</p>
             <a class="btn btn-primary btn-xl js-scroll-trigger" href="https://members.myrkur.net/addalbum.php">Add an album</a>
         </div>
       </div>
@@ -105,14 +105,14 @@ if(!empty($_SESSION["loggedin"]))
   <!-- Services Section -->
 <section class="page-section" id="services">
   <div class="container">
-    <h2 class="text-center mt-0">At Your Service</h2>
+    <h2 class="text-center mt-0">Music Album Galore</h2>
     <hr class="divider my-4">
     <div class="row">
       <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
               <i class="fas fa-4x fa-gem text-primary mb-4"></i>
               <h3 class="h4 mb-2">Rare Albums</h3>
-              <p class="text-muted mb-0">High Quality Music for FREE!</p>
+              <p class="text-muted mb-0">High quality music for FREE!</p>
           </div>
       </div>
 
@@ -127,8 +127,8 @@ if(!empty($_SESSION["loggedin"]))
       <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
               <i class="fas fa-4x fa-globe text-primary mb-4"></i>
-              <h3 class="h4 mb-2">Ready to Share</h3>
-              <p class="text-muted mb-0">You can share these albums for FREE!</p>
+              <h3 class="h4 mb-2">Open to All</h3>
+              <p class="text-muted mb-0">Anyone can add an album.</p>
           </div>
       </div>
 
