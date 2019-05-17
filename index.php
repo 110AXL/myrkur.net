@@ -110,34 +110,42 @@ if(!empty($_SESSION["loggedin"]))
     <div class="row">
       <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
+            <a href="http://myrkur.net/?added">
               <i class="fas fa-4x fa-gem text-primary mb-4"></i>
               <h3 class="h4 mb-2">Rare Albums</h3>
               <p class="text-muted mb-0">High quality music for FREE!</p>
+            </a>
           </div>
       </div>
 
       <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
-              <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
-              <h3 class="h4 mb-2">Up to Date</h3>
-              <p class="text-muted mb-0">New releases added weekly</p>
+              <a href="http://myrkur.net/?released">
+                <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
+                <h3 class="h4 mb-2">Up to Date</h3>
+                <p class="text-muted mb-0">New releases added weekly</p>
+              </a>
           </div>
       </div>
 
       <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
+            <a href="http://myrkur.net/?clicks">
               <i class="fas fa-4x fa-globe text-primary mb-4"></i>
               <h3 class="h4 mb-2">Open to All</h3>
               <p class="text-muted mb-0">Anyone can add an album.</p>
+            </a>
           </div>
       </div>
 
 
       <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
+            <a href="http://myrkur.net/?artist">
               <i class="fas fa-4x fa-heart text-primary mb-4"></i>
-              <h3 class="h4 mb-2">Made with No Love</h3>
-              <p class="text-muted mb-0">Fuck everybody!</p>
+              <h3 class="h4 mb-2">Made to Share</h3>
+              <p class="text-muted mb-0">Anyone can create a collection.</p>
+            </a>
           </div>
       </div>
     </div>
