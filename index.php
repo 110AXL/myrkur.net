@@ -180,7 +180,7 @@ if(!empty($_SESSION["loggedin"]))
          $removed_spaces = str_replace(" ","%20",$resized_link);
          echo "<div class='col-lg-4 col-sm-4'>";
           echo "<a class='portfolio-box' target=_blank title='" . $row["artist"]. " - " . $row["album"]. " [" . $row["username"] . "]' href=main/link.php?i='" . $row["id"]."'>";
-          echo "<img class='img-fluid' src='/medlimir/uploads/" . $removed_spaces . "' alt=''>";
+          echo "<img class='img-fluid' min-height='400px' min-width='400px' src='/medlimir/uploads/" . $removed_spaces . "' alt=''>";
           echo "<div class='portfolio-box-caption'>";
             echo "<div class='project-category text-white-50'>" . $row["artist"] . "</div>";
               echo "<div class='project-name'>" . $row["album"] . "</a></div></div></div>";
