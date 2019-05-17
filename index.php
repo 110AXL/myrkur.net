@@ -38,7 +38,7 @@ if(!empty($_SESSION["loggedin"]))
 <body id="page-top">
 
   <!-- Navigation -->
-  <nav id="mainNav" class="navbar navbar-expand-lg navbar-light fixed-top py-3">
+  <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">ProgrammingKnowledge</a>
       <button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navBarResponsive" aria-controls="navBarResponsive" aria-expanded="false" aria-label="Toggle navigation">
