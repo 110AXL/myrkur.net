@@ -156,7 +156,7 @@ if(!empty($_POST['img_url']))
 		/* Resize based on extension of link */
 		if($linkFileExt == "jpg" || $linkFileExt == "jpeg" ){
 			echo "image is jpg or jpeg. <br/>";
-			if(!$localUrl = resize_imagejpg($localUrl, 200, 200))
+			if(!$localUrl = resize_imagejpg($localUrl, 400, 400))
 				echo "failed to JPG/JPEG resize " . $localUrl . "<br/>";
 			else {
 				imagejpeg($localUrl, $resizedFilename);
@@ -165,7 +165,7 @@ if(!empty($_POST['img_url']))
 		}
 		else if($linkFileExt == "png"){
 			echo "image is png.<br/>";
-			if(!$localUrl = resize_imagepng($localUrl, 200, 200))
+			if(!$localUrl = resize_imagepng($localUrl, 400, 400))
 			echo "failed to png resize " .  $localUrl . "<br/>";
 			else {
 				imagejpeg($localUrl, $resizedFilename);
@@ -174,7 +174,7 @@ if(!empty($_POST['img_url']))
 		}
 		else if($linkFileExt == "gif"){
 			echo "image is gif.<br/>";
-			if(!$localUrl = resize_imagegif($localUrl, 200, 200))
+			if(!$localUrl = resize_imagegif($localUrl, 400, 400))
 			echo "failed to gif resize " .  $localUrl . "<br/>";
 			else {
 				imagejpeg($localUrl, $resizedFilename);
@@ -259,7 +259,7 @@ else if(empty($_POST['img_url']) && !empty($_FILES['fileToUpload']['name']))
 		/* Resize based on uploaded file extension: */
 		if($localFileExt == "jpg" || $localFileExt == "jpeg" ){
 			echo "image is jpg or jpeg and is being resized: <br/>";
-			if(!$localFilename = resize_imagejpg($localFilename, 200, 200))
+			if(!$localFilename = resize_imagejpg($localFilename, 400, 400))
 				echo "failed to JPG/JPEG resize" . $localFilename . "<br/>";
 			else {
 				imagejpeg($localFilename, $resizedFilename);
@@ -269,7 +269,7 @@ else if(empty($_POST['img_url']) && !empty($_FILES['fileToUpload']['name']))
 
 		else if($localFileExt == "png"){
 				echo "image is png. Resized:<br/>";
-			if(!$localFilename = resize_imagepng($localFilename, 200, 200))
+			if(!$localFilename = resize_imagepng($localFilename, 400, 400))
 				echo "failed to png resize " . $localFilename . "<br/>";
 			else {
 				imagejpeg($localFilename, $resizedFilename);
@@ -279,7 +279,7 @@ else if(empty($_POST['img_url']) && !empty($_FILES['fileToUpload']['name']))
 
 		else if($localFileExt == "gif"){
 				echo "image is gif.<br/>";
-			if(!$localFilename = resize_imagegif($localFilename, 200, 200))
+			if(!$localFilename = resize_imagegif($localFilename, 400, 400))
 				echo "failed to gif resize " . $localFilename . "<br/>";
 			else {
 				imagejpeg($localFilename, $resizedFilename);
