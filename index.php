@@ -55,13 +55,13 @@ if(!empty($_SESSION["loggedin"]))
       <div class="collapse navbar-collapse" id="navBarResponsive">
           <ul class="navbar-nav ml-auto my-2 my-lg-0">
             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">About</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#portfolio">Albums</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="https://members.myrkur.net/">System</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
             </li>
           </ul>
       </div>
