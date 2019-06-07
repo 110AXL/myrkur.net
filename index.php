@@ -309,7 +309,7 @@ if(!empty($_SESSION["loggedin"]))
       </div>
       <div class="row">
         <div class="col-lg-4 ml-auto text-center">
-          <i class="fas fa-bank fa-3x mb-3 text-muted"></i>
+          <i class="fa fa-bank fa-3x mb-3 text-muted"></i>
           <a class="d-block" href="https://www.slsknet.org/news/">Soulseek</a>
           <a class="d-block" href="http://ninjamovie.io">ninjamovie.io</a>
         </div>
