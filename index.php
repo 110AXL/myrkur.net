@@ -5,7 +5,6 @@ $loggedIn = 0;
 if(!empty($_SESSION["loggedin"]))
 {
   $loggedIn = 1;
-  echo "logged in";
 }
 ?>
 <!DOCTYPE html>
@@ -56,9 +55,6 @@ if(!empty($_SESSION["loggedin"]))
       <div class="collapse navbar-collapse" id="navBarResponsive">
           <ul class="navbar-nav ml-auto my-2 my-lg-0">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#portfolio">Albums</a>
             </li>
             <li class="nav-item">
@@ -102,7 +98,7 @@ if(!empty($_SESSION["loggedin"]))
   </div>
 </section> -->
 
-  <!-- Services Section -->
+  <!-- Services Section
 <section class="page-section" id="services">
   <div class="container">
     <h2 class="text-center mt-0">Music Album Galore</h2>
@@ -152,7 +148,7 @@ if(!empty($_SESSION["loggedin"]))
   </div>
 </section>
 
-  <!-- Portfolio Section -->
+   Portfolio Section -->
 <section id="portfolio">
   <div class="container-fluid p-0">
         <div class="row no-gutters">
@@ -291,17 +287,17 @@ if(!empty($_SESSION["loggedin"]))
   </div>
 
 </section>
-  <!-- Call to Action Section -->
+  <!-- Call to Action Section
 <section class="page-section bg-dark text-white">
   <div class="container text-center">
     <h2 class="mb-4">Free Music Albums</h2>
     <hr class="divider light my-4">
     <p class="text-white-50 mb-4">You can have High Quality Music Albums for absolutely FREE!</p>
-    <a class="btn btn-light btn-xl" href="#">Download Now!</a>
+    <a class="btn btn-light btn-xl" href="https://www.slsknet.org/news/">Download Now!</a>
   </div>
 </section>
 
-  <!-- Contact Section -->
+   Contact Section -->
 <section class="page-section" id="contact">
   <div class="container">
       <div class="row justify-content-center">
