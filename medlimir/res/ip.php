@@ -11,7 +11,7 @@ $agent = $_SERVER['HTTP_USER_AGENT'];
 $hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']);
 $date = date('d/m/Y H:i:s', time());
 $site = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-$username = htmlspecialchars($_SESSION["username"]);
+$username = $_SESSION["username"];
 
 
 if(isset($_SERVER['HTTP_REFERER'])) {
