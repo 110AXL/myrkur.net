@@ -60,7 +60,8 @@ h1 {
   text-align: center;
   font-size: 300%;
   text-shadow: 2px 2px 4px #000000;
-  margin-top: 33px !important;
+  position: absolute;
+  top: 33px !important;
   color: #222 !important;
 }
 
