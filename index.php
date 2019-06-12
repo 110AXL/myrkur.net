@@ -29,6 +29,12 @@ if(!empty($_SESSION["loggedin"]))
   <!-- Plugin CSS -->
   <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
+  <!-- load banner first of all -->
+  <script type="text/javascript">
+        if(document.images)
+            (new Image()).src="img/TSE2017Aug21_Sequence_RTF_TQI.jpg";
+  </script>
+
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="css/creative.css" rel="stylesheet">
 
