@@ -83,7 +83,7 @@ if(!empty($_SESSION["loggedin"]))
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
-            <p class="text-white-75 font-weight-light mb-5">This is Arr! country now:</p>
+            <p class="text-white-75 font-weight-light mb-5">Arr!</p>
             <a class="btn btn-primary btn-xl js-scroll-trigger" href="https://members.myrkur.net/addalbum.php">Add an album</a>
         </div>
       </div>
