@@ -3,7 +3,7 @@
 require_once 'sqlcon.php';
 
 //Variables
-$ref = "";
+$ref = $protocol = $ip = $port = $agent = $hostname = $date = $site = $username = "";
 $protocol = $_SERVER['SERVER_PROTOCOL'];
 $ip = $_SERVER['REMOTE_ADDR'];
 $port = $_SERVER['REMOTE_PORT'];
@@ -11,8 +11,10 @@ $agent = $_SERVER['HTTP_USER_AGENT'];
 $hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']);
 $date = date('d/m/Y H:i:s', time());
 $site = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-$username = $_SESSION["username"];
 
+if(isset($_SESSION["username"])) {
+	$username = $_SESSION["username"];
+};
 
 if(isset($_SERVER['HTTP_REFERER'])) {
 	$ref = $_SERVER['HTTP_REFERER'];
