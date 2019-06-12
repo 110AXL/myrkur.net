@@ -11,7 +11,7 @@ $agent = $_SERVER['HTTP_USER_AGENT'];
 $hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']);
 $date = date('d/m/Y H:i:s', time());
 $site = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-
+$username = htmlspecialchars($_SESSION["username"]);
 
 
 if(isset($_SERVER['HTTP_REFERER'])) {
@@ -31,8 +31,8 @@ if ($result2->num_rows > 0) {
 			}
 
 		 if($last_ip != $ip){
-			 $stmt = $mysqli->prepare("INSERT INTO log (ip, hostname, port, user_agent, protocol, referer, site) VALUES (?, ?, ?, ?, ?, ?, ?)");
-			 $stmt->bind_param("ssissss", $ip, $hostname, $port, $agent, $protocol, $ref, $site);
+			 $stmt = $mysqli->prepare("INSERT INTO log (ip, username, hostname, port, user_agent, protocol, referer, site) VALUES (?, ?, ?, ?, ?, ?, ?)");
+			 $stmt->bind_param("sssissss", $ip, $hostname, $port, $agent, $protocol, $ref, $site);
 			 $stmt->execute();
 			 $stmt->close();
 			 $mysqli->close();
