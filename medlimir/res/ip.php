@@ -38,7 +38,7 @@ if ($result2->num_rows > 0) {
 			}
 
 		 if($last_ip != $ip || $last_username != $username){
-			 $stmt = $mysqli->prepare("INSERT INTO log (ip, log_username, hostname, port, user_agent, protocol, referer, site) VALUES (?, ?, ?, ?, ?, ?, ?)");
+			 $stmt = $mysqli->prepare("INSERT INTO log (ip, log_username, hostname, port, user_agent, protocol, referer, site) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 			 $stmt->bind_param("sssissss", $ip, $username, $hostname, $port, $agent, $protocol, $ref, $site);
 			 $stmt->execute();
 			 $stmt->close();
