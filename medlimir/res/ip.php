@@ -28,7 +28,7 @@ if(isset($result2) == TRUE){
 if ($result2->num_rows > 0) {
 		// output data of each row
 	 while($row = $result2->fetch_assoc()) {
-		 if($row["ip"] != NULL || $row["log_username"] != NULL){
+		 if($row["ip"] != NULL || $row["log_username"] != ""){
 			 	$last_ip = $row["ip"];
 				$last_username = $row["log_username"];
 			}
