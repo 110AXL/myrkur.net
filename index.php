@@ -316,11 +316,7 @@ if(!empty($_SESSION["loggedin"]))
       <div class="row">
         <div class="col-lg-4 ml-auto text-center">
           <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-          <a class="d-block" href="https://www.slsknet.org/news/">Soulseek</a>
-          <a class="d-block" href="http://ninjamovie.io">ninjamovie.io</a>
-          <a class="d-block" href="http://vipboxe.com/">VIPBox</a>
-          <a class="d-block" href="http://firstrowsporťs.eu/">First Row Sports</a>
-          <a class="d-block" href="https://proxybay.ist/">Proxy Bay</a>
+          <a class="d-block" href="https://wiki.myrkur.net">Myrkur's Wiki</a>
         </div>
         <div class="col-lg-4 mr-auto text-center">
           <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
