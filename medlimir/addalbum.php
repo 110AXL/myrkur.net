@@ -46,7 +46,7 @@ $year = date("Y");
 	</div>
 	<div class="form-group" >
 		<label id="first">Year released:</label><br/>
-		<input type="number" name="year" id="year" min="1860" value="<?php echo $year; ?>" max="<?php echo $year; ?>"><br/>
+		<input type="number" name="year" id="year" min="1860" value="<?php echo $year; ?>" max="<?php echo $year; ?>" size="9"><br/>
 	</div>
 	<div class="form-group" >
 		<label id="first">Link to the music:</label><br/>
