@@ -21,7 +21,7 @@ if(isset($_SERVER['HTTP_REFERER'])) {
 };
 
 
-$sql2 = "SELECT ip from log ORDER BY id DESC LIMIT 1";
+$sql2 = "SELECT * from log ORDER BY id DESC LIMIT 1";
 $result2 = $mysqli->query($sql2);
 
 if(isset($result2) == TRUE){
