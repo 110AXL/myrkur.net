@@ -17,7 +17,7 @@ $date = date('d/m/Y H:i:s', time());
 $site = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 if(isset($_SESSION["username"])) {
-	$username = $_SESSION["username"];
+	$username = strval($_SESSION["username"]);
 };
 
 if(isset($_SERVER['HTTP_REFERER'])) {
