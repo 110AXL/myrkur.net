@@ -316,7 +316,7 @@ if(!empty($_SESSION["loggedin"]))
       <div class="row">
         <div class="col-lg-4 ml-auto text-center">
           <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-          <a class="d-block" href="https://wiki.myrkur.net">Myrkur's Wiki</a>
+          <a class="d-block" href="http://wiki.myrkur.net">Myrkur's Wiki</a>
         </div>
         <div class="col-lg-4 mr-auto text-center">
           <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
