@@ -32,7 +32,7 @@ if(!empty($_SESSION["loggedin"]))
   <!-- load banner first of all -->
   <script type="text/javascript">
         if(document.images)
-            (new Image()).src="img/TSE2017Aug21_Sequence_RTF_TQI.jpg";
+            (new Image()).src="img/spikesbg.jpg";
   </script>
 
   <!-- Theme CSS - Includes Bootstrap -->
