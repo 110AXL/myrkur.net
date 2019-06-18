@@ -61,7 +61,7 @@ if(!empty($_SESSION["loggedin"]))
       <div class="collapse navbar-collapse" id="navBarResponsive">
           <ul class="navbar-nav ml-auto my-2 my-lg-0">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">About</a>
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact & Wiki</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#portfolio">Albums</a>
@@ -310,13 +310,13 @@ if(!empty($_SESSION["loggedin"]))
         <div class="col-lg-8 text-center">
             <h2 class="mt-0">About</h2>
             <hr class="divider my-4">
-            <p class="text-muted mb-5">Contact information & links</p>
+            <p class="text-muted mb-5">Contact information & wiki</p>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-4 ml-auto text-center">
           <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-          <a class="d-block" href="http://wiki.myrkur.net">Myrkur's Wiki</a>
+          <a class="d-block" href="http://wiki.myrkur.net">wiki.myrkur.net</a>
         </div>
         <div class="col-lg-4 mr-auto text-center">
           <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
@@ -330,7 +330,7 @@ if(!empty($_SESSION["loggedin"]))
 <footer class="bg-light py-5">
   <div class="container">
       <div class="small text-center text-muted">
-          Copyright &copy; not included
+          <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
       </div>
   </div>
 </footer>
