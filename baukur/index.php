@@ -23,12 +23,12 @@
   <aside class="sidebar-right">
     Viðbrögð
   </aside>
-</div></div>
+</div>
 
   <footer>
     Skrá styrk 1000 | 1500 | 2000
   </footer>
-</div>
+</div></div>
 
 <script>
 var coll = document.getElementsByClassName("collapsible");
