@@ -10,9 +10,9 @@
 <div class="grid">
   <header>
     Linkur1 Linkur2
-  </header>
+  </header> </div>
 <button class="collapsible">Open Collapsible</button>
-<div class="content"><aside class="sidebar-left">
+<div class="content"><div class=“grid”><aside class="sidebar-left">
     Punktar
   </aside>
 
@@ -23,7 +23,7 @@
   <aside class="sidebar-right">
     Viðbrögð
   </aside>
-</div>
+</div></div>
 
   <aside class="sidebar-left">
     Punktar
