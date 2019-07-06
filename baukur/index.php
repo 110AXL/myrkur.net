@@ -12,7 +12,7 @@
     Linkur1 Linkur2
   </header> </div>
 <button class="collapsible">Open Collapsible</button>
-<div class="content"><div class=“grid”><aside class="sidebar-left">
+<div class="content">fff><div class="grid"><aside class="sidebar-left">
     Punktar
   </aside>
 
@@ -24,29 +24,6 @@
     Viðbrögð
   </aside>
 </div></div>
-
-  <aside class="sidebar-left">
-    Punktar
-  </aside>
-
-  <article>
-    Ræða
-  </article>
-
-  <aside class="sidebar-right">
-    Viðbrögð
-  </aside>
-  
-
-  <aside class="sidebar-left">
-    Punktar 2
-  </aside>
-  <article>
-    Ræða 2
-  </article>
-  <aside class="sidebar-right">
-    Viðbrögð!2
-  </aside>
 
   <footer>
     Skrá styrk 1000 | 1500 | 2000
