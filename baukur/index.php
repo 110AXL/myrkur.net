@@ -24,6 +24,17 @@
     Viðbrögð
   </aside>
   
+
+  <aside class="sidebar-left">
+    Punktar 2
+  </aside>
+  <article>
+    Ræða 2
+  </article>
+  <aside class="sidebar-right">
+    Viðbrögð!2
+  </aside>
+
   <footer>
     Skrá styrk 1000 | 1500 | 2000
   </footer>
