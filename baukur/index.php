@@ -9,23 +9,23 @@
 
 <div class="grid">
   <header>
-    Header
+    Linkur1 Linkur2
   </header>
 
   <aside class="sidebar-left">
-    Left Sidebar
+    Punktar
   </aside>
 
   <article>
-    Article
+    Ræða
   </article>
 
   <aside class="sidebar-right">
-    Right Sidebar
+    Viðbrögð
   </aside>
   
   <footer>
-    Footer
+    Skrá styrk 1000 | 1500 | 2000
   </footer>
 </div>
 </body>
