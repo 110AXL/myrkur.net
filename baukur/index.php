@@ -11,6 +11,19 @@
   <header>
     Linkur1 Linkur2
   </header>
+<button class="collapsible">Open Collapsible</button>
+<div class="content"><aside class="sidebar-left">
+    Punktar
+  </aside>
+
+  <article>
+    Ræða
+  </article>
+
+  <aside class="sidebar-right">
+    Viðbrögð
+  </aside>
+</div>
 
   <aside class="sidebar-left">
     Punktar
