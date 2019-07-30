@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Myrkur.net</title>
+</head>
+
+<body>
+<div id="head">
+	<div id="bar">
+    	<div id="logo">
+		<a href="http://www.myrkur.net"><img src="../../img/myrkur-logo.jpg" /></a>
+		</div>
+	</div>
+   
+</div>
+<div id="menu">
+	<div class="link"><a>Music</a></div>
+	<div class="link"><a>Games</a></div>
+	<div class="link"><a>Sports</a></div>
+	<div class="link"><a>Forum</a></div>
+	<div class="link"><a>Info</a></div>
+</div>
+
+<div id="box">
+<div id="content">
+<ul class="nav">
+<li><a href="#news">Chronicles</a></li>
+<li><a href="#contact">Events</a></li>
+</ul>
+<div id="post">
+	<div class=".p-pic">
+<img src="imgc.php" />
+	</div>
+
+	<div id="p-name">
+		<a href="chronicles/jimi-hendrix-electric-ladyland/">Jimi Hendrix - Electric Ladyland</a>
+	</div>
+	<div id="p-info">
+	Published 25.10.1968 <br />
+	Rating: 10/10 <br />
+	Label  : Polydor <br />
+	Genre  : Rock, Blues
+	</div>
+</div>
+
+</div>
+<br clear="all" />
+</div>
+</body>
+</html>

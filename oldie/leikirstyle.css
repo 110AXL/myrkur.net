@@ -1,0 +1,168 @@
+html {
+padding:0px;
+margin:0px;
+}
+
+img { 
+   border:1px solid white;
+}
+
+#gameboxes {
+    display:block; 
+	width:auto; 
+	float:right; 
+	margin-right:10px;
+	width:810px;
+	padding:5px;
+	background-color:#444444;
+	overflow: auto;
+}
+
+body {
+background-color: #333333;
+font-size: 14px;
+color:#ffffff;
+font-family: Verdana, Geneva, sans-serif;
+margin:0px;
+padding:0px;
+}
+
+p,pre, h1 {
+margin:0px 5px 5px 10px;
+}
+
+h1 {
+font-size:14px;
+padding-top:4px;
+font:Georgia, "Times New Roman", Times, serif;
+background-color: transparent;
+}
+
+h2 {
+font-size:12px;
+padding-top:1px;
+color: #564b47;
+background-color: transparent;
+}
+
+a {
+color: #ff66cc;
+font-size: 11px;
+background-color:transparent;
+text-decoration: none;
+}
+
+pre {
+color: #564b47;
+font-size: 11px;
+background-color:transparent;
+font-family: Courier, Monaco, Monospace;
+}
+
+/*  positioning-layers statisch und absolut */
+#box {
+width:1000px;
+margin: 0px auto;
+padding:0px;
+text-align:left;
+}
+
+#bar {
+width:1000px;
+margin: 0px auto;
+padding:0px;
+padding-top:15px;
+padding-left:15px;
+text-align:left;
+}
+
+#left {
+width:175px;
+padding:0px;
+float:left;
+background-color:#ff99cc;
+}
+#right {
+width:175px;
+padding:0px;
+float:left;
+background-color:#ff99cc;
+}
+#content {
+width:815px;
+padding:5px;
+float:left;
+background-color:#444444;
+overflow: auto;
+}
+#post {
+width:251px;
+height:375px;
+padding:4px;
+float:left;
+overflow: auto;
+border-color:#000;
+border-width:1px;
+border-style:solid;
+margin-top:5px;
+margin-bottom:5px;
+margin-right:5px;
+margin-left:5px;
+background-color:rgba(85,85,85,0.5);
+}
+
+#head {
+background-color:#000044;
+height:40px;
+}
+#head h1 {
+font-size: 11px;
+text-transform:uppercase;
+text-align: right;
+color: #564b47;
+background-color: #90897a;
+padding:5px 15px;
+margin:0px
+}
+#head p {
+padding:5px;
+margin:0px;
+}
+#c-left {
+width:305px;
+height:350px;
+padding:15px;
+padding-top:35px;
+float:left;
+background-color:#555555;
+}
+#c-right {
+width:450px;
+height:370px;
+padding:15px;
+float:left;
+background-color:#555555;
+font-size:12px;
+}
+#critique {
+width:785px;
+heigh:200px;	
+padding:15px;
+float:left;
+background-color:#444444;
+}
+#mytable {width:100%; margin:0 auto;}
+#mytable .left {text-align:right; padding-right:10px; font-style:italic; font-size:10px;}
+#mytable .right {text-align:left;}
+
+#boxes {	
+width:250px;
+padding-left:500px;
+float:left;
+background-color:#444444;
+}
+
+#tic {
+	float:left;
+	width:75px;
+}

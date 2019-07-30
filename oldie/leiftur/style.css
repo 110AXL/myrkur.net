@@ -1,0 +1,415 @@
+html {
+padding:0px;
+margin:0px;
+}
+
+.submissionfield {
+    width: 250px;
+}
+
+.cleardefault {
+    width: 250px;
+}
+
+.crit {
+    width: 420px;
+	height: 450px;
+}
+
+img { 
+border-color:#000;
+}
+
+#head {
+background-color:#5F5F5F;
+height:35px;
+border-top:solid;
+border-width:9px;
+border-color:black;
+}
+
+#menu{
+	display: block;
+ 	margin: 0 auto;
+	text-align: center;
+	width:100%;
+	height:25px;
+	position: relative;
+	
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	box-align: center;
+
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	box-pack: center;
+}
+
+#menu .link a{
+float:left;
+padding:4px;
+background-color:#555555;
+display:block;
+margin-left:auto;
+margin-right:50px;
+text-decoration:none;
+-webkit-border-radius:0px;
+-moz-border-radius:0px;
+font-family:Tahoma, Geneva, sans-serif;
+font-size:11px;
+color:#aaaaaa;
+font-weight:bold;
+text-shadow:1px 1px 1px #000;
+}
+
+#menu .link a:hover{
+background-color:#AFAFAF;
+text-shadow:1px 1px 1px #000;
+border-top:solid;
+border-width:1px;
+border-color:5F5F5F;
+}
+
+
+
+#bar {
+width:1000px;
+margin: 0px auto;
+padding:0px;
+padding-top:12px;
+padding-left:75px;
+text-align:left;
+position:relative;
+}
+
+#logo {
+	position:absolute;
+	top:0;
+	left:65px;
+}
+
+#head h1 {
+font-size: 11px;
+text-transform:uppercase;
+text-align: right;
+color: #9A9A9A;
+background-color: #90897a;
+padding:5px 15px;
+margin:0px
+}
+
+#head p {
+padding:5px;
+margin:0px;
+}
+
+body {
+background-color: #AAAAAA;
+font-size: 14px;
+background-image:url('img/whitebg.png');
+background-repeat:repeat;
+color:#000000;
+font-family: Verdana, Geneva, sans-serif;
+margin:0px;
+padding:0px;
+margin-left: auto;
+margin-right: auto;
+}
+
+p,pre, h1 {
+margin:0px 5px 5px 10px;
+}
+
+h1 {
+font-size:14px;
+padding-top:4px;
+font:Georgia, "Times New Roman", Times, serif;
+background-color: transparent;
+}
+
+h2 {
+font-size:12px;
+padding-top:1px;
+color: #564b47;
+background-color: transparent;
+}
+
+a {
+color: #fcFcfc;
+background-color:transparent;
+text-decoration: none;
+}
+
+pre {
+color: #000000;
+font-size: 11px;
+background-color:transparent;
+font-family: Courier, Monaco, Monospace;
+}
+
+/*  positioning-layers statisch und absolut */
+#box {
+width:960px;
+margin: 0px auto;
+padding:0px;
+text-align:left;
+margin-left: auto;
+margin-right: auto;
+}
+
+#left {
+width:180px;
+padding:0px;
+float:left;
+background-color:#ff99cc;
+}
+
+#right {
+width:173px;
+padding:0px;
+float:left;
+background-color:#ff99cc;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+border:1px solid #191900;
+background-color:#000000;
+-webkit-box-shadow: #000000 3px 3px 3px;
+-moz-box-shadow: #000000 3px 3px 3px; 
+box-shadow: #000000 3px 3px 3px;
+}
+
+
+#content {
+width:960px;
+padding:0px;
+float:left;
+background-color:rgba(0,0,0,0.1);
+overflow: auto;
+margin-left: auto;
+margin-right: auto;
+overflow-y:hidden;
+overflow-x:hidden;
+}
+
+#post {
+width:300px;
+height:450px;
+padding:5px;
+float:left;
+overflow: auto;
+border-color:#000;
+border-width:1px;
+border-style:solid;
+margin:4px;
+background-color:rgba(5,5,5,0.5);
+overflow-y:hidden;
+overflow-x:hidden;
+position:relative;
+}
+
+#postGames {
+width:960px;
+height:20px;
+padding:2px;
+float:left;
+overflow: auto;
+border-color:#000;
+border-width:1px;
+border-style:solid;
+background-color:rgba(5,5,5,0.5);
+overflow-y:hidden;
+overflow-x:hidden;
+position:relative;
+}
+
+#postGames0 {
+width:235px;
+float:left;
+}
+
+#postGames1 {
+width:235px;
+float:left;
+}
+
+#postGames2 {
+width:235px;
+float:left;
+}
+
+#postGames3 {
+width:235px;
+float:left;
+}
+
+#p-name {
+	margin:6px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	padding-bottom: 8px;
+	height: auto;
+}
+
+#p-info {
+	margin: 6px;
+	font:"Courier New", Courier, monospace;
+	font-family:"Courier New", Courier, monospace;
+	font-size: 14px;
+	position:absolute;
+	bottom: 0;
+	left: 0;
+	color:#999999;
+}
+
+h3 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18pt;
+	color: White;
+	padding-top: 15px;
+}
+
+#c-left {
+width:375px;
+height:400px;
+padding:1px;
+padding-top:35px;
+padding-left:35px;
+border:thick;
+float:left;
+background-color:#222;
+}
+
+#c-left2 {
+width:380px;
+height:380px;
+padding-top:30px;
+float:left;
+background-color:#111;
+}
+
+#c-right {
+width:548px;
+height:289px;
+padding-top:5px;
+float:left;
+background-color:#222;
+font-size:12px;
+}
+
+#c-right2 {
+width:546px;
+height:70px;
+padding-right:2px;
+float:left;
+background-color:#222;
+font-size:12px;
+color:#222;
+}
+
+#c-right3 {
+width:546px;
+height:70px;
+padding:1px;
+float:left;
+background-color:#222;
+font-size:12px;
+color:#0B0B0B;
+}
+
+.right
+{
+float:right;
+padding-right:18px;
+}
+
+#critique {
+width:960px;
+height:auto;	
+padding:15px;
+float:left;
+background-color:#111;
+}
+
+#leftadd {
+width:440px;
+height:560px;	
+padding:15px;
+float:left;
+background-color:#111;
+}
+#rightadd {
+width:440px;
+height:560px;	
+padding:15px;
+float:right;
+background-color:#111;
+}
+
+#mytable {width:100%; margin:0 auto;}
+#mytable .left {text-align:right; padding-right:10px; font-style:italic; font-size:10px;}
+#mytable .right {text-align:left;}
+
+.nav{
+    border-bottom:1px solid #fff;
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+	font-size: 18px;
+	font-variant:small-caps;
+}
+
+.navGames{
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+	font-size: 16px;
+	font-variant:small-caps;
+	float:right;
+}
+
+.nav li{
+    display:inline;
+}
+
+.nav a{
+    display:inline-block;
+    padding:10px;
+}
+
+#tic {
+	float:left;
+	width:75px;
+}
+
+#gameselection {	
+width:230px;
+height:80px;
+float:left;
+}
+
+#gameselectionfiller {	
+width:730px;
+float:left;
+height:90px;
+border-bottom:thin;
+border-color:#999;
+}
+
+.container {
+  width: 200px; /* or whatever you want */
+  height: 200px; /* or whatever you want */
+  line-height: 200px; /* or whatever you want, should match height */
+  text-align: center;
+}
+
+.container > img {
+  vertical-align: middle;
+}
