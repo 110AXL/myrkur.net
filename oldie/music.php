@@ -17,9 +17,6 @@
 
 <div id="menu">
 	<div class="link"><a href="music.php">Music</a></div>
-	<div class="link"><a href="movies.php">Movies</a></div>
-	<div class="link"><a href="sports.php">Sports</a></div>
-	<div class="link"><a href="forum.php">Forum</a></div>
 	<div class="link"><a href="info.php">Info</a></div>
 </div>
 
