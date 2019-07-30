@@ -25,7 +25,7 @@
 		<ul class="nav">
 		<li><a href="index.php">Chronicles</a></li>
 		<li><a href="events.php">Events</a></li>
-        <li><a href="addAlbum.php">Admin</a></li>
+    <li><a href="addAlbum.php">Admin</a></li>
 		</ul>
 
 <?PHP
@@ -37,7 +37,7 @@
 
 	$db_handle = mysqli_connect($server, $user_name, $password);
 	$db_found = mysqli_select_db($database, $db_handle);
-
+	
 	if ($db_found)
 	{
 
