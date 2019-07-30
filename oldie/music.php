@@ -32,10 +32,10 @@
 		</ul>
         
 <?PHP
-	$con=mysqli_connect("localhost","myrkurne","on8v/Vos785","myrkurne_Music");
-	$user_name = "myrkurne";
-	$password = "on8v/Vos785";
-	$database = "myrkurne_Music";
+	$con=mysqli_connect("localhost","u445255185_zc4r","Dim&mur%Dalur","u445255185_sweet");
+	$user_name = "u445255185_zc4r";
+	$password = "Dim&mur%Dalur";
+	$database = "u445255185_sweet";
 	$server = "localhost";
 
 	$db_handle = mysql_connect($server, $user_name, $password);
