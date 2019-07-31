@@ -10692,6 +10692,7 @@ header.masthead h1 {
 }
 
 #portfolio .container-fluid {
+  padding-top: 10px;
   max-width: 1920px;
 }
 

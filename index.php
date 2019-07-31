@@ -77,8 +77,8 @@ if(!empty($_SESSION["loggedin"]))
   </nav>
 
   <!-- Masthead -->
-<header class="mast">
-  <!-- <div class="container h-100">
+<!-- <header class="mast">
+  <div class="container h-100">
       <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-10 align-self-end">
           <h1 class="text-white font-weight-bold">☺ arr country ☺</h1>
@@ -89,8 +89,8 @@ if(!empty($_SESSION["loggedin"]))
             <a class="btn btn-primary btn-xl js-scroll-trigger" href="https://members.myrkur.net/addalbum.php">Add an album</a>
         </div>
       </div>
-  </div> -->
-</header>
+  </div>
+</header> -->
 
   <!-- About Section
 <section class="page-section bg-primary" id="about">
