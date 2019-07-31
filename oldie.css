@@ -34,18 +34,24 @@ position: sticky;
 	height:25px;
   background-color:#5F5F5F;
 	position: sticky;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  border-bottom: 2px solid #111;
+
 
 	display: -webkit-box;
 	display: -moz-box;
 	display: box;
 
-	-webkit-box-align: center;
-	-moz-box-align: center;
-	box-align: center;
+	-webkit-box-align: right;
+	-moz-box-align: right;
+	box-align: right;
 
-	-webkit-box-pack: center;
-	-moz-box-pack: center;
-	box-pack: center;
+	-webkit-box-pack: right;
+	-moz-box-pack: right;
+	box-pack: right;
 }
 
 #menu .link a{
@@ -86,9 +92,10 @@ position:sticky;
 }
 
 #logo {
-	position:absolute;
+	position:sticky;
 	top:3px;
 	left:65px;
+
 }
 
 #head h1 {
