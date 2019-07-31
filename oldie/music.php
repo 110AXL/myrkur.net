@@ -38,7 +38,7 @@
 
 
 	$db_handle = mysqli_connect($server, $user_name, $password);
-	$db_found = mysqli_select_db($mysqli, $db_handle);
+	$db_found = mysqli_select_db($mysqli);
 
 	/* check connection */
 	if (mysqli_connect_errno()) {
