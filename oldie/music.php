@@ -36,8 +36,8 @@
 	$server = "localhost";
 
 	$db_handle = mysqli_connect($server, $user_name, $password);
-	$db_found = mysqli_select_db($database, $db_handle);
-	
+	$db_found = mysql_select_db($database, $db_handle);
+
 	if ($db_found)
 	{
 
