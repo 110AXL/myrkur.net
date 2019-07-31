@@ -51,7 +51,13 @@ if(!empty($_SESSION["loggedin"]))
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
   ?>
-
+  <div id="head">
+  	<div id="bar">
+      	<div id="logo">
+  		<a href="http://www.myrkur.net"><img src="oldie/img/myrkur-logo.jpg" /></a>
+  		</div>
+  	</div>
+  </div>
   <!-- Navigation -->
   <div id="menu" class="fixed-top">
   	<div class="link"><a class="nav-link js-scroll-trigger" href="https://members.myrkur.net/addalbum.php">Add album</a></div>
