@@ -116,62 +116,6 @@
        }
 
       $mysqli->close(); ?>
-//****
-//
-// 	if ($db_found)
-// 	{
-//
-// 		$SQL = "SELECT * FROM Albums ORDER BY ID DESC";
-// 		// $result = mysqli_query($mysqli, $SQL);
-//
-// 		if ($result = $mysqli->query($SQL)) {
-//
-// 		while ( $row = $result->fetch_assoc())
-// 		{
-//     		$string = $row['Genre'];
-//   			$tags = explode(',', $string);
-// 			$last_key = key( array_slice( $tags, -1, 1, TRUE ) );
-// 			$label = $row['Label'];
-//
-//
-// echo			"<div id='post'>";
-// echo				"<div class='.p-pic'>";
-// echo					"<a href='viewAlbum.php?id=" . $row['ID'] . "'><img src=../medlimir/uploads" . $removed_spaces . " width=300px; height=300px; /> </a>";
-// echo				"</div>";
-//
-// echo				"<div id='p-name'>";
-// echo					"<a href='viewAlbum.php?id=" . $row['ID'] . "'>" . $row['artist'] . " - " . $row['album'] . "</a>";
-// echo				"</div>";
-//
-// echo				"<div id='p-info'>";
-// // echo					"Released " . $row['Released'] . "<br />";
-// // echo					"Rating: " . $row['Rating'] . "<br />";
-// // echo					"Label  : <a href='music.php?label=" . $label . "'>" . $label . "</a><br />";
-// // echo					"Genre  : ";
-// // 						foreach($tags as $key)
-// // 						{
-// // 							$word=trim($key);
-// // 							$safe=mysqli_real_escape_string( $word );
-// // 							if ($key == $tags[count($tags) - 1])
-// // 								echo "<a href='music.php?genre=" . $safe . "'>" . $safe . "</a>";
-// // 							else
-// // 								echo "<a href='music.php?genre=" . $safe . "'>" . $safe . "</a>, ";
-// // 						}
-//
-// echo				"</div>";
-// echo			"</div>";
-// 		}
-// 		$result->free();
-// }
-// 		mysqli_close($db_handle);
-// 	}
-// 	else
-// 	{
-//
-// 	print "Database NOT Found ";
-// 	mysqli_close($db_handle);
-// 	}
-// ?>
 
 	</div>
 	<br clear="all" />
