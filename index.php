@@ -320,7 +320,7 @@ if(!empty($_SESSION["loggedin"]))
 </section>
 
    Contact Section -->
-<section class="page-section" id="contact">
+<!-- <section class="page-section" id="contact">
   <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
@@ -349,7 +349,7 @@ if(!empty($_SESSION["loggedin"]))
           © original pirate material
       </div>
   </div>
-</footer>
+</footer> -->
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
