@@ -58,33 +58,35 @@
 	{
 
 		$SQL = "SELECT * FROM Albums ORDER BY ID DESC";
-		$result = mysqli_query($mysqli, $SQL);
+		// $result = mysqli_query($mysqli, $SQL);
 
-		while ( $db_field = $result->fetch_assoc())
+		if ($result = $mysqli->query($SQL)) {
+
+		while ( $row = $result->fetch_assoc())
 		{
-    		$string = $db_field['Genre'];
+    		$string = $row['Genre'];
   			$tags = explode(',', $string);
 			$last_key = key( array_slice( $tags, -1, 1, TRUE ) );
-			$label = $db_field['Label'];
+			$label = $row['Label'];
 
 echo			"<div id='post'>";
 echo				"<div class='.p-pic'>";
-echo					"<a href='viewAlbum.php?id=" . $db_field['ID'] . "'><img src=" . $db_field['PathToImage'] . " width=300px; height=300px; /> </a>";
+echo					"<a href='viewAlbum.php?id=" . $row['ID'] . "'><img src=" . $row['PathToImage'] . " width=300px; height=300px; /> </a>";
 echo				"</div>";
 
 echo				"<div id='p-name'>";
-echo					"<a href='viewAlbum.php?id=" . $db_field['ID'] . "'>" . $db_field['Artist'] . " - " . $db_field['Album'] . "</a>";
+echo					"<a href='viewAlbum.php?id=" . $row['ID'] . "'>" . $row['Artist'] . " - " . $row['Album'] . "</a>";
 echo				"</div>";
 
 echo				"<div id='p-info'>";
-echo					"Released " . $db_field['Released'] . "<br />";
-echo					"Rating: " . $db_field['Rating'] . "<br />";
+echo					"Released " . $row['Released'] . "<br />";
+echo					"Rating: " . $row['Rating'] . "<br />";
 echo					"Label  : <a href='music.php?label=" . $label . "'>" . $label . "</a><br />";
 echo					"Genre  : ";
 						foreach($tags as $key)
 						{
 							$word=trim($key);
-							$safe=mysql_real_escape_string( $word );
+							$safe=mysqli_real_escape_string( $word );
 							if ($key == $tags[count($tags) - 1])
 								echo "<a href='music.php?genre=" . $safe . "'>" . $safe . "</a>";
 							else
@@ -94,7 +96,8 @@ echo					"Genre  : ";
 echo				"</div>";
 echo			"</div>";
 		}
-
+		$result->free();
+}
 		mysql_close($db_handle);
 	}
 	else
