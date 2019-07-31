@@ -152,10 +152,10 @@ font-family: Courier, Monaco, Monospace;
 
 /*  positioning-layers statisch und absolut */
 #box {
-width:960px;
+width:100%;
 margin: 0px auto;
 padding:0px;
-text-align:left;
+text-align:right;
 margin-left: auto;
 margin-right: auto;
 }
