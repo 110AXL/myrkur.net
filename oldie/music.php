@@ -71,6 +71,7 @@
 	//     $result->close();
 	// }
 //****
+?>
 <section id="portfolio">
   <div class="container-fluid p-0">
         <div class="row no-gutters">
