@@ -94,7 +94,7 @@ position:sticky;
 }
 
 #logo {
-	position:sticky;
+	position:absolute;
 	top:3px;
 	left:65px;
 

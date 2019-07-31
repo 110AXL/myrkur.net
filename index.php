@@ -59,7 +59,7 @@ if(!empty($_SESSION["loggedin"]))
         <div class="link"><a class="nav-link js-scroll-trigger" href="http://wiki.myrkur.net">Wiki</a></div>
         <div class="link"><a class="nav-link js-scroll-trigger" href="https://members.myrkur.net/addalbum.php">Add album</a></div>
       </div>
-      <div id="logo">
+      <div id="logo" class="sticky">
           <a href="http://www.myrkur.net"><img src="oldie/img/myrkur-logo.jpg" /></a>
     </div>
   	</div>
