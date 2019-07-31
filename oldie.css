@@ -81,8 +81,8 @@ margin: 0px auto;
 padding:0px;
 padding-top:12px;
 padding-left:75px;
-text-align:left;
-position:relative;
+text-align:right;
+position:sticky;
 }
 
 #logo {
