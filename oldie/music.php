@@ -46,21 +46,21 @@
 	    exit();
 	}
 
-	/* return name of current default database */
-	if ($result = $mysqli->query("SELECT DATABASE()")) {
-	    $row = $result->fetch_row();
-	    printf("Default database is %s.\n", $row[0]);
-	    $result->close();
-	}
+	// /* return name of current default database */
+	// if ($result = $mysqli->query("SELECT DATABASE()")) {
+	//     $row = $result->fetch_row();
+	//     printf("Default database is %s.\n", $row[0]);
+	//     $result->close();
+	// }
 
 
 	if ($db_found)
 	{
 
 		$SQL = "SELECT * FROM Albums ORDER BY ID DESC";
-		$result = mysql_query($SQL);
+		$result = mysqli_query($mysqli, $SQL);
 
-		while ( $db_field = mysql_fetch_assoc($result) )
+		while ( $db_field = $result->fetch_assoc())
 		{
     		$string = $db_field['Genre'];
   			$tags = explode(',', $string);
