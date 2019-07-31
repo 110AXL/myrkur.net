@@ -1,4 +1,4 @@
-row
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -10513,8 +10513,7 @@ a.text-dark:hover, a.text-dark:focus {
     min-width: 992px !important;
   }
   .navbar {
-    /* display: none; */
-    padding-bottom: 25px;
+    display: none;
   }
   .badge {
     border: 1px solid #000;
@@ -10585,9 +10584,10 @@ hr.light {
 #mainNav {
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  background-color: #fff;
+  background-color: #333;
   -webkit-transition: background-color 0.2s ease;
   transition: background-color 0.2s ease;
+  padding-bottom:2rem;
 }
 
 #mainNav .navbar-brand {
@@ -10605,11 +10605,11 @@ hr.light {
 }
 
 #mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link:active {
-  color: #c56cf0;
+  color: #aaa;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #c56cf0 !important;
+  color: #aaa !important;
 }
 
 @media (min-width: 992px) {
