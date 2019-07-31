@@ -23,9 +23,7 @@
 <div id="box">
 	<div id="content">
 		<ul class="nav">
-		<li><a href="index.php">Chronicles</a></li>
-		<li><a href="events.php">Events</a></li>
-    <li><a href="addAlbum.php">Admin</a></li>
+    <li><a href="addAlbum.php">Add album</a></li>
 		</ul>
 
 <?PHP
@@ -69,9 +67,19 @@
 			$last_key = key( array_slice( $tags, -1, 1, TRUE ) );
 			$label = $row['Label'];
 
+			$resized_link = $row["img"];
+	 	 $removed_spaces = str_replace(" ","%20",$resized_link);
+	 	 echo "<div class='col-lg-3 col-sm-3'>";
+	 		echo "<a class='portfolio-box' target=_blank title='" . $row["artist"]. " - " . $row["album"]. " [" . $row["username"] . "]' href=main/link.php?i='" . $row["id"]."' alt=''>";
+	 		echo "<img class='img-fluid' height='100%' width='100%' src='/medlimir/uploads/" . $removed_spaces . "' alt=''>";
+	 		echo "<div class='portfolio-box-caption'>";
+	 			echo "<div class='project-category text-white-50'>" . $row["artist"] . "</div>";
+	 				echo "<div class='project-name'>" . $row["album"] . "</div></div></a></div>";
+
+
 echo			"<div id='post'>";
 echo				"<div class='.p-pic'>";
-echo					"<a href='viewAlbum.php?id=" . $row['ID'] . "'><img src=" . $row['PathToImage'] . " width=300px; height=300px; /> </a>";
+echo					"<a href='viewAlbum.php?id=" . $row['ID'] . "'><img src=../medlimir/uploads" . $removed_spaces . " width=300px; height=300px; /> </a>";
 echo				"</div>";
 
 echo				"<div id='p-name'>";
@@ -79,19 +87,19 @@ echo					"<a href='viewAlbum.php?id=" . $row['ID'] . "'>" . $row['Artist'] . " -
 echo				"</div>";
 
 echo				"<div id='p-info'>";
-echo					"Released " . $row['Released'] . "<br />";
-echo					"Rating: " . $row['Rating'] . "<br />";
-echo					"Label  : <a href='music.php?label=" . $label . "'>" . $label . "</a><br />";
-echo					"Genre  : ";
-						foreach($tags as $key)
-						{
-							$word=trim($key);
-							$safe=mysqli_real_escape_string( $word );
-							if ($key == $tags[count($tags) - 1])
-								echo "<a href='music.php?genre=" . $safe . "'>" . $safe . "</a>";
-							else
-								echo "<a href='music.php?genre=" . $safe . "'>" . $safe . "</a>, ";
-						}
+// echo					"Released " . $row['Released'] . "<br />";
+// echo					"Rating: " . $row['Rating'] . "<br />";
+// echo					"Label  : <a href='music.php?label=" . $label . "'>" . $label . "</a><br />";
+// echo					"Genre  : ";
+// 						foreach($tags as $key)
+// 						{
+// 							$word=trim($key);
+// 							$safe=mysqli_real_escape_string( $word );
+// 							if ($key == $tags[count($tags) - 1])
+// 								echo "<a href='music.php?genre=" . $safe . "'>" . $safe . "</a>";
+// 							else
+// 								echo "<a href='music.php?genre=" . $safe . "'>" . $safe . "</a>, ";
+// 						}
 
 echo				"</div>";
 echo			"</div>";
