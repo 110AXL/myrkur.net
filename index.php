@@ -58,8 +58,9 @@ if(!empty($_SESSION["loggedin"]))
   		</div>
       <div id="menu" class="fixed-top">
         <div class="link"><a class="nav-link js-scroll-trigger" href="https://members.myrkur.net/addalbum.php">Add album</a></div>
-        <div class="link"><a class="nav-link js-scroll-trigger" href="#contact">Contact & Wiki</a></div>
         <div class="link"><a class="nav-link js-scroll-trigger" href="https://members.myrkur.net/">System</a></div>
+        <div class="link"><a class="nav-link js-scroll-trigger" href="http://wiki.myrkur.net">Wiki</a></div>
+        <div class="link"><a class="nav-link js-scroll-trigger" href="mailto:system@myrkur.net">Contact</a></div>
       </div>
   	</div>
   </div>
