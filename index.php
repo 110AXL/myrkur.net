@@ -12,6 +12,9 @@ if(!empty($_SESSION["loggedin"]))
 
 <head>
 
+  <link rel="shortcut icon" type="image/png" href="/medlimir/favicon.png"/>
+  <link rel="shortcut icon" type="image/png" href="http://myrkur.net/medlimir/favicon.png"/>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
