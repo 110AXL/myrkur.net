@@ -7,29 +7,36 @@
 </head>
 <body>
 
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '471037537031554',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v3.3'
-    });
-      
-    FB.AppEvents.logPageView();   
-      
-  };
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '{your-app-id}',
+        cookie     : true,
+        xfbml      : true,
+        version    : '{api-version}'
+      });
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
+      FB.AppEvents.logPageView();
 
-<div class="grid">
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+
+     function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
+  </script>
+  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+<!-- <div class="grid">
   <header>
     Linkur1 Linkur2
   </header> </div>
@@ -50,8 +57,8 @@
   <footer>
     Skrá styrk 1000 | 1500 | 2000
   </footer>
-</div></div>
-
+</div></div> -->
+<!--
 <script>
 var coll = document.getElementsByClassName("collapsible");
 var i;
@@ -67,7 +74,7 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
-</script>
+</script> -->
 
 
 </body>
