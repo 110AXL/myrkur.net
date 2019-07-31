@@ -54,7 +54,7 @@ if(!empty($_SESSION["loggedin"]))
   <!-- Navigation -->
   <nav id="mainNav" class="navbar navbar-expand-lg navbar-light fixed-top py-3">
     <div class="container">
-      <a class="navbar-brand" href="#page-top">Myrkur.net</a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Myrkur.net</a>
       <button type="button" class="navbar-toggler collapsed navbar-toggler-right" data-toggle="collapse" data-target="#navBarResponsive" aria-controls="navBarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -77,8 +77,8 @@ if(!empty($_SESSION["loggedin"]))
   </nav>
 
   <!-- Masthead -->
-<!-- <header class="masthead">
-  <div class="container h-100">
+<header class="masthead">
+  <!-- <div class="container h-100">
       <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-10 align-self-end">
           <h1 class="text-white font-weight-bold">☺ arr country ☺</h1>
@@ -89,8 +89,8 @@ if(!empty($_SESSION["loggedin"]))
             <a class="btn btn-primary btn-xl js-scroll-trigger" href="https://members.myrkur.net/addalbum.php">Add an album</a>
         </div>
       </div>
-  </div>
-</header> -->
+  </div> -->
+</header>
 
   <!-- About Section
 <section class="page-section bg-primary" id="about">
