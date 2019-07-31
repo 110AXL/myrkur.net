@@ -23,7 +23,9 @@ border-color:#000;
 #head {
 background-color:#5F5F5F;
 height:40px;
-position: sticky;
+position: fixed;
+z-index: 9999;
+width: 100%;
 }
 
 #menu{
