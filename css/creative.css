@@ -4415,7 +4415,6 @@ input[type="button"].btn-block {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0.5rem 1rem;
-  margin-top: 10rem;
 }
 
 .navbar > .container,
@@ -10508,6 +10507,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
   body {
     min-width: 992px !important;
+    margin-top: 30px;
   }
   .container {
     min-width: 992px !important;
