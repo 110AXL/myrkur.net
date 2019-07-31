@@ -10587,7 +10587,7 @@ hr.light {
   background-color: #333;
   -webkit-transition: background-color 0.2s ease;
   transition: background-color 0.2s ease;
-  padding-bottom:2rem;
+  margin-bottom:2rem;
 }
 
 #mainNav .navbar-brand {
