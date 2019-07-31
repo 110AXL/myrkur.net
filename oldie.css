@@ -47,12 +47,12 @@ height:40px;
 }
 
 #menu .link a{
-float:left;
+float:right;
 padding:4px;
 background-color:#111111;
 display:block;
 margin-left:auto;
-margin-right:50px;
+margin-right:10px;
 text-decoration:none;
 -webkit-border-radius:0px;
 -moz-border-radius:0px;
