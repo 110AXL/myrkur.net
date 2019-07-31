@@ -1,4 +1,4 @@
-
+row
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -4554,7 +4554,7 @@ input[type="button"].btn-block {
     flex-basis: auto;
   }
   .navbar-expand-sm .navbar-toggler {
-    display: none;
+    /* display: none; */
   }
 }
 
@@ -4602,7 +4602,7 @@ input[type="button"].btn-block {
     flex-basis: auto;
   }
   .navbar-expand-md .navbar-toggler {
-    display: none;
+    row;
   }
 }
 
@@ -4650,7 +4650,7 @@ input[type="button"].btn-block {
     flex-basis: auto;
   }
   .navbar-expand-lg .navbar-toggler {
-    display: none;
+    row;
   }
 }
 
@@ -4698,7 +4698,7 @@ input[type="button"].btn-block {
     flex-basis: auto;
   }
   .navbar-expand-xl .navbar-toggler {
-    display: none;
+    row;
   }
 }
 
@@ -4749,7 +4749,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-expand .navbar-toggler {
-  display: none;
+  row;
 }
 
 .navbar-light .navbar-brand {
@@ -5272,7 +5272,7 @@ a.badge:hover, a.badge:focus {
 }
 
 .badge:empty {
-  display: none;
+  row;
 }
 
 .btn .badge {
@@ -6052,7 +6052,7 @@ a.close.disabled {
 }
 
 .toast.hide {
-  display: none;
+  row;
 }
 
 .toast-header {
@@ -6087,7 +6087,7 @@ a.close.disabled {
   top: 0;
   left: 0;
   z-index: 1050;
-  display: none;
+  row;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -6580,7 +6580,7 @@ a.close.disabled {
 }
 
 .popover-header:empty {
-  display: none;
+  row;
 }
 
 .popover-body {
@@ -10513,7 +10513,7 @@ a.text-dark:hover, a.text-dark:focus {
     min-width: 992px !important;
   }
   .navbar {
-    display: none;
+    /* display: none; */
   }
   .badge {
     border: 1px solid #000;
