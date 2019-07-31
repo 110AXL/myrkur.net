@@ -54,7 +54,7 @@ if(!empty($_SESSION["loggedin"]))
   <!-- Navigation -->
   <nav id="mainNav" class="navbar navbar-expand-lg navbar-light fixed-top py-3">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Myrkur.net</a>
+      <a class="navbar-brand" href="#page-top">Myrkur.net</a>
       <button type="button" class="navbar-toggler collapsed navbar-toggler-right" data-toggle="collapse" data-target="#navBarResponsive" aria-controls="navBarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
