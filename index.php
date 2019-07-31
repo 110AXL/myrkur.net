@@ -61,7 +61,7 @@ if(!empty($_SESSION["loggedin"]))
       <div class="collapse navbar-collapse" id="navBarResponsive">
           <ul class="navbar-nav ml-auto my-2 my-lg-0">
             <li class"nav-item">
-              <a class="btn btn-primary btn-l js-scroll-trigger" href="https://members.myrkur.net/addalbum.php">Add an album</a>
+              <a class="btn btn-primary btn-s js-scroll-trigger" href="https://members.myrkur.net/addalbum.php">Add an album</a>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact & Wiki</a>
             </li>
