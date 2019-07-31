@@ -34,9 +34,25 @@
 	$password = "Dim&mur%Dalur";
 	$database = "u445255185_sweet";
 	$server = "localhost";
+	$mysqli = new mysqli("localhost", "u445255185_zc4r", "Dim&mur%Dalur", "u445255185_sweet");
+
 
 	$db_handle = mysqli_connect($server, $user_name, $password);
-	$db_found = mysql_select_db($database, $db_handle);
+	$db_found = mysqli_select_db($database, $db_handle);
+
+	/* check connection */
+	if (mysqli_connect_errno()) {
+	    printf("Connect failed: %s\n", mysqli_connect_error());
+	    exit();
+	}
+
+	/* return name of current default database */
+	if ($result = $mysqli->query("SELECT DATABASE()")) {
+	    $row = $result->fetch_row();
+	    printf("Default database is %s.\n", $row[0]);
+	    $result->close();
+	}
+
 
 	if ($db_found)
 	{
