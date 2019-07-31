@@ -17,7 +17,7 @@ if(!empty($_SESSION["loggedin"]))
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Myrkur.net | Arr!</title>
+  <title>myrkur.net</title>
 
   <!-- Font Awesome Icons -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -77,7 +77,7 @@ if(!empty($_SESSION["loggedin"]))
   </nav>
 
   <!-- Masthead -->
-<header class="masthead">
+<header class="mast">
   <!-- <div class="container h-100">
       <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-10 align-self-end">
