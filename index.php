@@ -37,6 +37,7 @@ if(!empty($_SESSION["loggedin"]))
 
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="css/creative.css" rel="stylesheet">
+  <link href="oldie.css" rel="stylesheet">
 
 </head>
 
@@ -52,7 +53,13 @@ if(!empty($_SESSION["loggedin"]))
   ?>
 
   <!-- Navigation -->
-  <nav id="mainNav" class="navbar navbar-expand-lg navbar-light fixed-top py-3">
+  <div id="menu" class="fixed-top">
+  	<div class="link"><a class="nav-link js-scroll-trigger" href="https://members.myrkur.net/addalbum.php">Add album</a></div>
+  	<div class="link"><a class="nav-link js-scroll-trigger" href="#contact">Contact & Wiki</a></div>
+  	<div class="link"><a class="nav-link js-scroll-trigger" href="https://members.myrkur.net/">System</a></div>
+  </div>
+
+  <!-- <nav id="mainNav" class="navbar navbar-expand-lg navbar-light fixed-top py-3">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">Myrkur.net</a>
       <button type="button" class="navbar-toggler collapsed navbar-toggler-right" data-toggle="collapse" data-target="#navBarResponsive" aria-controls="navBarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,7 +81,7 @@ if(!empty($_SESSION["loggedin"]))
           </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
 
   <!-- Masthead -->
 <!-- <header class="mast">
