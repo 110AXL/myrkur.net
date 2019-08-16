@@ -3,6 +3,7 @@ padding:0px;
 margin:0px;
 }
 
+
 .submissionfield {
     width: 250px;
 }
@@ -168,14 +169,14 @@ margin-left: auto;
 margin-right: auto;
 }
 
-#left {
+#artist {
 width:180px;
 padding:0px;
 float:left;
 background-color:#ff99cc;
 }
 
-#right {
+#album {
 width:173px;
 padding:0px;
 float:left;
