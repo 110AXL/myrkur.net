@@ -212,8 +212,8 @@ if(!empty($_SESSION["loggedin"]))
           echo "<a class='portfolio-box' target=_blank title='" . $row["artist"]. " - " . $row["album"]. " [" . $row["username"] . "]' href=main/link.php?i='" . $row["id"]."' alt='" . $row["album"] . " by- " . $row["artist"] . "'>";
           echo "<img class='img-fluid' height='100%' width='100%' src='/medlimir/uploads/" . $removed_spaces . "' alt=''>";
           echo "<div class='portfolio-box-caption'>";
-            echo "<div id='artist'>". $row["artist"] . "</div>";
-              echo "<div id='album'>" . $row["album"] . "</div></div></a></div>";
+            echo "<div id='artist'><h1>" . $row["artist"] . "</div>";
+              echo "<div id='album'>" . $row["album"] . "<h1></div></div></a></div>";
          // echo "<p class='info' title='Year & link clicks.'><a href=main/link.php?i='" . $row["id"]."'>" . $row["year"] . "</a></p><div id=username>" . $row["username"] . "</div><div id=clicks>" . $row["clicks"] . "</div></div>";
          }
        }
