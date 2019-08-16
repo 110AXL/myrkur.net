@@ -206,13 +206,14 @@ if(!empty($_SESSION["loggedin"]))
        // output data of each row
        while($row = $result->fetch_assoc()) {
          $resized_link = $row["img"];
+
          $removed_spaces = str_replace(" ","%20",$resized_link);
          echo "<div class='col-lg-3 col-sm-3'>";
-          echo "<a class='portfolio-box' target=_blank title='" . $row["artist"]. " - " . $row["album"]. " [" . $row["username"] . "]' href=main/link.php?i='" . $row["id"]."' alt=''>";
+          echo "<a class='portfolio-box' target=_blank title='" . $row["artist"]. " - " . $row["album"]. " [" . $row["username"] . "]' href=main/link.php?i='" . $row["id"]."' alt='" . $row["album"] . " by- " . $row["artist"] . "'>";
           echo "<img class='img-fluid' height='100%' width='100%' src='/medlimir/uploads/" . $removed_spaces . "' alt=''>";
           echo "<div class='portfolio-box-caption'>";
-            echo "<div class='project-category text-white-50'>" . $row["artist"] . "</div>";
-              echo "<div class='project-name'>" . $row["album"] . "</div></div></a></div>";
+            echo "<div id='artist'>". $row["artist"] . "</div>";
+              echo "<div id='album'>" . $row["album"] . "</div></div></a></div>";
          // echo "<p class='info' title='Year & link clicks.'><a href=main/link.php?i='" . $row["id"]."'>" . $row["year"] . "</a></p><div id=username>" . $row["username"] . "</div><div id=clicks>" . $row["clicks"] . "</div></div>";
          }
        }
